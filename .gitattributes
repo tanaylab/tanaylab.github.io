@@ -1,0 +1,2 @@
+repo/src/contrib/shaman_2.0.tar.gz filter=lfs diff=lfs merge=lfs -text
+repo/src/contrib/Repsc_0.0.0.9000.tar.gz filter=lfs diff=lfs merge=lfs -text

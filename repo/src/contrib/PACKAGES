@@ -1,15 +1,15 @@
 Package: gpatterns
 Version: 0.2
 Depends: R (>= 3.2.2)
-Imports: BH, cowplot, crayon, data.table, doMC, dplyr, gclus,
-        GetoptLong, ggplot2, glue, logging, misha (>= 3.5.4), parallel,
-        pheatmap (>= 1.0.9), plyr, purrr, purrrlyr, Rcpp, readr,
-        reshape2, scales, stringi, stringr, tgstat, tibble, tidyr, zoo,
-        tgstat, misha
-LinkingTo: BH, Rcpp
-Suggests: knitr, rmarkdown, testthat
+Imports: plyr, reshape2, tibble, dplyr, tidyr, purrr, purrrlyr,
+        ggplot2, cowplot, scales, stringi, stringr, readr, data.table,
+        gclus, zoo, doMC, parallel, GetoptLong, Rcpp, pheatmap (>=
+        1.0.9), BH, logging, crayon, misha (>= 3.5.4), glue, tgstat,
+        tgutil
+LinkingTo: Rcpp, BH
+Suggests: testthat, knitr, rmarkdown
 License: GPL
-MD5sum: 4168bb033a214399429a284ee0d9989c
+MD5sum: 39abe4df997f8d92d07de8b35d5a4d24
 NeedsCompilation: yes
 
 Package: metacell

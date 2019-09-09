@@ -1,0 +1,2523 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>dynamake package &mdash; DynaMake 0.3.49 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dynamake.bin package" href="dynamake.bin.html" />
+    <link rel="prev" title="dynamake" href="modules.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DynaMake
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.49
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License (MIT)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">package</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">dynamake package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dynamake.bin.html">dynamake.bin package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-dynamake.application">dynamake.application module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-dynamake.config">dynamake.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-dynamake.make">dynamake.make module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-dynamake.patterns">dynamake.patterns module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-dynamake.version">dynamake.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-dynamake">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="cover/index.html#http://">coverage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DynaMake</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">dynamake</a> &raquo;</li>
+        
+      <li>dynamake package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dynamake-package">
+<h1>dynamake package<a class="headerlink" href="#dynamake-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dynamake.bin.html">dynamake.bin package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dynamake.bin.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamake.bin.html#module-dynamake.bin.main">dynamake.bin.main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamake.bin.html#module-dynamake.bin.make">dynamake.bin.make module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamake.bin.html#module-dynamake.bin">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dynamake.application">
+<span id="dynamake-application-module"></span><h2>dynamake.application module<a class="headerlink" href="#module-dynamake.application" title="Permalink to this headline">¶</a></h2>
+<p>Utilities for configurable applications.</p>
+<dl class="class">
+<dt id="dynamake.application.Env">
+<em class="property">class </em><code class="descclassname">dynamake.application.</code><code class="descname">Env</code><span class="sig-paren">(</span><em>default_value: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.application.Env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Marker for default for environment parameters.</p>
+<dl class="method">
+<dt id="dynamake.application.Env.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>default_value: Any</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Env.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optionally provide a default value for the parameter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Env.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Env.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default value for the parameter.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.application.Func">
+<em class="property">class </em><code class="descclassname">dynamake.application.</code><code class="descname">Func</code><span class="sig-paren">(</span><em>wrapped: Callable</em>, <em>*</em>, <em>is_top: bool</em>, <em>is_random: bool</em>, <em>is_parallel: bool</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.application.Func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data collected for a configurable function.</p>
+<dl class="method">
+<dt id="dynamake.application.Func.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>wrapped: Callable</em>, <em>*</em>, <em>is_top: bool</em>, <em>is_random: bool</em>, <em>is_parallel: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Func.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a configurable function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.by_name">
+<code class="descname">by_name</code><em class="property"> = {}</em><a class="headerlink" href="#dynamake.application.Func.by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current known functions.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Func.collect">
+<em class="property">static </em><code class="descname">collect</code><span class="sig-paren">(</span><em>wrapped: Callable</em>, <em>*</em>, <em>is_top: bool</em>, <em>is_random: bool</em>, <em>is_parallel: bool</em><span class="sig-paren">)</span> &#x2192; dynamake.application.Func<a class="headerlink" href="#dynamake.application.Func.collect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect a configurable function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.collect_indirect_invocations">
+<code class="descname">collect_indirect_invocations</code><em class="property"> = True</em><a class="headerlink" href="#dynamake.application.Func.collect_indirect_invocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to collect indirect invocations and parameters.</p>
+<p>This is useful in normal applications, allowing to generate a proper help message for each
+command (top level function).</p>
+<p>This does not make sense when we run a make-like program, where there is no easy way to tell
+which function invokes which other function (as this depends on the file name patterns).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.direct_parameter_names">
+<code class="descname">direct_parameter_names</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.direct_parameter_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of parameter names the function (directly) configures.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Func.finalize">
+<em class="property">static </em><code class="descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Func.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finalize the per-function data once all functions have been collected.</p>
+<p>This conservatively assumes that every mention of a configurable function name inside
+another configurable function means an invocation. It tries to do better by ignoring names
+that are assigned to (that is, are probably just local variable names). This isn’t 100% safe
+but seems to work well for simple code.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.has_required_arguments">
+<code class="descname">has_required_arguments</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.has_required_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the function has non-configurable arguments.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.indirect_parameter_names">
+<code class="descname">indirect_parameter_names</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.indirect_parameter_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of parameter names the function (indirectly) depends on. This starts identical to
+the direct parameter names and is later expanded to include the names of indirectly
+invoked functions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.application.Func.invocation_kwargs">
+<code class="descname">invocation_kwargs</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="headerlink" href="#dynamake.application.Func.invocation_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the complete named arguments for an invocation based on the configuration parameter
+values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.invoked_function_names">
+<code class="descname">invoked_function_names</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.invoked_function_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of other configurable functions it invokes. This starts by collecting all
+potential invoked names, and is later filtered to only include configurable function
+names.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.invoker_function_names">
+<code class="descname">invoker_function_names</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.invoker_function_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of other configurable functions that invoke it. This starts empty and is
+later filled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.is_disabled">
+<code class="descname">is_disabled</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.application.Func.is_disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, do not really collect functions (e.g., when importing all of a package modules for
+generating documentation).</p>
+<p>By default is <code class="docutils literal notranslate"><span class="pre">True</span></code> unless the environment variable <code class="docutils literal notranslate"><span class="pre">DYNAMAKE_DISABLE</span></code> exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.is_parallel">
+<code class="descname">is_parallel</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.is_parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this function uses multiple processors.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.is_random">
+<code class="descname">is_random</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.is_random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this function uses random numbers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.is_top">
+<code class="descname">is_top</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.is_top" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this is a top-level function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name used to locate the function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.names_by_parameter">
+<code class="descname">names_by_parameter</code><em class="property"> = {}</em><a class="headerlink" href="#dynamake.application.Func.names_by_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name the functions that use each configurable parameter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.parameter_defaults">
+<code class="descname">parameter_defaults</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.parameter_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>The override for the parameter defaults.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.parameter_names">
+<code class="descname">parameter_names</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.parameter_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ordered parameter names.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Func.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Func.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Func.top_functions">
+<em class="property">static </em><code class="descname">top_functions</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#dynamake.application.Func.top_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of top-level configurable functions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.wrapped">
+<code class="descname">wrapped</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.wrapped" title="Permalink to this definition">¶</a></dt>
+<dd><p>The wrapped real function that will do the work.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Func.wrapper">
+<code class="descname">wrapper</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Func.wrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>The wrapper we place around the real function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.application.NamesCollector">
+<em class="property">class </em><code class="descclassname">dynamake.application.</code><code class="descname">NamesCollector</code><a class="headerlink" href="#dynamake.application.NamesCollector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ast.NodeVisitor</span></code></p>
+<p>Collect all the names of potential invocations from an AST.</p>
+<dl class="method">
+<dt id="dynamake.application.NamesCollector.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.NamesCollector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an empty collector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.application.NamesCollector.names">
+<code class="descname">names</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Set[str]<a class="headerlink" href="#dynamake.application.NamesCollector.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the collected potential invocation names.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.application.NamesCollector.visit_Name">
+<code class="descname">visit_Name</code><span class="sig-paren">(</span><em>node: _ast.Name</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.NamesCollector.visit_Name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect any identifier which might potentially be an invoked function name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.application.Parallel">
+<em class="property">class </em><code class="descclassname">dynamake.application.</code><code class="descname">Parallel</code><a class="headerlink" href="#dynamake.application.Parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Invoke a function in parallel, efficiently.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Pool.map</span></code>  insists on pickling and sending all the invocation arguments. This is bad for two
+reasons:</p>
+<ul class="simple">
+<li>It is inefficient. The forked process(es) already have these objects, since the fork happened
+after the list of arguments was created.</li>
+<li>It is restrictive. You can’t simply work around it by giving <code class="docutils literal notranslate"><span class="pre">Pool.map</span></code> a <code class="docutils literal notranslate"><span class="pre">lambda</span></code> that
+just takes an index and uses it to access whatever-you-want, because pickling this <code class="docutils literal notranslate"><span class="pre">lambda</span></code>
+fails (mercifully; otherwise it would need to pickle all the data captured by the lambda,
+which would defeat the purpose).</li>
+</ul>
+<p>This class is a workaround. It stashes all the arguments in a global array (yikes), which is
+created before the processes are forked, and then just lets each parallel invocation access this
+array to obtain its arguments.</p>
+<p>Sigh.</p>
+<dl class="staticmethod">
+<dt id="dynamake.application.Parallel.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Parallel.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.application.Param">
+<em class="property">class </em><code class="descclassname">dynamake.application.</code><code class="descname">Param</code><span class="sig-paren">(</span><em>*, name: str, default: Any, parser: Callable[str, Any], description: str, short: Optional[str] = None, group: Optional[str] = None, order: Optional[int] = None, metavar: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.application.Param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Describe a configurable parameter used by one or more computation function.</p>
+<dl class="attribute">
+<dt id="dynamake.application.Param.BUILTIN">
+<code class="descname">BUILTIN</code><em class="property"> = ['log_level', 'log_context', 'jobs', 'random_seed']</em><a class="headerlink" href="#dynamake.application.Param.BUILTIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the predefines parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.application.Param.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*, name: str, default: Any, parser: Callable[str, Any], description: str, short: Optional[str] = None, group: Optional[str] = None, order: Optional[int] = None, metavar: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Param.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and register a parameter description.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Param.default">
+<code class="descname">default</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Param.default" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value to use if the parameter is not explicitly configured.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Param.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Param.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A description of the parameter for help messages.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Param.group">
+<code class="descname">group</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Param.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional group of parameters (for generating a help message).</p>
+<p>If the group is <cite>global options</cite>, the parameter will be listed in this group
+instead of being associated with specific function(s).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Param.metavar">
+<code class="descname">metavar</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Param.metavar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional name of the command line parameter value (<code class="docutils literal notranslate"><span class="pre">metavar</span></code> in <code class="docutils literal notranslate"><span class="pre">argparse</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Param.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Param.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique name of the parameter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Param.order">
+<code class="descname">order</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Param.order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional order of parameter (in help message)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Param.parser">
+<code class="descname">parser</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Param.parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to parse the parameter value from a string (command line argument).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Param.short">
+<code class="descname">short</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Param.short" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique short name of the parameter.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.application.Prog">
+<em class="property">class </em><code class="descclassname">dynamake.application.</code><code class="descname">Prog</code><a class="headerlink" href="#dynamake.application.Prog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Hold all the configurable parameters for a program execution.</p>
+<dl class="attribute">
+<dt id="dynamake.application.Prog.DEFAULT_CONFIG">
+<code class="descname">DEFAULT_CONFIG</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.application.Prog.DEFAULT_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default configuration to load, if any.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Prog.DEFAULT_MODULE">
+<code class="descname">DEFAULT_MODULE</code><em class="property"> = 'DynaMods'</em><a class="headerlink" href="#dynamake.application.Prog.DEFAULT_MODULE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default module to load.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Prog.TRACE">
+<code class="descname">TRACE</code><em class="property"> = 15</em><a class="headerlink" href="#dynamake.application.Prog.TRACE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The log level for tracing calls.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.add_commands_to_parser">
+<em class="property">static </em><code class="descname">add_commands_to_parser</code><span class="sig-paren">(</span><em>parser: argparse.ArgumentParser</em>, <em>functions: Optional[List[str]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.add_commands_to_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a command argument each top-level function.</p>
+<p>If a list of functions is provided, it is used instead of the automatic list of top-level
+functions (annotated with <code class="docutils literal notranslate"><span class="pre">&#64;config(top=True)</span></code>). For each such command argument, add a
+sub-parser with the parameters relevant for the specific function.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.add_global_parameters">
+<em class="property">static </em><code class="descname">add_global_parameters</code><span class="sig-paren">(</span><em>parser: argparse.ArgumentParser</em><span class="sig-paren">)</span> &#x2192; argparse._ArgumentGroup<a class="headerlink" href="#dynamake.application.Prog.add_global_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the parameters that are not tied to specific functions.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.add_parameter">
+<em class="property">static </em><code class="descname">add_parameter</code><span class="sig-paren">(</span><em>parameter: dynamake.application.Param</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.add_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a parameter to the program.</p>
+<p>This is invoked automatically when a <a class="reference internal" href="#dynamake.application.Param" title="dynamake.application.Param"><code class="xref py py-class docutils literal notranslate"><span class="pre">dynamake.application.Param</span></code></a> object is
+created.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.add_parameters_to_parser">
+<em class="property">static </em><code class="descname">add_parameters_to_parser</code><span class="sig-paren">(</span><em>parser: argparse.ArgumentParser</em>, <em>functions: Optional[List[str]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.add_parameters_to_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a command line flag for each parameter to the parser to allow overriding parameter
+values directly from the command line.</p>
+<p>If a list of functions is provided, it is used instead of the automatic list of top-level
+functions (annotated with <code class="docutils literal notranslate"><span class="pre">&#64;config(top=True)</span></code>).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.add_sorted_parameters">
+<em class="property">static </em><code class="descname">add_sorted_parameters</code><span class="sig-paren">(</span><em>parser: argparse.ArgumentParser</em>, <em>*</em>, <em>predicate: Optional[Callable[str</em>, <em>bool]] = None</em>, <em>extra_help: Optional[Callable[str</em>, <em>str]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.add_sorted_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the parameters of the functions that satify the predicate (if any), allowing for
+additional help string for each one.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.call_with_args">
+<em class="property">static </em><code class="descname">call_with_args</code><span class="sig-paren">(</span><em>args: argparse.Namespace</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.application.Prog.call_with_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>If a command function was specified on the command line, invoke it with the current
+parameters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Prog.explicit_parameters">
+<code class="descname">explicit_parameters</code><em class="property"> = set()</em><a class="headerlink" href="#dynamake.application.Prog.explicit_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The names of the explicitly set parameters.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.get_parameter">
+<em class="property">static </em><code class="descname">get_parameter</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.application.Prog.get_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the value of some parameter.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.load_config">
+<em class="property">static </em><code class="descname">load_config</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.load_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a configuration file.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.load_modules">
+<em class="property">static </em><code class="descname">load_modules</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.load_modules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load all the modules specified by command line options.</p>
+<p>This needs to be done before we set up the command line options parser, because
+the options depend on the loaded modules. Catch-22. This therefore employs a
+brutish option detection which may not be 100% correct.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Prog.logger">
+<code class="descname">logger</code><em class="property"> = &lt;Logger prog (WARNING)&gt;</em><a class="headerlink" href="#dynamake.application.Prog.logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>A configured logger for the program.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Prog.on_parallel_calls">
+<code class="descname">on_parallel_calls</code><em class="property"> = []</em><a class="headerlink" href="#dynamake.application.Prog.on_parallel_calls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function(s) to invoke before any parallel function call, to setup global state (e.g., random
+number generation).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Prog.parameter_values">
+<code class="descname">parameter_values</code><em class="property"> = {'log_context': None, 'log_level': 'WARN'}</em><a class="headerlink" href="#dynamake.application.Prog.parameter_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value for each parameter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.application.Prog.parameters">
+<code class="descname">parameters</code><em class="property"> = {'log_context': &lt;dynamake.application.Param object at 0x7f9e0d0afc18&gt;, 'log_level': &lt;dynamake.application.Param object at 0x7f9e0d0afbe0&gt;}</em><a class="headerlink" href="#dynamake.application.Prog.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The known parameters.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.parse_args">
+<em class="property">static </em><code class="descname">parse_args</code><span class="sig-paren">(</span><em>args: argparse.Namespace</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.parse_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the values based on loaded configuration files and/or explicit command line flags.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.application.Prog.verify">
+<em class="property">static </em><code class="descname">verify</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.Prog.verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify the collection of parameters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.application.config">
+<code class="descclassname">dynamake.application.</code><code class="descname">config</code><span class="sig-paren">(</span><em>*</em>, <em>random: bool = False</em>, <em>parallel: bool = False</em>, <em>top: bool = False</em><span class="sig-paren">)</span> &#x2192; Callable[Callable, Callable]<a class="headerlink" href="#dynamake.application.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for configurable functions.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">top</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, this is a top-level function that can be directly invoked from the main
+function.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">random</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the code uses random numbers. This activates the implicit
+<code class="docutils literal notranslate"><span class="pre">random_seed</span></code> parameter.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">parallel</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the codes invokes the <a class="reference internal" href="#dynamake.application.parallel" title="dynamake.application.parallel"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.parallel()</span></code></a>
+function to use multiple processors. This activates the implicit <code class="docutils literal notranslate"><span class="pre">jobs</span></code> parameter.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.application.env">
+<code class="descclassname">dynamake.application.</code><code class="descname">env</code><span class="sig-paren">(</span><em>default_value: Any</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.application.env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used as a default value for environment parameters.</p>
+<p>When a step uses this as a default value for a parameter,
+and an invocation does not specify an explicit or a configuration value for the parameter,
+then the value will be taken from the nearest parent which has a parameter with the same name.</p>
+<p>If a default value is provided, then it is used if no value is available from either the command
+line or the invocation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.application.main">
+<code class="descclassname">dynamake.application.</code><code class="descname">main</code><span class="sig-paren">(</span><em>parser: argparse.ArgumentParser</em>, <em>functions: Optional[List[str]] = None</em>, <em>*</em>, <em>adapter: Optional[Callable[argparse.Namespace</em>, <em>None]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic <code class="docutils literal notranslate"><span class="pre">main</span></code> function for configurable functions.</p>
+<p>The optional <code class="docutils literal notranslate"><span class="pre">adapter</span></code> may perform additional adaptation of the execution environment based on
+the parsed command-line arguments before the actual function(s) are invoked.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.application.override">
+<code class="descclassname">dynamake.application.</code><code class="descname">override</code><span class="sig-paren">(</span><em>**values</em><span class="sig-paren">)</span> &#x2192; Iterator[None]<a class="headerlink" href="#dynamake.application.override" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override configuration parameters for some nested calls.</p>
+<p>Writing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">override</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">some_wrapped_function</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Will execute all the configurable computations in <code class="docutils literal notranslate"><span class="pre">some_wrapped_function</span></code>
+as if the parameter <code class="docutils literal notranslate"><span class="pre">foo</span></code> was configured to have the specified <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.application.parallel">
+<code class="descclassname">dynamake.application.</code><code class="descname">parallel</code><span class="sig-paren">(</span><em>invocations: int</em>, <em>function: Callable</em>, <em>*fixed_args</em>, <em>kwargs: Optional[Callable[int</em>, <em>Dict[str</em>, <em>Any]]] = None</em>, <em>overrides: Optional[Callable[int</em>, <em>Dict[str</em>, <em>Any]]] = None</em>, <em>**fixed_kwargs</em><span class="sig-paren">)</span> &#x2192; List[Any]<a class="headerlink" href="#dynamake.application.parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invoke a function in parallel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>invocations</strong> – The number of function invocations needed.</li>
+<li><strong>fixed_args</strong> – Positional arguments for the function, that do not depend on the invocation index.</li>
+<li><strong>kwargs</strong> – An optional <code class="docutils literal notranslate"><span class="pre">lambda</span></code> taking the invocation index and returning a dictionary of keyword
+arguments which do depend on the index.</li>
+<li><strong>overrides</strong> – An optional <code class="docutils literal notranslate"><span class="pre">lambda</span></code> taking the invocation index and returning a dictionary of parameter
+values. Each invocation will be executed under an <a class="reference internal" href="#dynamake.application.override" title="dynamake.application.override"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.override()</span></code></a>
+using these values.</li>
+<li><strong>fixed_kwargs</strong> – Other named arguments for the function, that do not depend on the invocation index.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The list of results from all the function invocations, in order.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List[Any]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.application.processes_for">
+<code class="descclassname">dynamake.application.</code><code class="descname">processes_for</code><span class="sig-paren">(</span><em>tasks: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#dynamake.application.processes_for" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of parallel processes for the tasks in the current context.</p>
+<p>This is restricted by the <code class="docutils literal notranslate"><span class="pre">--jobs</span></code> command line option, and is further reduced to one when
+nested inside a parallel call. A proper work-stealing scheduler would do much better (ideally,
+across multiple application invocations on the same machine).</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">tasks</span></code> is zero, returns the maximal number of processes (zero for unlimited).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.application.reset_application">
+<code class="descclassname">dynamake.application.</code><code class="descname">reset_application</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.application.reset_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.application.serial">
+<code class="descclassname">dynamake.application.</code><code class="descname">serial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; List[Any]<a class="headerlink" href="#dynamake.application.serial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identical to <code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.parallal()</span></code> except that runs the invocations in
+serial.</p>
+<p>This is useful when one wants to temporarily convert a parallel call to a serial call,
+for debugging.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-dynamake.config">
+<span id="dynamake-config-module"></span><h2>dynamake.config module<a class="headerlink" href="#module-dynamake.config" title="Permalink to this headline">¶</a></h2>
+<p>Manage per-step configurations.</p>
+<dl class="class">
+<dt id="dynamake.config.Config">
+<em class="property">class </em><code class="descclassname">dynamake.config.</code><code class="descname">Config</code><a class="headerlink" href="#dynamake.config.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Global configuration class.</p>
+<dl class="staticmethod">
+<dt id="dynamake.config.Config.load">
+<em class="property">static </em><code class="descname">load</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.config.Config.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a YAML configuration file into <a class="reference internal" href="#dynamake.config.Config.rules" title="dynamake.config.Config.rules"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dynamake.config.Config.rules</span></code></a>.</p>
+<p>The rules from the loaded files will override any values specified by previously loaded
+rules. In general, the last matching rule wins.</p>
+<p>The configuration YAML file should be empty, or contain a top-level sequence.
+Each entry must be a mapping with two keys: <code class="docutils literal notranslate"><span class="pre">when</span></code> and <code class="docutils literal notranslate"><span class="pre">then</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">then</span></code> value should be a mapping from parameter names to their values.
+The <code class="docutils literal notranslate"><span class="pre">when</span></code> value should be a mapping of conditions.</p>
+<p>The condition key can be either a parameter name, or <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">parameter_name,</span> <span class="pre">...</span></code>.
+If the key starts with <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, the value should be a string containing a
+python boolean expression, which will be evaluated using the specified parameters.</p>
+<p>Otherwise, the condition value should be one of:</p>
+<ul class="simple">
+<li>The exact value of the parameter.</li>
+<li>A <code class="docutils literal notranslate"><span class="pre">!r</span> <span class="pre">regexp-pattern</span></code> or a <code class="docutils literal notranslate"><span class="pre">!g</span> <span class="pre">glob-pattern</span></code> to match the (string) parameter value
+against. While general regular expressions are more powerful, glob patterns are simpler
+and more familiar to most people, as they are used by the shell.</li>
+<li>A list of alternative values or patterns to match the parameter value against.</li>
+</ul>
+<p>A rule is applicable to a step invocation if all the conditions in its <code class="docutils literal notranslate"><span class="pre">when</span></code> mapping
+match the parameters used in the invocation.</p>
+<p>Two additional parameters are also added for the purpose of the matching: <code class="docutils literal notranslate"><span class="pre">step</span></code> contains
+the step function name, and the call <code class="docutils literal notranslate"><span class="pre">stack</span></code> contains the path of step names
+<code class="docutils literal notranslate"><span class="pre">/top/.../step</span></code>. This uses <code class="docutils literal notranslate"><span class="pre">/</span></code> to separate the step names to allow matching it against a
+glob pattern, as if it was a file path. Conditions on these parameters are evaluated first,
+and if they reject the invocation, no other condition is evaluated.</p>
+<p>It is normally an error for the rest of the conditions to specify a parameter which is not
+one of the arguments of the invoked step function. However, if the condition key ends with
+<code class="docutils literal notranslate"><span class="pre">?</span></code>, then the condition will silently reject the step instead. This allows specifying
+rules that provide defaults without worrying about applying the rule to the exact list of
+steps that use it.</p>
+<p>Default rules are very useful when used responsibly. However, they have two important
+downsides:</p>
+<ul class="simple">
+<li>Modifying the values in such default rules will trigger the re-computation of all the
+action steps that match them, even if they do not actually depend on the provided values.</li>
+<li>Default rules silently ignore typos in parameter names.</li>
+</ul>
+<p>It is pretty annoying to modify the configuration file, to adjust some parameter, re-execute
+the full computation, wait a few hours, and then discover this was wasted effort because you
+wrote <code class="docutils literal notranslate"><span class="pre">foo:</span> <span class="pre">1</span></code> instead of <code class="docutils literal notranslate"><span class="pre">foos:</span> <span class="pre">1</span></code> in the default rule.</p>
+<p>It is therefore recommended to minimize the use of default rules, and when they are used, to
+restrict them to match as few steps as possible, typically by matching against the steps
+call <code class="docutils literal notranslate"><span class="pre">stack</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.config.Config.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.config.Config.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.config.Config.rules">
+<code class="descname">rules</code><em class="property"> = []</em><a class="headerlink" href="#dynamake.config.Config.rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>All the known configuration rules (including for per-rule parameters).</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.config.Config.values_for_context">
+<em class="property">static </em><code class="descname">values_for_context</code><span class="sig-paren">(</span><em>context: Dict[str, Any]</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="headerlink" href="#dynamake.config.Config.values_for_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the configuration values for a specific step invocation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.config.Rule">
+<em class="property">class </em><code class="descclassname">dynamake.config.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>path: str, index: int, when: Dict[str, Any], then: Dict[str, Any]</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.config.Rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A single configuration rule.</p>
+<dl class="method">
+<dt id="dynamake.config.Rule.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>path: str, index: int, when: Dict[str, Any], then: Dict[str, Any]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.config.Rule.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a configuration rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.config.Rule.index">
+<code class="descname">index</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.config.Rule.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of this rule in the file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.config.Rule.is_match">
+<code class="descname">is_match</code><span class="sig-paren">(</span><em>context: Dict[str, Any]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.config.Rule.is_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the rule is a match for a step invocation.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.config.Rule.load">
+<em class="property">static </em><code class="descname">load</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; List[dynamake.config.Rule]<a class="headerlink" href="#dynamake.config.Rule.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load configuration rules from a YAML file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.config.Rule.path">
+<code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.config.Rule.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path of the file this was loaded from.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.config.Rule.then">
+<code class="descname">then</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.config.Rule.then" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parameter values provided by the rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.config.Rule.when">
+<code class="descname">when</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.config.Rule.when" title="Permalink to this definition">¶</a></dt>
+<dd><p>The conditions for when to apply the rule.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dynamake.make">
+<span id="dynamake-make-module"></span><h2>dynamake.make module<a class="headerlink" href="#module-dynamake.make" title="Permalink to this headline">¶</a></h2>
+<p>Utilities for dynamic make.</p>
+<dl class="class">
+<dt id="dynamake.make.Invocation">
+<em class="property">class </em><code class="descclassname">dynamake.make.</code><code class="descname">Invocation</code><span class="sig-paren">(</span><em>step: Optional[dynamake.make.Step], **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.make.Invocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An active invocation of a build step.</p>
+<dl class="method">
+<dt id="dynamake.make.Invocation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>step: Optional[dynamake.make.Step], **kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Track the invocation of an async step.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.abandoned_output">
+<code class="descname">abandoned_output</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.abandoned_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>A path for some missing old built output file, if any.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.abort">
+<code class="descname">abort</code><span class="sig-paren">(</span><em>reason: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.abort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort the invocation for some reason.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.actions_count">
+<code class="descname">actions_count</code><em class="property"> = 0</em><a class="headerlink" href="#dynamake.make.Invocation.actions_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A running counter of the executed actions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.active">
+<code class="descname">active</code><em class="property"> = {}</em><a class="headerlink" href="#dynamake.make.Invocation.active" title="Permalink to this definition">¶</a></dt>
+<dd><p>The active invocations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.async_actions">
+<code class="descname">async_actions</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.async_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The queued async actions for creating the input files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.built_outputs">
+<code class="descname">built_outputs</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.built_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The built outputs, if any.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.collect_final_outputs">
+<code class="descname">collect_final_outputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.collect_final_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure that all the (required) outputs were actually created and are newer than all input
+files specified so far.</p>
+<p>If successful, this marks all the outputs as up-to-date so that steps that depend on them
+will immediately proceed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.collect_initial_outputs">
+<code class="descname">collect_initial_outputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.collect_initial_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check which of the outputs already exist and what their modification times are, to be able
+to decide whether actions need to be run to create or update them.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.computed_configuration">
+<code class="descname">computed_configuration</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.computed_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether we computed the configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.condition">
+<code class="descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A condition variable to wait on for this invocation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.config_context">
+<code class="descname">config_context</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.config_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context for local control over configuration parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.config_file">
+<code class="descname">config_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[str]<a class="headerlink" href="#dynamake.make.Invocation.config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the step-specific configuration file in the following step action(s).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.config_param">
+<code class="descname">config_param</code><span class="sig-paren">(</span><em>name: str</em>, <em>default: Any = None</em>, <em>*</em>, <em>keep_in_file: bool = False</em>, <em>is_required: bool = False</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.make.Invocation.config_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the value of a parameter from the step-specific configuration.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">keep_in_file</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, then the parameter will be removed from the generated
+persistent configuration file (if any). This ensures that when changing parameters that only
+affect the internals of the build step, the resulting actions will not be triggered unless
+they actually changed as well.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.config_path">
+<code class="descname">config_path</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.config_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to the persistent configuration file, if it is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.current">
+<code class="descname">current</code><em class="property"> = &lt;dynamake.make.Invocation object&gt;</em><a class="headerlink" href="#dynamake.make.Invocation.current" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current invocation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.did_run_actions">
+<code class="descname">did_run_actions</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.did_run_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether we actually run any actions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.did_skip_actions">
+<code class="descname">did_skip_actions</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.did_skip_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether we actually skipped all actions so far.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.different_actions">
+<code class="descname">different_actions</code><span class="sig-paren">(</span><em>old_action: dynamake.make.PersistentAction</em>, <em>new_action: dynamake.make.PersistentAction</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.make.Invocation.different_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the new action is different from the last build action.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.different_required">
+<code class="descname">different_required</code><span class="sig-paren">(</span><em>old_required: Dict[str, dynamake.make.UpToDate], new_required: Dict[str, dynamake.make.UpToDate]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.make.Invocation.different_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the required inputs of the new action are different from the required inputs
+of the last build action.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.done">
+<code class="descname">done</code><span class="sig-paren">(</span><em>awaitable: Awaitable</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.make.Invocation.done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Await some non-DynaMake function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.exception">
+<code class="descname">exception</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reason to abort this invocation, if any.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.file_config_values">
+<code class="descname">file_config_values</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.file_config_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>The persistent configuration for the step.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.full_config_values">
+<code class="descname">full_config_values</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.full_config_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full configuration for the step.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.initial_outputs">
+<code class="descname">initial_outputs</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.initial_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The output files that existed prior to the invocation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.kwargs">
+<code class="descname">kwargs</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The arguments to the invocation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.log_and_abort">
+<code class="descname">log_and_abort</code><span class="sig-paren">(</span><em>reason: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.log_and_abort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort the invocation for some reason.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.missing_output">
+<code class="descname">missing_output</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.missing_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>A pattern for some missing output file(s), if any.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.must_run_action">
+<code class="descname">must_run_action</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.must_run_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether we already decided to run actions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full name (including parameters) of the invocation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.new_persistent_actions">
+<code class="descname">new_persistent_actions</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.new_persistent_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The new persistent actions (from the code) for ensuring rebuild when actions change.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.newest_input_mtime_ns">
+<code class="descname">newest_input_mtime_ns</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.newest_input_mtime_ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>The modification time of the newest input file, if any.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.newest_input_path">
+<code class="descname">newest_input_path</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.newest_input_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The newest input file, if any.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.old_persistent_actions">
+<code class="descname">old_persistent_actions</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.old_persistent_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The old persistent actions (from the disk) for ensuring rebuild when actions change.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.old_persistent_outputs">
+<code class="descname">old_persistent_outputs</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.old_persistent_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The old list of outputs (from the disk) for ensuring complete dynamic outputs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.oldest_output_mtime_ns">
+<code class="descname">oldest_output_mtime_ns</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.oldest_output_mtime_ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>The modification time of the oldest existing output path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.oldest_output_path">
+<code class="descname">oldest_output_path</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.oldest_output_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The oldest existing output file path, or None if some output files are missing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.parent">
+<code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent invocation, if any.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.phony">
+<code class="descname">phony</code><em class="property"> = set()</em><a class="headerlink" href="#dynamake.make.Invocation.phony" title="Permalink to this definition">¶</a></dt>
+<dd><p>The paths for phony targets.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.phony_outputs">
+<code class="descname">phony_outputs</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.phony_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The phony outputs, if any.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.poison_all_outputs">
+<code class="descname">poison_all_outputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.poison_all_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark all outputs as poisoned for a failed step.</p>
+<p>Typically also removes them.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.poisoned">
+<code class="descname">poisoned</code><em class="property"> = set()</em><a class="headerlink" href="#dynamake.make.Invocation.poisoned" title="Permalink to this definition">¶</a></dt>
+<dd><p>The files that failed to build and must not be used by other steps.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.producer_of">
+<code class="descname">producer_of</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; Tuple[Optional[dynamake.make.Step], Optional[Dict[str, Any]]]<a class="headerlink" href="#dynamake.make.Invocation.producer_of" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the unique step, if any, that produces the file.</p>
+<p>Also returns the keyword arguments needed to invoke the step function (deduced from the
+path).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.read_old_persistent_actions">
+<code class="descname">read_old_persistent_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.read_old_persistent_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the old persistent data from the disk file.</p>
+<p>These describe the last successful build of the outputs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.remove_old_persistent_data">
+<code class="descname">remove_old_persistent_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.remove_old_persistent_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the persistent data from the disk in case the build failed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.remove_output">
+<code class="descname">remove_output</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.remove_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an output file, and possibly the directories that became empty as a result.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.remove_stale_outputs">
+<code class="descname">remove_stale_outputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.remove_stale_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete stale outputs before running a action.</p>
+<p>This is only done before running the first action of a step.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.require">
+<code class="descname">require</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.require" title="Permalink to this definition">¶</a></dt>
+<dd><p>Require a file to be up-to-date before executing any actions or completing the current
+invocation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.require_context">
+<code class="descname">require_context</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.require_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context for nested control over configuration parameters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.required">
+<code class="descname">required</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.required" title="Permalink to this definition">¶</a></dt>
+<dd><p>The required input targets (phony or files) the invocations depends on.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Invocation.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[BaseException]<a class="headerlink" href="#dynamake.make.Invocation.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Actually run the invocation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.run_action">
+<code class="descname">run_action</code><span class="sig-paren">(</span><em>kind: str</em>, <em>runner: Callable</em>, <em>*command</em>, <em>**resources</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.run_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spawn a action to actually create some files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.should_remove_stale_outputs">
+<code class="descname">should_remove_stale_outputs</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.should_remove_stale_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether we should remove stale outputs before running the next action.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.should_run_action">
+<code class="descname">should_run_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.make.Invocation.should_run_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether all (required) outputs already exist, and are newer than all input files
+specified so far.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.skipped_count">
+<code class="descname">skipped_count</code><em class="property"> = 0</em><a class="headerlink" href="#dynamake.make.Invocation.skipped_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>A running counter of the skipped actions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.stack">
+<code class="descname">stack</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.stack" title="Permalink to this definition">¶</a></dt>
+<dd><p>A short unique stack to identify invocations in the log.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.step">
+<code class="descname">step</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>The step being invoked.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.sub_count">
+<code class="descname">sub_count</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.sub_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>How many sub-invocations were created so far.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.sync">
+<code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[BaseException]<a class="headerlink" href="#dynamake.make.Invocation.sync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until all the async actions queued so far are complete.</p>
+<p>This is implicitly called before running a action.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.top">
+<code class="descname">top</code><em class="property"> = &lt;dynamake.make.Invocation object&gt;</em><a class="headerlink" href="#dynamake.make.Invocation.top" title="Permalink to this definition">¶</a></dt>
+<dd><p>The top-level invocation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.up_to_date">
+<code class="descname">up_to_date</code><em class="property"> = {}</em><a class="headerlink" href="#dynamake.make.Invocation.up_to_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The origin and time of targets that were built or otherwise proved to be up-to-date so far.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Invocation.used_config_params">
+<code class="descname">used_config_params</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Invocation.used_config_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configuration value(s) that were used by the step (so far).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.wait_for">
+<code class="descname">wait_for</code><span class="sig-paren">(</span><em>active: dynamake.make.Invocation</em><span class="sig-paren">)</span> &#x2192; Optional[BaseException]<a class="headerlink" href="#dynamake.make.Invocation.wait_for" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until the invocation is done.</p>
+<p>This is used by other invocations that use this invocation’s output(s) as their input(s).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Invocation.write_new_persistent_actions">
+<code class="descname">write_new_persistent_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Invocation.write_new_persistent_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the new persistent data into the disk file.</p>
+<p>This is only done on a successful build.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.make.Make">
+<em class="property">class </em><code class="descclassname">dynamake.make.</code><code class="descname">Make</code><a class="headerlink" href="#dynamake.make.Make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Global build configuration and state.</p>
+<dl class="attribute">
+<dt id="dynamake.make.Make.DEFAULT_STEP_CONFIG">
+<code class="descname">DEFAULT_STEP_CONFIG</code><em class="property"> = 'DynaMake.yaml'</em><a class="headerlink" href="#dynamake.make.Make.DEFAULT_STEP_CONFIG" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default steps configuration to load.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.PERSISTENT_DIRECTORY">
+<code class="descname">PERSISTENT_DIRECTORY</code><em class="property"> = '.dynamake'</em><a class="headerlink" href="#dynamake.make.Make.PERSISTENT_DIRECTORY" title="Permalink to this definition">¶</a></dt>
+<dd><p>The directory to keep persistent state in.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.WHY">
+<code class="descname">WHY</code><em class="property"> = 17</em><a class="headerlink" href="#dynamake.make.Make.WHY" title="Permalink to this definition">¶</a></dt>
+<dd><p>The log level for logging the reasons for action execution.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.failure_aborts_build">
+<code class="descname">failure_aborts_build</code><em class="property"> = True</em><a class="headerlink" href="#dynamake.make.Make.failure_aborts_build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to stop the script if any action fails (by default, <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
+<p>If this is <code class="docutils literal notranslate"><span class="pre">False</span></code>, then the build will continue to execute unrelated actions.
+In all cases, actions that have already been submitted will be allowed to end normally.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.log_skipped_actions">
+<code class="descname">log_skipped_actions</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.make.Make.log_skipped_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to log (level INFO) skipped actions (by default, <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.nfs_outputs_timeout">
+<code class="descname">nfs_outputs_timeout</code><em class="property"> = 60</em><a class="headerlink" href="#dynamake.make.Make.nfs_outputs_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time to wait for slow NFS outputs (by default, 60 seconds, which is the default
+timeout of the NFS client cache).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.rebuild_changed_actions">
+<code class="descname">rebuild_changed_actions</code><em class="property"> = True</em><a class="headerlink" href="#dynamake.make.Make.rebuild_changed_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to rebuild outputs if the actions have changed (by default, <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.remove_empty_directories">
+<code class="descname">remove_empty_directories</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.make.Make.remove_empty_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to (try to) remove empty directories when deleting the last file in them (by default,
+<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.remove_failed_outputs">
+<code class="descname">remove_failed_outputs</code><em class="property"> = True</em><a class="headerlink" href="#dynamake.make.Make.remove_failed_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to remove output files on a failing action (by default, <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
+<p>It is possible to override this on a per-action basis.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.remove_stale_outputs">
+<code class="descname">remove_stale_outputs</code><em class="property"> = True</em><a class="headerlink" href="#dynamake.make.Make.remove_stale_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to remove old output files before executing an action (by default, <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
+<p>It is possible to override this on a per-action basis.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Make.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Make.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.touch_success_outputs">
+<code class="descname">touch_success_outputs</code><em class="property"> = True</em><a class="headerlink" href="#dynamake.make.Make.touch_success_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to touch output files on a successful action to ensure they are newer than
+the input file(s) (by default, <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<p>In these modern times, this is mostly unneeded as we use the nanosecond modification time,
+which pretty much guarantees that output files will be newer than input files. In the “bad
+old days”, files created within a second of each other had the same modification time.</p>
+<p>This might still be needed if an output is a directory (not a file) and
+<a class="reference internal" href="#dynamake.make.Make.remove_stale_outputs" title="dynamake.make.Make.remove_stale_outputs"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dynamake.make.Make.remove_stale_outputs</span></code></a> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, since otherwise the
+<code class="docutils literal notranslate"><span class="pre">mtime</span></code> of an existing directory will not necessarily be updated to reflect the fact the
+action was executed. In general it is not advised to depend on the <code class="docutils literal notranslate"><span class="pre">mtime</span></code> of
+directories; it is better to specify a glob matching the expected files inside them, or use
+an explicit timestamp file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Make.wait_nfs_outputs">
+<code class="descname">wait_nfs_outputs</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.make.Make.wait_nfs_outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to wait before assuming an output file does not exist (by default, <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<p>This may be required if the output file(s) are on an NFS-mounted partition, and the NFS
+client is caching <cite>stat</cite> results (the default behavior, since otherwise performance would be
+horrible).</p>
+<p>Setting the NFS mount flags to include <cite>lookupcache=positive</cite> will force the client to avoid
+caching a “file not found” <cite>stat</cite> result, thereby ensuring that if we detect a missing output
+file, it really is missing. This has minimal impact on performance (since, most of the time,
+<cite>stat</cite> calls are for existing files).</p>
+<p>If you can’t tweak the NFS mount flags, set <cite>wait_nfs_outputs</cite>; this will cause us to wait up
+to 60 seconds (the default NFS <cite>stat</cite> cache time) before pronouncing that the output file
+really is missing.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.make.PersistentAction">
+<em class="property">class </em><code class="descclassname">dynamake.make.</code><code class="descname">PersistentAction</code><span class="sig-paren">(</span><em>previous: Optional[PersistentAction] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.make.PersistentAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An action taken during step execution.</p>
+<p>We can persist this to ensure the actions taken in a future invocation is identical,
+to trigger rebuild if the list of actions changes.</p>
+<dl class="method">
+<dt id="dynamake.make.PersistentAction.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>previous: Optional[PersistentAction] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.PersistentAction.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.PersistentAction.command">
+<code class="descname">command</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.PersistentAction.command" title="Permalink to this definition">¶</a></dt>
+<dd><p>The executed command.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.PersistentAction.done_action">
+<code class="descname">done_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.PersistentAction.done_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record the end time of the command.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.PersistentAction.end">
+<code class="descname">end</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.PersistentAction.end" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time the command ended execution.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.PersistentAction.from_data">
+<em class="property">static </em><code class="descname">from_data</code><span class="sig-paren">(</span><em>data: List[Dict[str, Any]]</em><span class="sig-paren">)</span> &#x2192; List[dynamake.make.PersistentAction]<a class="headerlink" href="#dynamake.make.PersistentAction.from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct the data from loaded YAML.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.PersistentAction.into_data">
+<code class="descname">into_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[Dict[str, Any]]<a class="headerlink" href="#dynamake.make.PersistentAction.into_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize for dumping to YAML.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.PersistentAction.is_empty">
+<code class="descname">is_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.make.PersistentAction.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this action has any additional information over its predecessor.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.PersistentAction.previous">
+<code class="descname">previous</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.PersistentAction.previous" title="Permalink to this definition">¶</a></dt>
+<dd><p>The previous action of the step, if any.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.PersistentAction.require">
+<code class="descname">require</code><span class="sig-paren">(</span><em>path: str</em>, <em>up_to_date: dynamake.make.UpToDate</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.PersistentAction.require" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a required input to the action.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.PersistentAction.required">
+<code class="descname">required</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.PersistentAction.required" title="Permalink to this definition">¶</a></dt>
+<dd><p>The up-to-date data for each input.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.PersistentAction.run_action">
+<code class="descname">run_action</code><span class="sig-paren">(</span><em>command: List[str]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.PersistentAction.run_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the executed command of the action.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.PersistentAction.start">
+<code class="descname">start</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.PersistentAction.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time the command started execution.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.make.Resources">
+<em class="property">class </em><code class="descclassname">dynamake.make.</code><code class="descname">Resources</code><a class="headerlink" href="#dynamake.make.Resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Restrict parallelism using some resources.</p>
+<dl class="attribute">
+<dt id="dynamake.make.Resources.available">
+<code class="descname">available</code><em class="property"> = {'jobs': 56}</em><a class="headerlink" href="#dynamake.make.Resources.available" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unused amount of each resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Resources.condition">
+<code class="descname">condition</code><em class="property"> = &lt;asyncio.locks.Condition object at 0x7f9e0cd6ae48 [unlocked]&gt;</em><a class="headerlink" href="#dynamake.make.Resources.condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A condition for synchronizing between the asynchronous actions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Resources.default">
+<code class="descname">default</code><em class="property"> = {'jobs': 1}</em><a class="headerlink" href="#dynamake.make.Resources.default" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default amount used by each action.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Resources.effective">
+<em class="property">static </em><code class="descname">effective</code><span class="sig-paren">(</span><em>requested: Dict[str, int]</em><span class="sig-paren">)</span> &#x2192; Dict[str, int]<a class="headerlink" href="#dynamake.make.Resources.effective" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the effective resource amounts given the explicitly requested amounts.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Resources.free">
+<em class="property">static </em><code class="descname">free</code><span class="sig-paren">(</span><em>amounts: Dict[str, int]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Resources.free" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release ownership of some resource amounts.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Resources.grab">
+<em class="property">static </em><code class="descname">grab</code><span class="sig-paren">(</span><em>amounts: Dict[str, int]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Resources.grab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take ownership of some resource amounts.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Resources.have">
+<em class="property">static </em><code class="descname">have</code><span class="sig-paren">(</span><em>amounts: Dict[str, int]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.make.Resources.have" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether there are available resource to cover the requested amounts.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Resources.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Resources.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Resources.total">
+<code class="descname">total</code><em class="property"> = {'jobs': 56}</em><a class="headerlink" href="#dynamake.make.Resources.total" title="Permalink to this definition">¶</a></dt>
+<dd><p>The total amount of each resource.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Resources.use">
+<em class="property">static </em><code class="descname">use</code><span class="sig-paren">(</span><em>**amounts</em><span class="sig-paren">)</span> &#x2192; Dict[str, int]<a class="headerlink" href="#dynamake.make.Resources.use" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for and grab some resource amounts.</p>
+<p>Returns the actual used resource amounts. If a resource is not explicitly given an amount,
+the default used amount from the <a class="reference internal" href="#dynamake.make.resource_parameters" title="dynamake.make.resource_parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.resource_parameters()</span></code></a> declaration is
+used.</p>
+<p>The caller is responsible for invoking <a class="reference internal" href="#dynamake.make.Resources.free" title="dynamake.make.Resources.free"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.Resources.free()</span></code></a> to
+release the actual used resources.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="dynamake.make.RestartException">
+<em class="property">exception </em><code class="descclassname">dynamake.make.</code><code class="descname">RestartException</code><a class="headerlink" href="#dynamake.make.RestartException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Indicates a step needs to be re-run, this time executing all actions.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.make.Step">
+<em class="property">class </em><code class="descclassname">dynamake.make.</code><code class="descname">Step</code><span class="sig-paren">(</span><em>func: dynamake.application.Func, output: Union[None, str, Sequence[str], Sequence[Sequence[str]], Sequence[Sequence[Sequence[str]]], Sequence[Sequence[Sequence[Sequence[str]]]]]</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.make.Step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A build step.</p>
+<dl class="method">
+<dt id="dynamake.make.Step.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>func: dynamake.application.Func, output: Union[None, str, Sequence[str], Sequence[Sequence[str]], Sequence[Sequence[Sequence[str]]], Sequence[Sequence[Sequence[Sequence[str]]]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Step.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a build step function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Step.by_name">
+<code class="descname">by_name</code><em class="property"> = {}</em><a class="headerlink" href="#dynamake.make.Step.by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current known steps.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Step.by_regexp">
+<code class="descname">by_regexp</code><em class="property"> = []</em><a class="headerlink" href="#dynamake.make.Step.by_regexp" title="Permalink to this definition">¶</a></dt>
+<dd><p>The step for building any output capture pattern.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Step.collect">
+<em class="property">static </em><code class="descname">collect</code><span class="sig-paren">(</span><em>wrapped: Callable, output: Union[None, str, Sequence[str], Sequence[Sequence[str]], Sequence[Sequence[Sequence[str]]], Sequence[Sequence[Sequence[Sequence[str]]]]]</em><span class="sig-paren">)</span> &#x2192; dynamake.make.Step<a class="headerlink" href="#dynamake.make.Step.collect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect a build step function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Step.func">
+<code class="descname">func</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Step.func" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configured function that implements the step.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.Step.name">
+<code class="descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.make.Step.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the function implementing the step.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.Step.output">
+<code class="descname">output</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.Step.output" title="Permalink to this definition">¶</a></dt>
+<dd><p>The outputs generated by the step.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.Step.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.Step.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="dynamake.make.StepException">
+<em class="property">exception </em><code class="descclassname">dynamake.make.</code><code class="descname">StepException</code><a class="headerlink" href="#dynamake.make.StepException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Indicates a step has aborted and its output must not be used by other steps.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.make.UpToDate">
+<em class="property">class </em><code class="descclassname">dynamake.make.</code><code class="descname">UpToDate</code><span class="sig-paren">(</span><em>producer: str</em>, <em>mtime_ns: int = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.make.UpToDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data for each up-to-date target.</p>
+<dl class="method">
+<dt id="dynamake.make.UpToDate.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>producer: str</em>, <em>mtime_ns: int = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.UpToDate.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record a new up-to-date target.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.make.UpToDate.from_data">
+<em class="property">static </em><code class="descname">from_data</code><span class="sig-paren">(</span><em>data: Dict[str, str]</em><span class="sig-paren">)</span> &#x2192; dynamake.make.UpToDate<a class="headerlink" href="#dynamake.make.UpToDate.from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load from YAML data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.make.UpToDate.into_data">
+<code class="descname">into_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="headerlink" href="#dynamake.make.UpToDate.into_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize for dumping to YAML.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.UpToDate.mtime_ns">
+<code class="descname">mtime_ns</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.UpToDate.mtime_ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>The modified time of the target (in nanoseconds).</p>
+<p>This is negative until we know the correct time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.make.UpToDate.producer">
+<code class="descname">producer</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.make.UpToDate.producer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The step (with parameters) that updated the target.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.config_context">
+<code class="descclassname">dynamake.make.</code><code class="descname">config_context</code><span class="sig-paren">(</span><em>**values</em><span class="sig-paren">)</span> &#x2192; Iterator[None]<a class="headerlink" href="#dynamake.make.config_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide additional context information for computing configuration parameters.</p>
+<p>Writing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">config_context</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="n">config_param</span><span class="p">(</span><span class="s1">&#39;baz&#39;</span><span class="p">)</span>
+    <span class="n">call</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Will (re)compute the configuration parameters, taking into account the specified context
+parameters. The configuration parameters can be queried as usual:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">when</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt"> foo</span><span class="p">:</span> <span class="nv">value</span> <span class="p p-Indicator">}</span>
+  <span class="nt">then</span><span class="p">:</span> <span class="p p-Indicator">{</span> <span class="nv">...</span> <span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+<p>However, this will fail when trying to match steps when <code class="docutils literal notranslate"><span class="pre">foo</span></code> does not appear in the context.
+Avoid this by further restricting the <code class="docutils literal notranslate"><span class="pre">when</span></code> clause, either by adding a <code class="docutils literal notranslate"><span class="pre">step</span></code> constraint,
+or by testing that <code class="docutils literal notranslate"><span class="pre">foo</span></code> does appear in the context:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">when</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt"> context_contains</span><span class="p">:</span> <span class="nv">foo</span><span class="p p-Indicator">,</span><span class="nt"> foo</span><span class="p">:</span> <span class="nv">value</span> <span class="p p-Indicator">}</span>
+  <span class="nt">then</span><span class="p">:</span> <span class="p p-Indicator">{</span> <span class="nv">...</span> <span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The path of the <a class="reference internal" href="#dynamake.make.config_file" title="dynamake.make.config_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.config_file()</span></code></a> is <strong>not</strong> affected by the context,
+even though the content of the file <strong>is</strong> affected. Therefore, do <strong>not</strong> invoke
+<code class="docutils literal notranslate"><span class="pre">config_file</span></code> both inside and outside a <code class="docutils literal notranslate"><span class="pre">config_context</span></code> block in the same step.</p>
+<p class="last">Similarly, the contexts of steps invoked to build required input file(s) are
+<strong>not</strong> affected by the <code class="docutils literal notranslate"><span class="pre">config_context</span></code>. It only affects the current step.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.config_file">
+<code class="descclassname">dynamake.make.</code><code class="descname">config_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[str]<a class="headerlink" href="#dynamake.make.config_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the step-specific configuration file in the following step action(s).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.config_param">
+<code class="descclassname">dynamake.make.</code><code class="descname">config_param</code><span class="sig-paren">(</span><em>name: str</em>, <em>default: Any = None</em>, <em>*</em>, <em>keep_in_file: bool = False</em>, <em>is_required: bool = False</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.make.config_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the value of a parameter from the step-specific configuration.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.done">
+<code class="descclassname">dynamake.make.</code><code class="descname">done</code><span class="sig-paren">(</span><em>awaitable: Awaitable</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.make.done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Await some non-DynaMake function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.e">
+<code class="descclassname">dynamake.make.</code><code class="descname">e</code><span class="sig-paren">(</span><em>*strings</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.make.e" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.fmt" title="dynamake.patterns.fmt"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.fmt()</span></code></a> but automatically uses the named arguments
+of the current step.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">dm.e(...)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">dm.fmt(dm.step_kwargs(),</span> <span class="pre">...)</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.eglob_capture">
+<code class="descclassname">dynamake.make.</code><code class="descname">eglob_capture</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; dynamake.patterns.Captured<a class="headerlink" href="#dynamake.make.eglob_capture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.glob_capture" title="dynamake.patterns.glob_capture"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.glob_capture()</span></code></a> but automatically uses the named arguments
+of the current step.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">dm.eglob_capture(...)</span></code> is the same as
+<code class="docutils literal notranslate"><span class="pre">dm.glob_capture(*fmt_capture(dm.step_kwargs(),</span> <span class="pre">...))</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.eglob_extract">
+<code class="descclassname">dynamake.make.</code><code class="descname">eglob_extract</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; List[Dict[str, Any]]<a class="headerlink" href="#dynamake.make.eglob_extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.glob_extract" title="dynamake.patterns.glob_extract"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.glob_extract()</span></code></a> but automatically uses the named arguments
+of the current step.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">dm.eglob_extract(...)</span></code> is the same as
+<code class="docutils literal notranslate"><span class="pre">dm.glob_extract(fmt_capture(dm.step_kwargs(),</span> <span class="pre">...))</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.eglob_fmt">
+<code class="descclassname">dynamake.make.</code><code class="descname">eglob_fmt</code><span class="sig-paren">(</span><em>pattern: str</em>, <em>*patterns</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#dynamake.make.eglob_fmt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.glob_fmt" title="dynamake.patterns.glob_fmt"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.glob_fmt()</span></code></a> but automatically uses the named arguments of
+the current step.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">dm.eglob_fmt(...)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">dm.glob_fmt(fmt_capture(dm.step_kwargs(),</span>
+<span class="pre">...))</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.eglob_paths">
+<code class="descclassname">dynamake.make.</code><code class="descname">eglob_paths</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#dynamake.make.eglob_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.glob_paths" title="dynamake.patterns.glob_paths"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.glob_paths()</span></code></a> but automatically uses the named arguments of
+the current step.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">dm.eglob_paths(...)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">dm.glob_paths*fmt_capture(dm.step_kwargs(),</span>
+<span class="pre">...))</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.erequire">
+<code class="descclassname">dynamake.make.</code><code class="descname">erequire</code><span class="sig-paren">(</span><em>*templates</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.erequire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.make.require" title="dynamake.make.require"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.require()</span></code></a>, but first <a class="reference internal" href="#dynamake.make.e" title="dynamake.make.e"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.e()</span></code></a>-xpands each
+parameter.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">erequire(...)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">require(e(...))</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.eshell">
+<code class="descclassname">dynamake.make.</code><code class="descname">eshell</code><span class="sig-paren">(</span><em>*templates</em>, <em>**resources</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.eshell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.make.shell" title="dynamake.make.shell"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.shell()</span></code></a>, but first <a class="reference internal" href="#dynamake.make.e" title="dynamake.make.e"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.e()</span></code></a>-xpands each
+parameter.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">eshell(...)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">shell(e(...))</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.espawn">
+<code class="descclassname">dynamake.make.</code><code class="descname">espawn</code><span class="sig-paren">(</span><em>*templates</em>, <em>**resources</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.espawn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.make.spawn" title="dynamake.make.spawn"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.spawn()</span></code></a>, but first <a class="reference internal" href="#dynamake.make.e" title="dynamake.make.e"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.e()</span></code></a>-xpands each
+parameter.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">espawn(...)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">spawn(e(...))</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.esubmit">
+<code class="descclassname">dynamake.make.</code><code class="descname">esubmit</code><span class="sig-paren">(</span><em>*templates</em>, <em>**resources</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.esubmit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.make.submit" title="dynamake.make.submit"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.submit()</span></code></a>, but first <a class="reference internal" href="#dynamake.make.e" title="dynamake.make.e"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.e()</span></code></a>-xpands each
+parameter.</p>
+<p>That is, <code class="docutils literal notranslate"><span class="pre">esubmit(...)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">submit(e(...))</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.log_prefix">
+<code class="descclassname">dynamake.make.</code><code class="descname">log_prefix</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.make.log_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>The prefix for log messages.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.make">
+<code class="descclassname">dynamake.make.</code><code class="descname">make</code><span class="sig-paren">(</span><em>parser: argparse.ArgumentParser, *, default_targets: Union[None, str, Sequence[str], Sequence[Sequence[str]], Sequence[Sequence[Sequence[str]]], Sequence[Sequence[Sequence[Sequence[str]]]]] = 'all', logger_name: Optional[str] = None, adapter: Optional[Callable[argparse.Namespace, None]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.make" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic <code class="docutils literal notranslate"><span class="pre">main</span></code> function for <code class="docutils literal notranslate"><span class="pre">DynaMake</span></code>.</p>
+<p>The optional <code class="docutils literal notranslate"><span class="pre">adapter</span></code> may perform additional adaptation of the execution environment based on
+the parsed command-line arguments before the actual function(s) are invoked.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.require">
+<code class="descclassname">dynamake.make.</code><code class="descname">require</code><span class="sig-paren">(</span><em>*paths</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.require" title="Permalink to this definition">¶</a></dt>
+<dd><p>Require an input file for the step.</p>
+<p>This queues an async build of the input file using the appropriate step,
+and immediately returns.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.require_context">
+<code class="descclassname">dynamake.make.</code><code class="descname">require_context</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="headerlink" href="#dynamake.make.require_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the context used by steps for building required input files.</p>
+<p>Modifications to this context will be visible in the configuration context of steps invoked to
+create required input files.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Once a required file was already built to be used as an input for some step, then the
+contexts specified by other steps (requiring the same file) will be silently ignored.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.reset_make">
+<code class="descclassname">dynamake.make.</code><code class="descname">reset_make</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.reset_make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all the current state, for tests.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.resource_parameters">
+<code class="descclassname">dynamake.make.</code><code class="descname">resource_parameters</code><span class="sig-paren">(</span><em>**default_amounts</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.resource_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declare additional resources for controlling parallel action execution.</p>
+<p>Each resource should have been declared as a <a class="reference internal" href="#dynamake.application.Param" title="dynamake.application.Param"><code class="xref py py-class docutils literal notranslate"><span class="pre">dynamake.application.Param</span></code></a>.
+The value given here is the default amount of the resource used by each action that
+does not specify an explicit value.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.run">
+<code class="descclassname">dynamake.make.</code><code class="descname">run</code><span class="sig-paren">(</span><em>awaitable: Awaitable</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.make.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Python3.6 way to implement the <cite>asyncio.run</cite> function from Python 3.7.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.shell">
+<code class="descclassname">dynamake.make.</code><code class="descname">shell</code><span class="sig-paren">(</span><em>*command</em>, <em>**resources</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.shell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a shell command.</p>
+<p>The caller is responsible for all quotations. If the first character of the command is <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>
+then it is “silent”, that is, it is logged in the DEBUG level and not the INFO level.</p>
+<p>This first waits until all input files requested so far are ready.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.spawn">
+<code class="descclassname">dynamake.make.</code><code class="descname">spawn</code><span class="sig-paren">(</span><em>*command</em>, <em>**resources</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.spawn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute an external program with arguments.</p>
+<p>If the first character of the command is <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> then it is “silent”, that is, it is logged in the
+DEBUG level and not the INFO level.</p>
+<p>This first waits until all input files requested so far are ready.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.step">
+<code class="descclassname">dynamake.make.</code><code class="descname">step</code><span class="sig-paren">(</span><em>output: Union[None, str, Sequence[str], Sequence[Sequence[str]], Sequence[Sequence[Sequence[str]]], Sequence[Sequence[Sequence[Sequence[str]]]]]</em><span class="sig-paren">)</span> &#x2192; Callable[Callable, Callable]<a class="headerlink" href="#dynamake.make.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorate a build step functions.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">top</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, this is a top-level step that can be directly invoked from the main
+function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.step_kwargs">
+<code class="descclassname">dynamake.make.</code><code class="descname">step_kwargs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="headerlink" href="#dynamake.make.step_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the named arguments of the current step.</p>
+<p>These are the captured names extracted from the output file(s) that the current
+step was invoked to build.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.submit">
+<code class="descclassname">dynamake.make.</code><code class="descname">submit</code><span class="sig-paren">(</span><em>*command</em>, <em>**resources</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.make.submit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute an external command using a submit prefix.</p>
+<p>This allows the action configuration file to specify a <code class="docutils literal notranslate"><span class="pre">run_prefix</span></code> and/or <code class="docutils literal notranslate"><span class="pre">run_suffix</span></code>
+injected before and/or after the spawned command. The result is treated as a shell command. This
+allows setting up environment variables, submitting the command to execute on a compute cluster,
+etc.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.make.sync">
+<code class="descclassname">dynamake.make.</code><code class="descname">sync</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[BaseException]<a class="headerlink" href="#dynamake.make.sync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until all the input files specified so far are built.</p>
+<p>This is invoked automatically before running actions.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-dynamake.patterns">
+<span id="dynamake-patterns-module"></span><h2>dynamake.patterns module<a class="headerlink" href="#module-dynamake.patterns" title="Permalink to this headline">¶</a></h2>
+<p>Utility functions for dealing with strings.</p>
+<p>This is somewhat of a mixed bag and should arguably be split into several modules. The <code class="docutils literal notranslate"><span class="pre">Stat</span></code>
+functionality really doesn’t belong here, but has cyclical dependencies with <code class="docutils literal notranslate"><span class="pre">clean_path</span></code> and
+<code class="docutils literal notranslate"><span class="pre">glob</span></code>.</p>
+<dl class="class">
+<dt id="dynamake.patterns.AnnotatedStr">
+<em class="property">class </em><code class="descclassname">dynamake.patterns.</code><code class="descname">AnnotatedStr</code><a class="headerlink" href="#dynamake.patterns.AnnotatedStr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+<p>A wrapper containing optional annotations.</p>
+<dl class="attribute">
+<dt id="dynamake.patterns.AnnotatedStr.emphasized">
+<code class="descname">emphasized</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.patterns.AnnotatedStr.emphasized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this was annotated by <a class="reference internal" href="#dynamake.patterns.emphasized" title="dynamake.patterns.emphasized"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.emphasized()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.AnnotatedStr.exists">
+<code class="descname">exists</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.patterns.AnnotatedStr.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this was annotated by <a class="reference internal" href="#dynamake.patterns.exists" title="dynamake.patterns.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.exists()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.AnnotatedStr.optional">
+<code class="descname">optional</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.patterns.AnnotatedStr.optional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this was annotated by <a class="reference internal" href="#dynamake.patterns.optional" title="dynamake.patterns.optional"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.optional()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.AnnotatedStr.phony">
+<code class="descname">phony</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.patterns.AnnotatedStr.phony" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this was annotated by <a class="reference internal" href="#dynamake.patterns.phony" title="dynamake.patterns.phony"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.phony()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.AnnotatedStr.precious">
+<code class="descname">precious</code><em class="property"> = False</em><a class="headerlink" href="#dynamake.patterns.AnnotatedStr.precious" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this was annotated by <a class="reference internal" href="#dynamake.patterns.precious" title="dynamake.patterns.precious"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.precious()</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.patterns.Captured">
+<em class="property">class </em><code class="descclassname">dynamake.patterns.</code><code class="descname">Captured</code><a class="headerlink" href="#dynamake.patterns.Captured" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The results of operations using a capture pattern.</p>
+<p>A capture pattern is similar to a glob pattern. However, all wildcard matches must
+be specified inside <code class="docutils literal notranslate"><span class="pre">{...}</span></code> as follows:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">{*name}</span></code> has the same effect as <code class="docutils literal notranslate"><span class="pre">*</span></code>. The matching substring will be captured
+using the key <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">/{**name}/</span></code> has the same effect as <code class="docutils literal notranslate"><span class="pre">/**/</span></code>. The matching substring will be captured
+using the key <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+</ul>
+<p>If <code class="docutils literal notranslate"><span class="pre">name</span></code> starts with <code class="docutils literal notranslate"><span class="pre">_</span></code> then the matching substring will be discarded instead of being
+captured.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">name</span></code> is followed by <code class="docutils literal notranslate"><span class="pre">:</span></code>, it must be followed by the actual glob pattern. That is,
+<code class="docutils literal notranslate"><span class="pre">{*name}</span></code> is a shorthand for <code class="docutils literal notranslate"><span class="pre">{*name:*}</span></code> and <code class="docutils literal notranslate"><span class="pre">{**name}</span></code> is shorthand for <code class="docutils literal notranslate"><span class="pre">{*name:**}</span></code>.
+This allows using arbitrary match patterns (for example <code class="docutils literal notranslate"><span class="pre">{*digit:[0-9]}</span></code> will capture a single
+decimal digit).</p>
+<dl class="method">
+<dt id="dynamake.patterns.Captured.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.Captured.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an empty capture results.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.Captured.paths">
+<code class="descname">paths</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.patterns.Captured.paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of existing paths that matched the capture pattern.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.Captured.wildcards">
+<code class="descname">wildcards</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.patterns.Captured.wildcards" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of wildcard values captured from the matched paths.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.patterns.LoggingFormatter">
+<em class="property">class </em><code class="descclassname">dynamake.patterns.</code><code class="descname">LoggingFormatter</code><span class="sig-paren">(</span><em>fmt=None</em>, <em>datefmt=None</em>, <em>style='%'</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.patterns.LoggingFormatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code></p>
+<p>A formatter that uses a decimal point for milliseconds.</p>
+<dl class="method">
+<dt id="dynamake.patterns.LoggingFormatter.formatTime">
+<code class="descname">formatTime</code><span class="sig-paren">(</span><em>record: Any</em>, <em>datefmt: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.patterns.LoggingFormatter.formatTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format the time.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="dynamake.patterns.NonOptionalException">
+<em class="property">exception </em><code class="descclassname">dynamake.patterns.</code><code class="descname">NonOptionalException</code><span class="sig-paren">(</span><em>glob: str</em>, <em>capture: str</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.patterns.NonOptionalException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Exception when an non-optional pattern did not match any disk files.</p>
+<dl class="method">
+<dt id="dynamake.patterns.NonOptionalException.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>glob: str</em>, <em>capture: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.NonOptionalException.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new exception when no disk files matched the pattern.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.NonOptionalException.glob">
+<code class="descname">glob</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.patterns.NonOptionalException.glob" title="Permalink to this definition">¶</a></dt>
+<dd><p>The glob pattern that failed to match.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="dynamake.patterns.NotString">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">NotString</code><em class="property"> = typing.Union[NoneType, typing.Sequence[str], typing.Sequence[typing.Sequence[str]], typing.Sequence[typing.Sequence[typing.Sequence[str]]], typing.Sequence[typing.Sequence[typing.Sequence[typing.Sequence[str]]]]]</em><a class="headerlink" href="#dynamake.patterns.NotString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <code class="docutils literal notranslate"><span class="pre">Strings</span></code> but without the actual <code class="docutils literal notranslate"><span class="pre">str</span></code> type, for <code class="docutils literal notranslate"><span class="pre">overload</span></code> specifications.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.patterns.RangeParam">
+<em class="property">class </em><code class="descclassname">dynamake.patterns.</code><code class="descname">RangeParam</code><span class="sig-paren">(</span><em>min: Optional[float] = None</em>, <em>max: Optional[float] = None</em>, <em>step: Optional[int] = None</em>, <em>include_min: bool = True</em>, <em>include_max: bool = True</em><span class="sig-paren">)</span><a class="headerlink" href="#dynamake.patterns.RangeParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A range for a numeric argument.</p>
+<dl class="method">
+<dt id="dynamake.patterns.RangeParam.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>min: Optional[float] = None</em>, <em>max: Optional[float] = None</em>, <em>step: Optional[int] = None</em>, <em>include_min: bool = True</em>, <em>include_max: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.RangeParam.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a range for numeric arguments.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.RangeParam.include_max">
+<code class="descname">include_max</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.patterns.RangeParam.include_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the maximal value is allowd.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.RangeParam.include_min">
+<code class="descname">include_min</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.patterns.RangeParam.include_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the minimal value is allowed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.patterns.RangeParam.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>value: Union[float, int]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.RangeParam.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether a value is valid.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.RangeParam.max">
+<code class="descname">max</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.patterns.RangeParam.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>The optional maximal allowed value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.RangeParam.min">
+<code class="descname">min</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.patterns.RangeParam.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>The optional minimal allowed value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dynamake.patterns.RangeParam.step">
+<code class="descname">step</code><em class="property"> = None</em><a class="headerlink" href="#dynamake.patterns.RangeParam.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>The optional step between values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dynamake.patterns.RangeParam.text">
+<code class="descname">text</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.patterns.RangeParam.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return text for an error message.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="dynamake.patterns.Stat">
+<em class="property">class </em><code class="descclassname">dynamake.patterns.</code><code class="descname">Stat</code><a class="headerlink" href="#dynamake.patterns.Stat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Cache stat calls for better performance.</p>
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.exists">
+<em class="property">static </em><code class="descname">exists</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.Stat.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether a file exists on disk.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.forget">
+<em class="property">static </em><code class="descname">forget</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.Stat.forget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forget the cached <code class="docutils literal notranslate"><span class="pre">stat</span></code> data about a file. If it is a directory,
+also forget all the data about any files it contains.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.glob">
+<em class="property">static </em><code class="descname">glob</code><span class="sig-paren">(</span><em>pattern: str</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#dynamake.patterns.Stat.glob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast glob through the cache.</p>
+<p>If the pattern is a file name we know about, we can just return the result without touching
+the file system.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.isdir">
+<em class="property">static </em><code class="descname">isdir</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.Stat.isdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether a file exists and is a directory.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.isfile">
+<em class="property">static </em><code class="descname">isfile</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.Stat.isfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether a file exists and is not a directory.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.mkdir_create">
+<em class="property">static </em><code class="descname">mkdir_create</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.Stat.mkdir_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new directory.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.mkdir_exists">
+<em class="property">static </em><code class="descname">mkdir_exists</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.Stat.mkdir_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure a directory exists.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.remove">
+<em class="property">static </em><code class="descname">remove</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.Stat.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force remove of a file or a directory.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.Stat.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the cached data.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.rmdir">
+<em class="property">static </em><code class="descname">rmdir</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.Stat.rmdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an empty directory.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.stat">
+<em class="property">static </em><code class="descname">stat</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; os.stat_result<a class="headerlink" href="#dynamake.patterns.Stat.stat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the <code class="docutils literal notranslate"><span class="pre">stat</span></code> data for a file.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.touch">
+<em class="property">static </em><code class="descname">touch</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#dynamake.patterns.Stat.touch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the last modified time of a file (or a directory) to now.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="dynamake.patterns.Stat.try_stat">
+<em class="property">static </em><code class="descname">try_stat</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; Optional[os.stat_result]<a class="headerlink" href="#dynamake.patterns.Stat.try_stat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the <code class="docutils literal notranslate"><span class="pre">stat</span></code> data for a file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="dynamake.patterns.Strings">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">Strings</code><em class="property"> = typing.Union[NoneType, str, typing.Sequence[str], typing.Sequence[typing.Sequence[str]], typing.Sequence[typing.Sequence[typing.Sequence[str]]], typing.Sequence[typing.Sequence[typing.Sequence[typing.Sequence[str]]]]]</em><a class="headerlink" href="#dynamake.patterns.Strings" title="Permalink to this definition">¶</a></dt>
+<dd><p>An arbitrarily nested list of strings.</p>
+<p>This should really have been <code class="docutils literal notranslate"><span class="pre">Strings</span> <span class="pre">=</span> <span class="pre">Union[None,</span> <span class="pre">str,</span> <span class="pre">List[Strings]]</span></code> but <code class="docutils literal notranslate"><span class="pre">mypy</span></code> can’t
+handle nested types. Therefore, do not use this as a return type; as much as possible, return a
+concrete type (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">List[str]</span></code>, etc.). Instead use <code class="docutils literal notranslate"><span class="pre">Strings</span></code> as an argument type, for
+functions that <a class="reference internal" href="#dynamake.patterns.flatten" title="dynamake.patterns.flatten"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.flatten()</span></code></a> their arguments. This will allow the callers
+to easily nest lists without worrying about flattening themselves.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.capture2glob">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">capture2glob</code><span class="sig-paren">(</span><em>capture: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.patterns.capture2glob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translate a capture pattern to the equivalent <code class="docutils literal notranslate"><span class="pre">glob</span></code> pattern.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.capture2re">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">capture2re</code><span class="sig-paren">(</span><em>capture: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.patterns.capture2re" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translate a capture pattern to the equivalent <code class="docutils literal notranslate"><span class="pre">re.Pattern</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.clean_path">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">clean_path</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.patterns.clean_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a clean and hopefully “canonical” path.</p>
+<p>We do not use absolute paths everywhere (as that would mess up the match patterns).
+Instead we just convert each <cite>//</cite> to a single <cite>/</cite>. Perhaps more is needed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.color">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">color</code><span class="sig-paren">(</span><em>*strings</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the strings, replacing any that were <a class="reference internal" href="#dynamake.patterns.emphasized" title="dynamake.patterns.emphasized"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.emphasized()</span></code></a> by a colored
+version.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.copy_annotations">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">copy_annotations</code><span class="sig-paren">(</span><em>source: str</em>, <em>target: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.patterns.copy_annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the annotations from one string to another.</p>
+<p>Returns the annotated target string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.each_string">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">each_string</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; Iterator[str]<a class="headerlink" href="#dynamake.patterns.each_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate on all strings in an arbitrarily nested list of strings.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.emphasized">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">emphasized</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.emphasized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate patterns as emphasized (impacts logging command lines).</p>
+<p>Emphasized text in a command line is printed in color when logged. Strategic use of this makes
+it easier to figure out the actual actions in the text soup of all the command line flags.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.exists">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">exists</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate patterns as exist-only (for use in action <code class="docutils literal notranslate"><span class="pre">input</span></code> and/or <code class="docutils literal notranslate"><span class="pre">output</span></code>).</p>
+<p>An exist-only input is only required to exist, but its modification date is ignored.
+Directories are always treated this way because modification date on directories
+is unreliable.</p>
+<p>An exist-only output is not touched following the execution, that is, the action
+ensures the file will exist, but may choose to leave it unmodified.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.first_sentence">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">first_sentence</code><span class="sig-paren">(</span><em>text: Optional[str]</em><span class="sig-paren">)</span> &#x2192; Optional[str]<a class="headerlink" href="#dynamake.patterns.first_sentence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the first sentence in documentation text.</p>
+<p>Very loosely based on <a class="reference external" href="https://stackoverflow.com/a/31505798/63376">https://stackoverflow.com/a/31505798/63376</a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.flatten">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">flatten</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#dynamake.patterns.flatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flatten an arbitrarily nested list of strings into a simple list for processing.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.fmt">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">fmt</code><span class="sig-paren">(</span><em>wildcards: Any</em>, <em>*templates</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.fmt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <code class="docutils literal notranslate"><span class="pre">str.format</span></code>, but will format any number of templates in one call.</p>
+<p>In addition, this will preserve the annotations of the templates, if any.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.fmt_capture">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">fmt_capture</code><span class="sig-paren">(</span><em>kwargs: Any</em>, <em>*patterns</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.fmt_capture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format one or more capture patterns using the specified values.</p>
+<p>This is different from invoking <code class="docutils literal notranslate"><span class="pre">pattern.format(**kwargs)</span></code> on each pattern because <code class="docutils literal notranslate"><span class="pre">format</span></code>
+would be confused by the <code class="docutils literal notranslate"><span class="pre">{*name}</span></code> captures in the pattern(s). In contrast, <code class="docutils literal notranslate"><span class="pre">fmt_capture</span></code>
+will expand such directives, as long as the <code class="docutils literal notranslate"><span class="pre">name</span></code> does not start with <code class="docutils literal notranslate"><span class="pre">_</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.fmts">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">fmts</code><span class="sig-paren">(</span><em>wildcards_list: List[Dict[str, Any]], *templates</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#dynamake.patterns.fmts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.fmt" title="dynamake.patterns.fmt"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.fmt()</span></code></a>, except expands the <code class="docutils literal notranslate"><span class="pre">templates</span></code> for each of the
+provided <code class="docutils literal notranslate"><span class="pre">wildcards</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.glob2re">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">glob2re</code><span class="sig-paren">(</span><em>glob: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#dynamake.patterns.glob2re" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translate a <code class="docutils literal notranslate"><span class="pre">glob</span></code> pattern to the equivalent <code class="docutils literal notranslate"><span class="pre">re.Pattern</span></code> (as a string).</p>
+<p>This is subtly different from <code class="docutils literal notranslate"><span class="pre">fnmatch.translate</span></code> since we use it to match the result of a
+successful <code class="docutils literal notranslate"><span class="pre">glob</span></code> rather than to actually perform the <code class="docutils literal notranslate"><span class="pre">glob</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.glob_capture">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">glob_capture</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; dynamake.patterns.Captured<a class="headerlink" href="#dynamake.patterns.glob_capture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given capture pattern, return the <code class="xref py py-class docutils literal notranslate"><span class="pre">dynamake.pattern.Captured</span></code> information (paths and
+captured values).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>capture</strong> – <p>The pattern may contain <code class="docutils literal notranslate"><span class="pre">...{*captured_name}...</span></code>, as well as normal
+<code class="docutils literal notranslate"><span class="pre">glob</span></code> patterns (<code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>). The <code class="docutils literal notranslate"><span class="pre">...{name}..</span></code> is expanded using the provided
+<code class="docutils literal notranslate"><span class="pre">wildcards</span></code>. The <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> are <code class="docutils literal notranslate"><span class="pre">glob</span></code>-ed. A capture expression will cause the
+matching substring to be collected in a list of dictionaries (one per matching existing path
+name). Valid capture patterns are:</p>
+<ul>
+<li><code class="docutils literal notranslate"><span class="pre">...{*captured_name}...</span></code> is treated as if it was a <code class="docutils literal notranslate"><span class="pre">*</span></code> glob pattern, and the matching
+zero or more characters are entered into the dictionary under the <code class="docutils literal notranslate"><span class="pre">captured_name</span></code> key.</li>
+<li><code class="docutils literal notranslate"><span class="pre">...{*captured_name:pattern}...</span></code> is similar but allows you to explicitly specify the
+glob pattern
+capture it under the key <code class="docutils literal notranslate"><span class="pre">foo</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">...{**captured_name}...</span></code> is a shorthand for <code class="docutils literal notranslate"><span class="pre">...{*captured_name:**}...</span></code>. That is, it
+acts similarly to <code class="docutils literal notranslate"><span class="pre">...{*captured_name}...</span></code> except that the glob pattern is <code class="docutils literal notranslate"><span class="pre">**</span></code>.<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Do not use the <code class="docutils literal notranslate"><span class="pre">{*foo:**}</span></code> form. There’s some special treatment for the <code class="docutils literal notranslate"><span class="pre">{**foo}</span></code>
+form as it can expand to the empty string. In particular, it is expected to always be
+used between <code class="docutils literal notranslate"><span class="pre">/</span></code> characters, as in <code class="docutils literal notranslate"><span class="pre">.../{**foo}/...</span></code>, and may expand to either no
+directory name, a single directory name, or a sequence of directory names.</p>
+</div>
+</li>
+</ul>
+<p>If a pattern is not annotated with <a class="reference internal" href="#dynamake.patterns.optional" title="dynamake.patterns.optional"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.optional()</span></code></a> and it matches no
+existing files, an error is raised.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The list of existing file paths that match the patterns, and the list of dictionaries with
+the captured values for each such path. The annotations
+(<a class="reference internal" href="#dynamake.patterns.AnnotatedStr" title="dynamake.patterns.AnnotatedStr"><code class="xref py py-class docutils literal notranslate"><span class="pre">dynamake.patterns.AnnotatedStr</span></code></a>) of the pattern are copied to the paths expanded
+from the pattern.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#dynamake.patterns.Captured" title="dynamake.patterns.Captured">Captured</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.glob_extract">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">glob_extract</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; List[Dict[str, Any]]<a class="headerlink" href="#dynamake.patterns.glob_extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.glob_capture" title="dynamake.patterns.glob_capture"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.glob_capture()</span></code></a>, but just return the list of extracted
+wildcards dictionaries, ignoring the matching paths.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.glob_fmt">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">glob_fmt</code><span class="sig-paren">(</span><em>pattern: str</em>, <em>*templates</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#dynamake.patterns.glob_fmt" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each file that matches the capture <code class="docutils literal notranslate"><span class="pre">pattern</span></code>, extract its wildcards,
+then use them to format each of the <code class="docutils literal notranslate"><span class="pre">templates</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.glob_paths">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">glob_paths</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#dynamake.patterns.glob_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.glob_capture" title="dynamake.patterns.glob_capture"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.glob_capture()</span></code></a>, but just return the list of matching
+paths, ignoring any extracted values.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.is_emphasized">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">is_emphasized</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.is_emphasized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether a string has been annotated as <a class="reference internal" href="#dynamake.patterns.emphasized" title="dynamake.patterns.emphasized"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.emphasized()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.is_exists">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">is_exists</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.is_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether a string has been annotated as <a class="reference internal" href="#dynamake.patterns.exists" title="dynamake.patterns.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.exists()</span></code></a>-only.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.is_optional">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">is_optional</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.is_optional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether a string has been annotated as <a class="reference internal" href="#dynamake.patterns.optional" title="dynamake.patterns.optional"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.optional()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.is_phony">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">is_phony</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.is_phony" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether a string has been annotated as <a class="reference internal" href="#dynamake.patterns.phony" title="dynamake.patterns.phony"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.phony()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.is_precious">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">is_precious</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.is_precious" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether a string has been annotated as <a class="reference internal" href="#dynamake.patterns.precious" title="dynamake.patterns.precious"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.precious()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.match_extract">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">match_extract</code><span class="sig-paren">(</span><em>pattern: str</em>, <em>*strings</em><span class="sig-paren">)</span> &#x2192; List[Dict[str, Any]]<a class="headerlink" href="#dynamake.patterns.match_extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#dynamake.patterns.glob_extract" title="dynamake.patterns.glob_extract"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.glob_extract()</span></code></a>, except that it uses just one capture
+pattern and apply it to some string(s).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.match_fmt">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">match_fmt</code><span class="sig-paren">(</span><em>pattern: Any</em>, <em>template: Any</em>, <em>*strings</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.match_fmt" title="Permalink to this definition">¶</a></dt>
+<dd><p>for each of the <code class="docutils literal notranslate"><span class="pre">strings</span></code>, capture it using the <code class="docutils literal notranslate"><span class="pre">pattern</span></code> and use the extracted values to
+format the <code class="docutils literal notranslate"><span class="pre">template</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.optional">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">optional</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.optional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate patterns as optional (for use in action <code class="docutils literal notranslate"><span class="pre">input</span></code> and/or <code class="docutils literal notranslate"><span class="pre">output</span></code>).</p>
+<p>An optional input is allowed not to exist before the action is executed.
+This is useful if the action responds to the files but can execute without them.</p>
+<p>An optional output is allowed not to exist after the action is executed.
+This is useful to ensure such outputs are removed following a failed execution,
+or before a new execution.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.phony">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">phony</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.phony" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate patterns as phony (for use in action <code class="docutils literal notranslate"><span class="pre">input</span></code> and/or <code class="docutils literal notranslate"><span class="pre">output</span></code>).</p>
+<p>A phony target does not exist as a disk file. When required as an input, its producer
+step is always executed, and the dependent step always executes its sub-processes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.precious">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">precious</code><span class="sig-paren">(</span><em>*patterns</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#dynamake.patterns.precious" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate patterns as precious (for use in action <code class="docutils literal notranslate"><span class="pre">output</span></code>).</p>
+<p>A precious output is never deleted. This covers both deletion of “stale” outputs before an
+action is run and deletion of “failed” outputs after an action has failed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.str2bool">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">str2bool</code><span class="sig-paren">(</span><em>string: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#dynamake.patterns.str2bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a boolean command line argument.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.str2choice">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">str2choice</code><span class="sig-paren">(</span><em>options: List[str]</em><span class="sig-paren">)</span> &#x2192; Callable[str, str]<a class="headerlink" href="#dynamake.patterns.str2choice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a parser that accepts a string argument which is one of the options.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.str2enum">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">str2enum</code><span class="sig-paren">(</span><em>enum: type</em><span class="sig-paren">)</span> &#x2192; Callable[str, Any]<a class="headerlink" href="#dynamake.patterns.str2enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a parser for an enum command line argument.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.str2float">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">str2float</code><span class="sig-paren">(</span><em>min: Optional[float] = None</em>, <em>max: Optional[float] = None</em>, <em>step: Optional[int] = None</em>, <em>include_min: bool = True</em>, <em>include_max: bool = True</em><span class="sig-paren">)</span> &#x2192; Callable[str, float]<a class="headerlink" href="#dynamake.patterns.str2float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a parser that accepts a float argument in the specified
+<code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.pattern.RangeParam()</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.str2int">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">str2int</code><span class="sig-paren">(</span><em>min: Optional[int] = None</em>, <em>max: Optional[int] = None</em>, <em>step: Optional[int] = None</em>, <em>include_min: bool = True</em>, <em>include_max: bool = True</em><span class="sig-paren">)</span> &#x2192; Callable[str, int]<a class="headerlink" href="#dynamake.patterns.str2int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a parser that accepts an int argument in the specified
+<code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.pattern.RangeParam()</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.str2list">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">str2list</code><span class="sig-paren">(</span><em>parser: Callable[str, Any]</em><span class="sig-paren">)</span> &#x2192; Callable[str, List[Any]]<a class="headerlink" href="#dynamake.patterns.str2list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse an argument which is a list of strings, where each must be parsed on its own.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dynamake.patterns.str2optional">
+<code class="descclassname">dynamake.patterns.</code><code class="descname">str2optional</code><span class="sig-paren">(</span><em>parser: Callable[str, Any]</em><span class="sig-paren">)</span> &#x2192; Callable[str, Optional[Any]]<a class="headerlink" href="#dynamake.patterns.str2optional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse an argument which also takes the special value <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-dynamake.version">
+<span id="dynamake-version-module"></span><h2>dynamake.version module<a class="headerlink" href="#module-dynamake.version" title="Permalink to this headline">¶</a></h2>
+<p>Version is generated by setup.py.</p>
+</div>
+<div class="section" id="module-dynamake">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dynamake" title="Permalink to this headline">¶</a></h2>
+<p>Main DynaMake module.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dynamake.bin.html" class="btn btn-neutral float-right" title="dynamake.bin package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral" title="dynamake" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Weizmann Institute of Science.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3.49',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

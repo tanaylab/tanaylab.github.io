@@ -1,0 +1,987 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DynaMake - Dynamic Make in Python &mdash; DynaMake 0.3.49 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The MIT License (MIT)" href="LICENSE.html" />
+    <link rel="prev" title="DynaMake - Dynamic Make in Python" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DynaMake
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.49
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Readme</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why">WHY</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-build-graphs">Dynamic Build Graphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-control">Configuration Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#why-not">WHY NOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what">WHAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-scripts">Build Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pattern-steps">Pattern Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-outputs">Dynamic Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#universal-main-program">Universal Main Program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#annotations">Annotations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-flags">Control Flags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-configuration">Build Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel-resources">Parallel Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#action-configuration">Action Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configurable-applications">Configurable Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-not-yet">WHAT NOT (YET)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License (MIT)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">package</a></li>
+<li class="toctree-l1"><a class="reference external" href="cover/index.html#http://">coverage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DynaMake</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>DynaMake - Dynamic Make in Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dynamake-dynamic-make-in-python">
+<h1>DynaMake - Dynamic Make in Python<a class="headerlink" href="#dynamake-dynamic-make-in-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why">
+<h2>WHY<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><em>“What the world needs is another build tool”</em></p>
+<p class="attribution">&mdash;Way too many people</p>
+</div></blockquote>
+<p>So, why yet <em>another</em> one?</p>
+<p>DynaMake’s raisons d’etre are:</p>
+<ul class="simple">
+<li>First class support for dynamic build graphs.</li>
+<li>Fine-grained configuration control.</li>
+<li>Python implementation.</li>
+</ul>
+<p>DynaMake was created to address a concrete need for repeatable configurable processing in the
+context of scientific computation pipelines, but should be applicable in wider problem domains.</p>
+<div class="section" id="dynamic-build-graphs">
+<h3>Dynamic Build Graphs<a class="headerlink" href="#dynamic-build-graphs" title="Permalink to this headline">¶</a></h3>
+<p>This is a fancy way of saying that the following are supported:</p>
+<p><strong>Dynamic inputs</strong>: The full set of inputs of a build step may depend on a subset of its inputs.</p>
+<p>An example of dynamic inputs is compiling a C source file, which actually depends on all the
+included header files. For a more complex example, consider data analysis where the input data is
+classified into one of several categories. The actual analysis results are obtained by a
+category-specific algorithm, which generates different input files for the final consolidation step.</p>
+<p>Dynamic inputs are supported in various ways by most build tools - some of these ways being more
+convoluted than others. DynaMake provides natural first-class support for such cases.</p>
+<p><strong>Dynamic outputs</strong>: The set of outputs of a build step may depend on its inputs.</p>
+<p>An example of dynamic outputs is running a clustering step on some large data, which may produce any
+number of clusters. Each of these clusters needs to go through some further processing. Perhaps only
+some of these clusters need to be processed (based on some expensive-to-compute filter).</p>
+<p>Dynamic outputs are sufficiently common in scientific computation pipelines that they are a major
+source of pain. There are workarounds, for sure. But almost no existing tool has direct support for
+them, and of the few tools that do, most do it as an afterthought. Since this issue has wide-ranging
+implications on the build tool, this means they typically don’t do it well. A notable exception is
+<a class="reference external" href="https://shakebuild.com/">Shake</a>, which DynaMake is heavily inspired by.</p>
+<p>The problem with dynamic outputs (and, to a lesser extent, dynamic inputs) is that they make other
+build tool features really hard to implement. Therefore, retrofitting them into an existing build
+tool causes some features to break. In the worst case this leads to silent broken builds.</p>
+<p>Some examples of features that become very difficult in the presence of a dynamic build graph are:</p>
+<ul class="simple">
+<li>The ability to aggressively optimize the case when a build needs to do nothing at all, and
+in general reduce the build system overhead.</li>
+<li>The ability to perform a dry run that accurately lists <em>all</em> the steps that will be needed to
+build an arbitrary target.</li>
+<li>Having a purely declarative build language, which can be more easily learned than any programming
+language (even Python :-) and may be processed as pure data by additional tools.</li>
+</ul>
+</div>
+<div class="section" id="configuration-control">
+<h3>Configuration Control<a class="headerlink" href="#configuration-control" title="Permalink to this headline">¶</a></h3>
+<p>This is a fancy way of saying that you can tweak the parameters of arbitrary steps of a complex
+pipeline, and then only execute the affected parts of the pipeline, either all the way to the final
+results or just to obtain some intermediate results to examine. This use case occurs <em>a lot</em> in
+scientific computation pipelines.</p>
+<p>Configuration parameters can be either specified as explicit command line options for executed
+actions, or inside configuration files(s). A few build tools will trigger a rebuild if the command
+line options have changed. All build tools will allow adding a configuration file as a dependency;
+however, this requires setting up a per-invocation configuration file which can become very unwieldy
+for a large pipeline - especially when the “same” pattern step needs to be invoked with different
+configurations depending on the exact files (e.g., different compilation flags for different source
+files).</p>
+<p>DynaMake automates the generation of a per-invocation configuration file, based on a single central
+configuration file, so that on modification, only the affected actions are invoked. In addition,
+DynaMake tracks the list of inputs, outputs, actions and their command line options, so that any
+change in the pipeline itself will trigger the invocation of the affected actions.</p>
+<p>This functionality requires keeping additional persistent state between invocation. This state is
+stored as human-readable (YAML) files in a special directory (by default, <code class="docutils literal notranslate"><span class="pre">.dynamake</span></code>, but you can
+override it using the <code class="docutils literal notranslate"><span class="pre">DYNAMAKE_PERSISTENT_DIR</span></code> environment variable). The file names are legible
+(based on the step name and its parameters, if any), so it is easy to examine them after the fact to
+understand exactly which parameter values were used where.</p>
+<p>In rare cases, there are good reasons to avoid any such additional persistent state. DynaMake allows
+disabling these features, switching to relying only on the modification times of the input files.
+This of course results in less reliable rebuilds.</p>
+</div>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>DynaMake was initially created to address the needs of automating scientific computation pipelines
+(specifically in bio-informatics, specifically in single-cell RNA sequencing, not that it matters).
+However, it is a general-purpose build tool, which may be useful for a wide range of users.</p>
+<p>DynaMake is heavily inspired by <a class="reference external" href="https://shakebuild.com/">Shake</a>. However, <code class="docutils literal notranslate"><span class="pre">shake</span></code> is
+implemented in <a class="reference external" href="https://www.haskell.org/">Haskell</a>. Haskell is unlikely to be pre-installed on a
+typical machine, and installing it (and <code class="docutils literal notranslate"><span class="pre">shake</span></code>) is far from trivial, especially when one has no
+<code class="docutils literal notranslate"><span class="pre">sudo</span></code> privileges. Also, writing <code class="docutils literal notranslate"><span class="pre">shake</span></code> rules uses Haskell syntax which, while being simple and
+at times superior, is pretty different from that of most popular programming languages.</p>
+<p>In contrast, Python is much more likely to already be installed on a typical machine. It is trivial
+to just type <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">dynamake</span></code> (or <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">dynamake</span></code> if you have <code class="docutils literal notranslate"><span class="pre">sudo</span></code>
+privileges). The build rules are simple Python scripts, which means most people are already familiar
+with the language, or are in the process of becoming so for other reasons.</p>
+<p>Using a proven and familiar language is also preferable to coming up with a whole new build-oriented
+language, especially when creating a general-purpose build tool. The GNU <code class="docutils literal notranslate"><span class="pre">make</span></code> syntax is a
+warning for how such specialized languages inevitably devolve into a general-purpose mess.</p>
+</div>
+</div>
+<div class="section" id="why-not">
+<h2>WHY NOT<a class="headerlink" href="#why-not" title="Permalink to this headline">¶</a></h2>
+<p>DynaMake’s unique blend of features comes at some costs:</p>
+<ul>
+<li><p class="first">It is a new, immature tool. As such, it lacks some features it could/should provide,
+is less efficient than it could be, and you may encounter the occasional bug. Hopefully this will
+improve with time. If you want DynaMake-like features with a proven track record, you should
+consider <code class="docutils literal notranslate"><span class="pre">shake</span></code>.</p>
+</li>
+<li><p class="first">The provided goals, as described above, may be a poor fit for your use case.</p>
+<p>If your build graph and configuration are truly static, consider using <a class="reference external" href="https://ninja-build.org/">Ninja</a> which tries to maximize the benefits of such a static build pipeline.
+It is almost the opposite of DynaMake in this respect.</p>
+<p>If your build graph is only “mostly static” (e.g., just needs a restricted form of dynamic inputs,
+such as included header files), then you have (too) many other options to list here. Using the
+classical <code class="docutils literal notranslate"><span class="pre">make</span></code> is a good default choice.</p>
+</li>
+<li><p class="first">It is a low-level build tool, on par with <code class="docutils literal notranslate"><span class="pre">make</span></code> and <code class="docutils literal notranslate"><span class="pre">ninja</span></code>.</p>
+<p>If you are looking for a tool that comes with a lot of built-in rules for dealing with specific
+computer languages (say, C/C++), and will automatically deal with cross-platform issues,
+consider using <a class="reference external" href="https://cmake.org/">CMake</a> or <a class="reference external" href="https://xmake.io/">XMake</a> instead.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="what">
+<h2>WHAT<a class="headerlink" href="#what" title="Permalink to this headline">¶</a></h2>
+<p>DynaMake is essentially a Python library. There is a <code class="docutils literal notranslate"><span class="pre">dynamake</span></code> universal executable script
+provided with the package, similar to <a class="reference external" href="https://scons.org/">SCons</a>, but you still need to write
+your build script in Python, using the library’s utilities, and you can also easily invoke the
+provided <code class="docutils literal notranslate"><span class="pre">make</span></code> main function from your code. You can even directly invoke the build functionality
+from your own custom main function.</p>
+<p>DynaMake build steps may invoke applications written in any language, which are configured in any
+way (command line flags, configuration files, etc.).</p>
+<p>As a convenience, DynaMake also provides utilities for writing Python “configurable applications”
+which make heavy use of DynaMake’s automated configuration control. A <code class="docutils literal notranslate"><span class="pre">dynamain</span></code> universal
+executable script removes the need to wrap each Python function in its own executable script, and
+you can easily invoke the provided <code class="docutils literal notranslate"><span class="pre">main</span></code> function from your code. You can even directly invoke
+the configurable application functions from your own custom main function.</p>
+<div class="section" id="build-scripts">
+<h3>Build Scripts<a class="headerlink" href="#build-scripts" title="Permalink to this headline">¶</a></h3>
+<p>A typical build script consists of a set of step functions, which are functions decorated with
+<a class="reference internal" href="dynamake.html#dynamake.make.step" title="dynamake.make.step"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.step()</span></code></a>. This requires an explicit <code class="docutils literal notranslate"><span class="pre">output=...</span></code> parameter listing the
+file(s) created by the step.</p>
+<p>Here is a DynaMake build script which copies the file <code class="docutils literal notranslate"><span class="pre">foo</span></code> to the file <code class="docutils literal notranslate"><span class="pre">bar</span></code>, if <code class="docutils literal notranslate"><span class="pre">bar</span></code> does
+not exist, or if <code class="docutils literal notranslate"><span class="pre">foo</span></code> is newer than <code class="docutils literal notranslate"><span class="pre">bar</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dynamake.make</span> <span class="kn">as</span> <span class="nn">dm</span>
+
+<span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">copy_bar_to_foo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">shell</span><span class="p">(</span><span class="s1">&#39;cp bar foo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is essentially equivalent to the <code class="docutils literal notranslate"><span class="pre">make</span></code> rule:</p>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nf">foo</span><span class="o">:</span> <span class="n">bar</span>
+        cp bar foo
+</pre></div>
+</div>
+<p>That is, DynaMake will only execute the shell command <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">bar</span> <span class="pre">foo</span></code> if the <code class="docutils literal notranslate"><span class="pre">foo</span></code> file is missing
+or is older than the <code class="docutils literal notranslate"><span class="pre">bar</span></code> file. In general, DynaMake will skip actions unless it finds a
+sufficient reason to execute them. If there are multiple actions in a step, and DynaMake skipped
+some to discover that a later action needs to be executed, then DynaMake restarts the step, and this
+time executes all actions. That is, step functions are (should be) “idempotent”; re-running a step
+multiple times should have no effect.</p>
+<p>The Python version is more verbose, so if this was all there was to it, <code class="docutils literal notranslate"><span class="pre">make</span></code> would have been
+preferable. However, DynaMake allows one to specify scripts that are impossible in <code class="docutils literal notranslate"><span class="pre">make</span></code>,
+justifying the additional syntax.</p>
+<p>For example, inside each step, you can do the following:</p>
+<ul class="simple">
+<li>Invoke <a class="reference internal" href="dynamake.html#dynamake.make.require" title="dynamake.make.require"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.require()</span></code></a> to ensure the specified path exists and is and up-to-date.
+Building of required input files is done asynchronously (concurrently).</li>
+<li>Invoke <code class="docutils literal notranslate"><span class="pre">await</span></code> of <a class="reference internal" href="dynamake.html#dynamake.make.sync" title="dynamake.make.sync"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.sync()</span></code></a> to ensure all required input files specified so
+far have completed to build.</li>
+<li>Invoke <code class="docutils literal notranslate"><span class="pre">await</span></code> of <a class="reference internal" href="dynamake.html#dynamake.make.shell" title="dynamake.make.shell"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.shell()</span></code></a> or <a class="reference internal" href="dynamake.html#dynamake.make.spawn" title="dynamake.make.spawn"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.spawn()</span></code></a> to trigger
+the execution of a shell command or an external program. This will automatically <code class="docutils literal notranslate"><span class="pre">sync</span></code> first
+to ensure all required input files have completed to build.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Inside a step, do not simply ``await`` co-routines that are not provided by DynaMake.</strong></p>
+<p class="last">DynaMake tracks the current step, and invoking <code class="docutils literal notranslate"><span class="pre">await</span></code> of some other co-routines will confuse
+it. Use <a class="reference internal" href="dynamake.html#dynamake.make.done" title="dynamake.make.done"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.done()</span></code></a> to <code class="docutils literal notranslate"><span class="pre">await</span></code> on external co-routines. That is, write
+<code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">done(something())</span></code> rather than <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">something()</span></code>.</p>
+</div>
+<ul class="simple">
+<li>Use Python code to examine the file system (it is recommended to use
+<code class="xref py py-class docutils literal notranslate"><span class="pre">dynamake.stat.Stat</span></code> for cached <code class="docutils literal notranslate"><span class="pre">stat</span></code> operations), analyze the content of
+required input files (following a <code class="docutils literal notranslate"><span class="pre">sync</span></code>), perform control flow operations (branches, loops),
+invoke Python functions which do any of these things, etc.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>The correctness of the ``stat`` cache depends on accurate listing of each action’s inputs and
+outputs.</strong></p>
+<p class="last">In general DynaMake needs these lists to be accurate for correct operation. This is true of
+almost any build tool. In theory, one could use <code class="docutils literal notranslate"><span class="pre">strace</span></code> to automatically extract the true
+lists of inputs and outputs, but this is complex, fragile (breaks for programs running on
+cluster servers), and impacts the performance.</p>
+</div>
+<p>The ability to mix general Python code together with <code class="docutils literal notranslate"><span class="pre">make</span></code> functionality is what gives DynaMake
+its additional power over static build tools like <code class="docutils literal notranslate"><span class="pre">make</span></code> or <code class="docutils literal notranslate"><span class="pre">ninja</span></code>. The following examples
+will demonstrate some common idioms using this power.</p>
+</div>
+<div class="section" id="pattern-steps">
+<h3>Pattern Steps<a class="headerlink" href="#pattern-steps" title="Permalink to this headline">¶</a></h3>
+<p>A more generic script might be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dynamake.make</span> <span class="kn">as</span> <span class="nn">dm</span>
+<span class="kn">from</span> <span class="nn">c_source_files</span> <span class="kn">import</span> <span class="n">scan_included_files</span>  <span class="c1"># Assume this for simplicity.</span>
+
+<span class="c1"># Naive: does not handle a cycle of files including each other,</span>
+<span class="c1"># does not allow for missing include files (e.g. in #ifdef),</span>
+<span class="c1"># doesn&#39;t cache results, etc.</span>
+<span class="k">def</span> <span class="nf">require_included_files</span><span class="p">(</span><span class="n">paths</span><span class="p">:</span> <span class="o">*</span><span class="n">Strings</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="o">*</span><span class="n">paths</span><span class="p">)</span>
+    <span class="n">sync</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">included_path</span> <span class="ow">in</span> <span class="n">dm</span><span class="o">.</span><span class="n">each_string</span><span class="p">(</span><span class="o">*</span><span class="n">paths</span><span class="p">):</span>
+        <span class="n">require_included_files</span><span class="p">(</span><span class="n">scan_included_files</span><span class="p">(</span><span class="n">included_path</span><span class="p">))</span>
+
+<span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;obj/{*name}.o&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">make_object</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">source_path</span> <span class="o">=</span> <span class="s1">&#39;src/{name}.c&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">source_path</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="s1">&#39;src/{name}.c&#39;</span><span class="p">)</span>  <span class="c1"># Same as above</span>
+    <span class="n">source_path</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">e</span><span class="p">(</span><span class="s1">&#39;src/{name}.c&#39;</span><span class="p">)</span>  <span class="c1"># Same as above</span>
+    <span class="n">require_included_files</span><span class="p">(</span><span class="n">source_path</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">espawn</span><span class="p">(</span><span class="s1">&#39;cc&#39;</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="s1">&#39;obj/{name}.o&#39;</span><span class="p">,</span> <span class="n">source_path</span><span class="p">)</span>
+
+<span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;bin/main&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">make_executable</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">object_paths</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">glob_fmt</span><span class="p">(</span><span class="s1">&#39;src/{*name}.c&#39;</span><span class="p">,</span> <span class="s1">&#39;obj/{name}.o&#39;</span><span class="p">)</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">object_paths</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="s1">&#39;ld&#39;</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="s1">&#39;bin/main.o&#39;</span><span class="p">,</span> <span class="n">object_paths</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This demonstrates some additional concepts:</p>
+<ul>
+<li><p class="first">If the <code class="docutils literal notranslate"><span class="pre">output</span></code> of a step contains a <code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.capture()</span></code> pattern, then the
+extracted values are passed to the function as string arguments. These can be used inside the
+function to generate file names (in the above, the source file names).</p>
+<p>This is similar to <code class="docutils literal notranslate"><span class="pre">make</span></code> pattern rules, but is more powerful, as you can specify multiple parts
+of the file name to be captured. A pattern such as <code class="docutils literal notranslate"><span class="pre">foo/{*phase}/{*part}/bar</span></code> is essentially
+impossible to express in <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
+<p>When a target is <code class="docutils literal notranslate"><span class="pre">require</span></code>-d, it is matched against these patterns, and the unique step that
+matches the target is triggered, with the appropriate (extracted) arguments. It is an error for
+more than one step to match. If no step matches, the target is assumed to be a source file, and
+must exist on the disk. Otherwise, DynaMake complains it doesn’t know how to make this target.</p>
+</li>
+<li><p class="first">DynaMake provides many functions to deal with <code class="docutils literal notranslate"><span class="pre">glob</span></code>-ing, capturing, and formatting lists
+of strings, listed in the <a class="reference internal" href="dynamake.html#module-dynamake.patterns" title="dynamake.patterns"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns()</span></code></a> module. These make it convenient to perform
+common operations. For example, <code class="docutils literal notranslate"><span class="pre">:py:func:`dynamake.make.e</span></code> is equivalent to
+<a class="reference internal" href="dynamake.html#dynamake.patterns.fmt" title="dynamake.patterns.fmt"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.fmt()</span></code></a> using the <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> of the current step. This is an extremely
+common operation so we give it such a short function name. Another example is
+<a class="reference internal" href="dynamake.html#dynamake.patterns.glob_fmt" title="dynamake.patterns.glob_fmt"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.glob_fmt()</span></code></a> which uses a <code class="docutils literal notranslate"><span class="pre">glob</span></code> to obtain a list of file names, then
+<code class="docutils literal notranslate"><span class="pre">extract</span></code> some part(s) of each, then <code class="docutils literal notranslate"><span class="pre">fmt</span></code> some other pattern(s) using these values.</p>
+</li>
+<li><p class="first">Most DynaMake functions accept <code class="xref py py-class docutils literal notranslate"><span class="pre">Strings</span></code>, that is, either a single string, or a list of
+strings, or a list of list of strings, etc.; but they return either a single string or a flat list
+of strings. This makes it easy to pass the output of one function to another. You can also use
+this in your own functions, for example in <code class="docutils literal notranslate"><span class="pre">require_included_files</span></code>.</p>
+</li>
+<li><p class="first">The <code class="docutils literal notranslate"><span class="pre">output</span></code> of a step is also <code class="docutils literal notranslate"><span class="pre">Strings</span></code>, that is, may be a list of files that are created
+by the actions in the step. In contrast, many tools (most notably, <code class="docutils literal notranslate"><span class="pre">make</span></code>) can’t handle the
+notion of multiple outputs from a single step.</p>
+</li>
+<li><p class="first">The <code class="docutils literal notranslate"><span class="pre">require_included_files</span></code> is an example of how a step can examine the content of some
+required input file(s) to determine whether it needs additional required input file(s), or, in
+general, to make any decisions on how to proceed further. Note that it tries to <code class="docutils literal notranslate"><span class="pre">require</span></code> as
+many files as possible concurrently before invoking <code class="docutils literal notranslate"><span class="pre">sync</span></code>. Actual processing
+(<code class="docutils literal notranslate"><span class="pre">scan_included_files</span></code>) is done serially.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="dynamic-outputs">
+<h3>Dynamic Outputs<a class="headerlink" href="#dynamic-outputs" title="Permalink to this headline">¶</a></h3>
+<p>When a step may produce a dynamic set of outputs, it must specify an <code class="docutils literal notranslate"><span class="pre">output</span></code> pattern
+which includes some non captured parts (whose name starts with <code class="docutils literal notranslate"><span class="pre">_</span></code>). For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dynamake.make</span> <span class="kn">as</span> <span class="nn">dm</span>
+
+<span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;unzipped_messages/{*id}/{*_part}.txt&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;unzipped_messages/{*id}/.all.done&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">unzip_message</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;zipped_messages/{id}.zip&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">shell</span><span class="p">(</span><span class="s1">&#39;unzip ...&#39;</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">eshell</span><span class="p">(</span><span class="s1">&#39;touch unzipped_messages/{id}/.all.done&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that only <code class="docutils literal notranslate"><span class="pre">id</span></code> will be set in <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>. DynaMake assumes that the same invocation will
+generate all <code class="docutils literal notranslate"><span class="pre">_part</span></code> values in one call. This demonstrates another point: if a step specifies
+multiple <code class="docutils literal notranslate"><span class="pre">output</span></code> patterns, each must capture the same named argument(s) (in this case <code class="docutils literal notranslate"><span class="pre">name</span></code>),
+but may include different (or no) non-captured path parts.</p>
+<p>The <a class="reference internal" href="dynamake.html#dynamake.make.eshell" title="dynamake.make.eshell"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.eshell()</span></code></a> is equivalent to <code class="docutils literal notranslate"><span class="pre">shell(e(...))</span></code>, that is, it automatically
+formats all the string(s) using the step’s <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>. DynaMake defines several additional such
+functions with an <code class="docutils literal notranslate"><span class="pre">e</span></code> prefix, for example <a class="reference internal" href="dynamake.html#dynamake.make.erequire" title="dynamake.make.erequire"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.erequire()</span></code></a> and
+<a class="reference internal" href="dynamake.html#dynamake.make.eglob_paths" title="dynamake.make.eglob_paths"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.eglob_paths()</span></code></a>.</p>
+<p>Requiring <em>any</em> of the specific output files will cause the step to be invoked and ensure <em>all</em>
+outputs are up-to-date. A common trick, demonstrated above, it to have an additional final file
+serve as a convenient way to require all the files. This allows to query the filesystem for the full
+list of files. For example, assume each part needs to be processed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;processed_messages/{*id}/{*part}.txt&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">process_part</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;unzipped_messages/{id}/{part}.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>And that all parts need to be collected together:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;collected_messages/{*id}.txt&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">collect_parts</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;unzipped_messages/{id}/.all.done&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
+    <span class="n">all_parts</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">eglob_fmt</span><span class="p">(</span><span class="s1">&#39;unzipped_messages/{id}/{*part}.txt&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;processed_messages/{id}/{*part}.txt&#39;</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">eshell</span><span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_parts</span><span class="p">),</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;collected_messages/{id}.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This sort of flow can only be approximated using static build tools. Typically this is done using
+explicit build phases, instead of a unified build script. This results in brittle build systems,
+where the safe best practice if anything changes is to “delete all files and rebuild” to ensure the
+results are correct.</p>
+</div>
+<div class="section" id="universal-main-program">
+<h3>Universal Main Program<a class="headerlink" href="#universal-main-program" title="Permalink to this headline">¶</a></h3>
+<p>Installing DynaMake provides a universal executable build script called <code class="docutils literal notranslate"><span class="pre">dynamake</span></code>, which is a
+thin wrapper around the generic <a class="reference internal" href="dynamake.html#dynamake.make.make" title="dynamake.make.make"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.make()</span></code></a> main function. The easiest way to
+invoke DynaMake is to place your steps inside <code class="docutils literal notranslate"><span class="pre">DynaMake.py</span></code> (or modules included by
+<code class="docutils literal notranslate"><span class="pre">DynaMake.py</span></code>) and invoke this <code class="docutils literal notranslate"><span class="pre">dynamake</span></code> script. You can also specify explicit <code class="docutils literal notranslate"><span class="pre">--module</span></code>
+options in the command line to directly import your step functions from other Python modules.</p>
+<p>You can write your own executable script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">dynamake.make</span> <span class="kn">as</span> <span class="nn">dm</span>
+<span class="kn">import</span> <span class="nn">my_steps</span>
+
+<span class="n">dm</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Which will come pre-loaded with your own steps, and allow you to tweak the program’s help message
+and other aspects, if needed. This is especially useful if you are writing a package that wants to
+provide pre-canned steps for performing some complex operation (such as a scientific computation
+pipeline).</p>
+<p>Finally, you can directly invoke the lower-level API to use build steps as part of your code.
+See the implementation of the <code class="docutils literal notranslate"><span class="pre">make</span></code> function and the API documentation for details.</p>
+</div>
+<div class="section" id="annotations">
+<h3>Annotations<a class="headerlink" href="#annotations" title="Permalink to this headline">¶</a></h3>
+<p>DynaMake allows attaching annotations (<a class="reference internal" href="dynamake.html#dynamake.patterns.AnnotatedStr" title="dynamake.patterns.AnnotatedStr"><code class="xref py py-class docutils literal notranslate"><span class="pre">dynamake.patterns.AnnotatedStr</span></code></a>) to strings (and
+patterns). Multiple annotations may be applied to the same string. The provided string processing
+functions preserve these (that is, pass the annotations from the input(s) to the output(s)). These
+annotations are used by DynaMake to modify the handling of required and output files, and in some
+cases, control formatting.</p>
+<ul>
+<li><p class="first"><a class="reference internal" href="dynamake.html#dynamake.patterns.optional" title="dynamake.patterns.optional"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.optional()</span></code></a> indicates that an output need not exist at the end of the
+step, or a required file need not exist for the following actions to succeed. That is, invoking
+<code class="docutils literal notranslate"><span class="pre">require(optional('foo'))</span></code> will invoke the step that provides <code class="docutils literal notranslate"><span class="pre">foo</span></code>. If there is no such step,
+then <code class="docutils literal notranslate"><span class="pre">foo</span></code> need not exist on the disk. If this step exists, and succeeds, but does not in fact
+create <code class="docutils literal notranslate"><span class="pre">foo</span></code>, and specifies <code class="docutils literal notranslate"><span class="pre">output=optional('foo')</span></code>, then DynaMake will accept this and
+continue. If either of the steps did not specify the <code class="docutils literal notranslate"><span class="pre">optional</span></code> annotation, then DynaMake will
+complain and abort the build.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="dynamake.html#dynamake.patterns.exists" title="dynamake.patterns.exists"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.exists()</span></code></a> ignores the modification time of an input or an output,
+instead just considering whether it exists. That is, invoking <code class="docutils literal notranslate"><span class="pre">require(exists('foo'))</span></code>
+will attempt to build <code class="docutils literal notranslate"><span class="pre">foo</span></code> but will ignore its timestamp when deciding whether to
+skip the execution of following actions in this step. Specifying <code class="docutils literal notranslate"><span class="pre">output=exists('foo')</span></code>
+will disable touching the output file to ensure it is newer than the required input file(s)
+(regardless of the setting of <code class="docutils literal notranslate"><span class="pre">--touch_success_outputs</span></code>).</p>
+</li>
+<li><p class="first"><a class="reference internal" href="dynamake.html#dynamake.patterns.precious" title="dynamake.patterns.precious"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.precious()</span></code></a> prevents output file(s) from being removed
+(regardless of the setting of <code class="docutils literal notranslate"><span class="pre">--remove_stale_outputs</span></code> and <code class="docutils literal notranslate"><span class="pre">--remove_failed_outputs</span></code>).</p>
+</li>
+<li><p class="first"><a class="reference internal" href="dynamake.html#dynamake.patterns.phony" title="dynamake.patterns.phony"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.phony()</span></code></a> marks an output as a non-file target. Typically the
+default top-level <code class="docutils literal notranslate"><span class="pre">all</span></code> target is <code class="docutils literal notranslate"><span class="pre">phony</span></code>, as well as similar top-level targets such as
+<code class="docutils literal notranslate"><span class="pre">clean</span></code>. When a step has any <code class="docutils literal notranslate"><span class="pre">phony</span></code> output(s), its actions are always executed, and a
+synthetic modification time is assigned to it: one nanosecond newer than the newest required
+input.</p>
+<p>If using persistent state to track actions (see below), this state will ignore any parts of
+invoked commands that are marked as <code class="docutils literal notranslate"><span class="pre">phony</span></code>. This prevents changes irrelevant command line
+options from triggering a rebuild. For example, changing the value passed to the <code class="docutils literal notranslate"><span class="pre">--jobs</span></code>
+command line option of a program should not impact its outputs, and therefore should not trigger a
+rebuild.</p>
+<p>TODO: Clarify distinction between phony and optional (especially when using persistent state).</p>
+</li>
+<li><p class="first"><a class="reference internal" href="dynamake.html#dynamake.patterns.emphasized" title="dynamake.patterns.emphasized"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.patterns.emphasized()</span></code></a> is used by <code class="docutils literal notranslate"><span class="pre">shell</span></code> and <code class="docutils literal notranslate"><span class="pre">spawn</span></code>. Arguments
+so annotated are printed in <strong>bold</strong> in the log file. This makes it easier to see the important
+bits of long command lines.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="control-flags">
+<h3>Control Flags<a class="headerlink" href="#control-flags" title="Permalink to this headline">¶</a></h3>
+<p>The behavior of DynaMake can be tweaked by modifying the options specified in
+<a class="reference internal" href="dynamake.html#dynamake.make.Make" title="dynamake.make.Make"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.Make()</span></code></a>. This is typically done by specifying the appropriate command line
+option which is then handled by the provided <code class="docutils literal notranslate"><span class="pre">make</span></code> main function.</p>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">--rebuild_changed_actions</span></code> controls whether DynaMake uses the persistent state to track
+the list of outputs, inputs, invoked sub-steps, and actions with their command line options. This
+ensures that builds are repeatable (barring changes to the environment, such as compiler versions
+etc.). By default this is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>Persistent state is kept in YAML files named <code class="docutils literal notranslate"><span class="pre">.dynamake/step_name.actions.yaml</span></code> or, for
+parameterized steps, <code class="docutils literal notranslate"><span class="pre">.dynamake/step_name/param=value&amp;...&amp;param=value.actions.yaml</span></code>. As a
+convenience, this state also includes the start and end time of each of the invoked actions. This
+allows post-processing tools to analyze the behavior of the build script (as an alternative to
+analyzing the log messages).</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">--failure_aborts_build</span></code> controls whether DynaMake stops the build process on the first
+failure. Otherwise, it attempts to continue to build as many unaffected targets as possible.
+By default this is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">--remove_stale_outputs</span></code> controls whether DynaMake removes all (non-<code class="docutils literal notranslate"><span class="pre">precious</span></code>) outputs
+before executing the first action of a step. By default this is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">--wait_nfs_outputs</span></code> controls whether DynaMake will wait before pronouncing that an output
+file has not been created by the step action(s). This may be needed if the action executes on a
+server in a cluster using an NFS shared file system, as NFS clients are typically caching <code class="docutils literal notranslate"><span class="pre">stat</span></code>
+results (for performance).</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">--nfs_outputs_timeout</span></code> controls the amount of time DynaMake will wait for output files
+to appear after the last step action is done. By default this is 60 seconds, which is the
+default NFS stat cache timeout. However, heavily loaded NFS servers have been known to
+lag for longer of periods of time.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">--touch_success_outputs</span></code> controls whether DynaMake should touch (non-<code class="docutils literal notranslate"><span class="pre">exists</span></code>) output
+file(s) to ensure their modification time is later than that of (non-<code class="docutils literal notranslate"><span class="pre">exists</span></code>) required input
+files(s). By default this is <code class="docutils literal notranslate"><span class="pre">False</span></code> because DynaMake uses the nanosecond modification time,
+which is supported on most modern file systems. The modification times on old file systems used a
+1-second resolution, which could result in the output having the same modification time as the
+input for a fast operation.</p>
+<p>This option might still be needed if an output is a directory (not a file) and is <code class="docutils literal notranslate"><span class="pre">precious</span></code> or
+<code class="docutils literal notranslate"><span class="pre">--remove_stale_outputs</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>. In this case, the modification time of a pre-existing
+directory will not necessarily be updated to reflect the fact that output file(s) in it were
+created or modified by the action(s). In general it is not advised to depend on the modification
+time of directories; it is better to specify a glob matching the expected files inside them, or
+use an explicit timestamp file.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">--remove_failed_outputs</span></code> controls whether DynaMake should remove (non-<code class="docutils literal notranslate"><span class="pre">precious</span></code>) output
+files when a step action has failed. This prevents corrupt output file(s) from remaining on
+the disk and being used in later invocations or by other programs. By default this is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">-remove_empty_directories</span></code> controls whether DynaMake will remove empty directories resulting
+from removing any output file(s). By default this is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">--jobs</span></code> controls the maximal number of <code class="docutils literal notranslate"><span class="pre">shell</span></code> or <code class="docutils literal notranslate"><span class="pre">spawn</span></code> actions that are invoked at the
+same time. By default this is the number of (logical) processors in the system (<code class="docutils literal notranslate"><span class="pre">nproc</span></code>). A
+value of <code class="docutils literal notranslate"><span class="pre">1</span></code> will force executing one action at a time. You can override this default using the
+<code class="docutils literal notranslate"><span class="pre">DYNAMAKE_JOBS</span></code> environment variable.</p>
+<p>A value of <code class="docutils literal notranslate"><span class="pre">0</span></code> will allow for unlimited number of parallel actions. This is useful if actions
+are to be be executed on a cluster of servers instead of on the local machine, or if some other
+resource(s) are used to restrict the number of parallel actions (see below).</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>The DynaMake python code itself is not parallel.</strong></p>
+<p class="last">DynaMake always runs on a single process. Parallelism is the result of DynaMake executing an
+external action, and instead of waiting for it to complete, switching over to a different step
+and processing it until it also executes an external action, and so on. Thus actions may execute
+in parallel, while the Python code is still doing only one thing at a time. This greatly
+simplifies reasoning about the code. Specifically, if a piece of code contains no <code class="docutils literal notranslate"><span class="pre">await</span></code>
+calls, then it is guaranteed to “atomically” execute to completion, so there is no need for a
+lock or a mutex to synchronize between the steps, even when they share some data.</p>
+</div>
+</div>
+<div class="section" id="build-configuration">
+<h3>Build Configuration<a class="headerlink" href="#build-configuration" title="Permalink to this headline">¶</a></h3>
+<p>The above control flags are an example of global build configuration parameters. In general, such
+parameters have a default, can be overridden by some command line option, and may be used by any
+(possibly nested) function of the program.</p>
+<p>The use of global configuration parameters isn’t unique to DynaMake scripts. Therefore, it has been
+factored out and is provided on its own via the <a class="reference internal" href="dynamake.html#module-dynamake.application" title="dynamake.application"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dynamake.application</span></code></a> module, described
+below.</p>
+<p>A quick example of how such parameters can be used is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dynamake.make</span> <span class="kn">as</span> <span class="nn">dm</span>
+
+<span class="n">dm</span><span class="o">.</span><span class="n">Param</span><span class="p">(</span><span class="s1">&#39;mode&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+
+<span class="n">MODE_FLAGS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;debug&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span> <span class="p">],</span>
+    <span class="s1">&#39;release&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span> <span class="p">],</span>
+<span class="p">}</span>
+
+<span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;obj/{*name}.o&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">make_object</span><span class="p">(</span><span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">env</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;src/{name}.c&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">espawn</span><span class="p">(</span><span class="s1">&#39;cc&#39;</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="s1">&#39;obj/{name}.o&#39;</span><span class="p">,</span> <span class="n">MODE_FLAGS</span><span class="p">[</span><span class="n">mode</span><span class="p">],</span> <span class="n">source_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>That is, constructing a new <a class="reference internal" href="dynamake.html#dynamake.application.Param" title="dynamake.application.Param"><code class="xref py py-class docutils literal notranslate"><span class="pre">dynamake.application.Param</span></code></a> specifies the default value and
+command line option(s) for the parameter, and using <a class="reference internal" href="dynamake.html#dynamake.application.env" title="dynamake.application.env"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.env()</span></code></a> as the
+parameter’s default value will ensure the proper value is passed to the step invocation.</p>
+<p>The provided <code class="docutils literal notranslate"><span class="pre">make</span></code> main function will also load the parameter values specified in the file
+<code class="docutils literal notranslate"><span class="pre">DynaConf.yaml</span></code>, if it exists, or any files specified using the <code class="docutils literal notranslate"><span class="pre">--config</span></code> command line option.</p>
+</div>
+<div class="section" id="parallel-resources">
+<h3>Parallel Resources<a class="headerlink" href="#parallel-resources" title="Permalink to this headline">¶</a></h3>
+<p>As mentioned above, DynaMake will perform all <code class="docutils literal notranslate"><span class="pre">require</span></code> operations concurrently, up to the next
+<code class="docutils literal notranslate"><span class="pre">sync</span></code> call of the step (which automatically happens before any <code class="docutils literal notranslate"><span class="pre">shell</span></code> or <code class="docutils literal notranslate"><span class="pre">spawn</span></code> action). As
+a result, by default DynaMake will execute several actions in parallel, subject to the setting of
+<code class="docutils literal notranslate"><span class="pre">--jobs</span></code>.</p>
+<p>It is possible to define some additional resources using <code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.resources()</span></code> to
+restrict parallel execution. For example, specifying <code class="docutils literal notranslate"><span class="pre">resource_parameters(ram=1,</span> <span class="pre">io=1)</span></code> will
+create two new resources, <code class="docutils literal notranslate"><span class="pre">ram</span></code> and <code class="docutils literal notranslate"><span class="pre">io</span></code>, which must have been previously defined using
+configuration <code class="docutils literal notranslate"><span class="pre">Param</span></code> calls. The values specified are the default consumption for actions that do
+not specify an explicit value.</p>
+<p>Then, when invoking <code class="docutils literal notranslate"><span class="pre">shell</span></code> or <code class="docutils literal notranslate"><span class="pre">spawn</span></code>, it is possible to add <code class="docutils literal notranslate"><span class="pre">ram=...</span></code> and/or <code class="docutils literal notranslate"><span class="pre">io=...</span></code>
+named arguments to the call, to override the expected resource consumption of the action. DynaMake
+will ensure that the sum of these expected consumptions will never exceed the established limit.</p>
+</div>
+<div class="section" id="action-configuration">
+<h3>Action Configuration<a class="headerlink" href="#action-configuration" title="Permalink to this headline">¶</a></h3>
+<p>A major use case of DynaMake is fine-grained control over configuration parameters
+for controlling step actions.</p>
+<p>For example, let’s allow configuring the compilation flags in the above example(s):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dynamake.make</span> <span class="kn">as</span> <span class="nn">dm</span>
+
+<span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;obj/{*name}.o&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">make_object</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s1">&#39;src/{name}.c&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="n">await</span> <span class="n">dm</span><span class="o">.</span><span class="n">espawn</span><span class="p">(</span><span class="s1">&#39;cc&#39;</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="s1">&#39;obj/{name}.o&#39;</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">config_param</span><span class="p">(</span><span class="s1">&#39;flags&#39;</span><span class="p">),</span> <span class="n">source_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And create a YAML configuration file as follows:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">when</span><span class="p">:</span>
+    <span class="nt">step</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">make_object</span>
+  <span class="nt">then</span><span class="p">:</span>
+    <span class="nt">flags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">-g</span><span class="p p-Indicator">,</span> <span class="nv">-O2</span><span class="p p-Indicator">]</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">when</span><span class="p">:</span>
+    <span class="nt">step</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">make_object</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">main</span>
+  <span class="nt">then</span><span class="p">:</span>
+    <span class="nt">flags</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">-g</span><span class="p p-Indicator">,</span> <span class="nv">-O3</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>This configuration file needs to be loaded using <a class="reference internal" href="dynamake.html#dynamake.config.Config.load" title="dynamake.config.Config.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.config.Config.load()</span></code></a>. The
+provided <code class="docutils literal notranslate"><span class="pre">make</span></code> main function will automatically load the <code class="docutils literal notranslate"><span class="pre">DynaMake.yaml</span></code> configuration file, if
+it exists, followed by any file specified using the <code class="docutils literal notranslate"><span class="pre">--step_config</span></code> command line option(s), if
+any.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>Do not confuse build and step configuration files.</strong></p>
+<p class="last">The <code class="docutils literal notranslate"><span class="pre">DynaConf.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">--config</span></code> files control the <strong>build</strong> configuration parameters.
+The <code class="docutils literal notranslate"><span class="pre">DynaMake.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">--step_config</span></code> control control the <strong>steps</strong> configuration
+parameters. Thus the <code class="docutils literal notranslate"><span class="pre">DynaConf.yaml</span></code> contains simple build parameter values, while
+<code class="docutils literal notranslate"><span class="pre">DynaMake.yaml</span></code> contains configuration <strong>rules</strong> used to decide on the parameter values for
+each build step invocation.</p>
+</div>
+<p>Explicitly using configuration parameters as shown above is needed when executing generic programs.
+If, however, the action invokes a program implemented using the <a class="reference internal" href="dynamake.html#module-dynamake.application" title="dynamake.application"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dynamake.application</span></code></a>
+functions, it is possible to do better, by using a generated action configuration file. For
+example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">make_foo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">require</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">spawn</span><span class="p">(</span><span class="s1">&#39;dynamain&#39;</span><span class="p">,</span> <span class="s1">&#39;bar_to_foo&#39;</span><span class="p">,</span> <span class="s1">&#39;--config&#39;</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">config_file</span><span class="p">(),</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If <a class="reference internal" href="dynamake.html#dynamake.make.config_file" title="dynamake.make.config_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.config_file()</span></code></a> is invoked, then DynaMake will generate a configuration file
+containing just the parameter values for this specific step invocation. If this file is missing or
+contains different values, than it will trigger the actions, even if the output files otherwise seem
+up-to-date. Thus, even if the main <code class="docutils literal notranslate"><span class="pre">DynaConf.yaml</span></code> file is modified, an action will only be
+rebuilt if its own effective parameter values have changed.</p>
+<p>The paths to the generated configuration files are similar to the path to the persistent state
+files: <code class="docutils literal notranslate"><span class="pre">.dynamake/step_name.config.yaml</span></code> or
+<code class="docutils literal notranslate"><span class="pre">.dynamake/step_name/param=value&amp;param=value.config.yaml</span></code>. Thus, if for some reason you want to
+avoid all persistent state, you should not use this functionality.</p>
+<p>As an additional convenience, DynaMake provides the <a class="reference internal" href="dynamake.html#dynamake.make.submit" title="dynamake.make.submit"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.make.submit()</span></code></a> function which
+allows the action configuration file to specify a <code class="docutils literal notranslate"><span class="pre">run_prefix</span></code> and/or <code class="docutils literal notranslate"><span class="pre">run_suffix</span></code> around what
+would otherwise be a normal <cite>spawn</cite> action. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@dm.step</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">make_foo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">require</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+    <span class="n">await</span> <span class="n">spawn</span><span class="p">(</span><span class="s1">&#39;compute_foo_from_bar&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Combined with the YAML configuration file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">when</span><span class="p">:</span>
+    <span class="nt">step</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">make_foo</span>
+  <span class="nt">then</span><span class="p">:</span>
+    <span class="nt">run_prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">run_on_compute_cluster</span>
+</pre></div>
+</div>
+<p>Will result in DynaMake executing the <code class="docutils literal notranslate"><span class="pre">shell</span></code> command <code class="docutils literal notranslate"><span class="pre">run_on_compute_cluster</span>
+<span class="pre">compute_foo_from_bar</span> <span class="pre">...</span></code>. Both the prefix and suffix are marked as <code class="docutils literal notranslate"><span class="pre">phony</span></code> so modifying them
+will not trigger a rebuild. By default both prefix and suffix are empty, in which case <code class="docutils literal notranslate"><span class="pre">submit</span></code>
+behaves identically to <code class="docutils literal notranslate"><span class="pre">spawn</span></code>.</p>
+</div>
+<div class="section" id="logging">
+<h3>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h3>
+<p>Complex build scripts are notoriously difficult to debug. To help alleviate this pain, DynaMake
+uses the standard Python logging mechanism, and supports the following logging levels:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">INFO</span></code> prints only the executed actions. This is similar to the default <code class="docutils literal notranslate"><span class="pre">make</span></code> behavior.
+Use this if you just want to know what is being run, when all is well. If
+<code class="docutils literal notranslate"><span class="pre">--log_skipped_actions</span></code> is set, then this will also log skipped actions.</li>
+<li><code class="docutils literal notranslate"><span class="pre">WHY</span></code> also prints the reason for executing each action (which output file does not exist and
+needs to be created, which input file is newer than which output file, etc.). This is useful
+for debugging the logic of the build script.</li>
+<li><code class="docutils literal notranslate"><span class="pre">TRACE</span></code> also prints each step invocation. This can further help in debugging the logic of the
+build script.</li>
+<li><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> prints a lot of very detailed information about the flow. Expanded globs, the full
+list of input and output files, the configuration files used, etc. This is useful in the hopefully
+very rare cases when the terse output from the <code class="docutils literal notranslate"><span class="pre">WHY</span></code> and <code class="docutils literal notranslate"><span class="pre">TRACE</span></code> levels is not sufficient for
+figuring out what went wrong.</li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">WHY</span></code> and <code class="docutils literal notranslate"><span class="pre">TRACE</span></code> levels are not a standard python log level. They are defined to be between
+<code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> and <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, in the proper order.</p>
+<p>If using the provided <code class="docutils literal notranslate"><span class="pre">make</span></code> main function, the logging level can be set using the <code class="docutils literal notranslate"><span class="pre">--log-level</span></code>
+command line option. The default log level is <code class="docutils literal notranslate"><span class="pre">WARN</span></code> which means the only expected output would
+be from the actions themselves.</p>
+</div>
+<div class="section" id="configurable-applications">
+<h3>Configurable Applications<a class="headerlink" href="#configurable-applications" title="Permalink to this headline">¶</a></h3>
+<p>A major use case for DynaMake is automating scientific computation pipelines. Such pipelines involve
+multiple actions, which are often also implemented in Python. Each such action also has its own
+configuration parameters, which we’d like to control using action configuration as described
+above.</p>
+<p>A realistic system has multiple such functions that need to be invoked. It is a hassle to have to
+create a separate script for invoking each such function. A way around this is to create a single
+script which takes the function name as a command-line argument.</p>
+<p>DynaMake therefore factors out support for configurable Python-based programs, allowing users to
+implement their own. The <code class="docutils literal notranslate"><span class="pre">dynamake</span></code> script itself can be seen as just another such customized
+program.</p>
+<p>DynaMake installs a universal <code class="docutils literal notranslate"><span class="pre">dynamain</span></code> script which is a thin wrapper for a provided
+<a class="reference internal" href="dynamake.html#dynamake.application.main" title="dynamake.application.main"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.main()</span></code></a> function. This script automatically imports <code class="docutils literal notranslate"><span class="pre">DynaMain.py</span></code> if
+it exists, and any other modules specified by the <code class="docutils literal notranslate"><span class="pre">--module</span></code> command line option.</p>
+<p>Similarly to the <code class="docutils literal notranslate"><span class="pre">make</span></code> main function, you can implement your own custom script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">dynamake.application</span> <span class="kn">as</span> <span class="nn">da</span>
+<span class="kn">import</span> <span class="nn">my_functions</span>
+
+<span class="n">da</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>You can also directly invoke the lower-level API to directly invoke the functions.
+See the implementation of the <code class="docutils literal notranslate"><span class="pre">main</span></code> function and the API documentation for details.</p>
+<p>Here is a trivial example configurable function which can be invoked from the command line using
+this mechanisms:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dynamake.application</span> <span class="kn">as</span> <span class="nn">da</span>
+
+<span class="n">da</span><span class="o">.</span><span class="n">Param</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">parser</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;The number of bars&#39;</span><span class="p">)</span>
+
+<span class="nd">@da.config</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">do_bar</span><span class="p">()</span>
+
+<span class="nd">@da.config</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">do_bar</span><span class="p">(</span><span class="n">bar</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">env</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The usage pattern of the library is as follows:</p>
+<ul class="simple">
+<li>First, one must declare all the parameters of all the configured functions by creating
+<a class="reference internal" href="dynamake.html#dynamake.application.Param" title="dynamake.application.Param"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dynamake.application.Param</span></code></a> objects.</li>
+<li>All functions that use such parameters must be decorated with
+<a class="reference internal" href="dynamake.html#dynamake.application.config" title="dynamake.application.config"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.config()</span></code></a>. They must either be annotated as top level using
+<code class="docutils literal notranslate"><span class="pre">top=True</span></code>, or be directly invoked from another configured function (and, ultimately, from a
+top-level function).</li>
+<li>Some parameters are already defined and managed for you, such as <code class="docutils literal notranslate"><span class="pre">log_level</span></code> to control logging
+and <code class="docutils literal notranslate"><span class="pre">random_seed</span></code> to control the random number generation. The latter is only added if you
+specify <code class="docutils literal notranslate"><span class="pre">random=True</span></code> when invoking <code class="docutils literal notranslate"><span class="pre">config</span></code>. Similarly, <code class="docutils literal notranslate"><span class="pre">jobs</span></code> controls the number of
+processors used in parallel, and is only added if you specify <code class="docutils literal notranslate"><span class="pre">parallel=True</span></code> when invoking
+<code class="docutils literal notranslate"><span class="pre">config</span></code>.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p><strong>The automatic detection of invocations of one configurable function from another is
+simplistic.</strong></p>
+<p class="last">Basically, if we see inside the function source the name of another function, and this isn’t the
+name of a variable being assigned to, then we assume this is a call. This isn’t 100% complete;
+for example this will not detect cases where <code class="docutils literal notranslate"><span class="pre">foo</span></code> calls a non-configured <code class="docutils literal notranslate"><span class="pre">bar</span></code> which then
+calls a configured <code class="docutils literal notranslate"><span class="pre">baz</span></code>. However it works “well enough” for simple code.</p>
+</div>
+<ul class="simple">
+<li>The configured parameters must use <a class="reference internal" href="dynamake.html#dynamake.application.env" title="dynamake.application.env"><code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.env()</span></code></a> as the parameter’s default
+value. This will inject the proper value at each point.</li>
+</ul>
+<p>To invoke this function from the command line, run <code class="docutils literal notranslate"><span class="pre">dynamain</span> <span class="pre">foo</span></code> (or, possibly, <code class="docutils literal notranslate"><span class="pre">dynamain</span>
+<span class="pre">--module</span> <span class="pre">my_functions</span> <span class="pre">foo</span></code>, or <code class="docutils literal notranslate"><span class="pre">dynamain</span> <span class="pre">--config</span> <span class="pre">my_configuration.yaml</span> <span class="pre">foo</span></code>, etc.). A possible
+configuration file for this program would be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bar</span><span class="p">:</span> <span class="mi">2</span>  <span class="c1"># The program will print 2 instead of the default 1.</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">main</span></code> function is self-documenting. Running it with the <code class="docutils literal notranslate"><span class="pre">--help</span></code> command line option will
+list all the available top-level functions. Running it with <code class="docutils literal notranslate"><span class="pre">--help</span> <span class="pre">function_name</span></code> will print the
+function’s documentation, and list all the parameters used by it (or any configurable function it
+indirectly invokes).</p>
+<p>The <code class="xref py py-attr docutils literal notranslate"><span class="pre">dynamain.application.Prog.logger</span></code> provides access to Python’s logging facilities,
+configured by the <code class="docutils literal notranslate"><span class="pre">--log_level</span></code> command line option. That is, just write
+<code class="docutils literal notranslate"><span class="pre">Prog.logger.debug(...)</span></code> etc.</p>
+<p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">dynamain.application.parallel()</span></code> function allows multiple invocations of some function
+in parallel. The number of processes used is controlled by the <code class="docutils literal notranslate"><span class="pre">--jobs</span></code> command line option. Any
+nested <code class="docutils literal notranslate"><span class="pre">parallel</span></code> invocation will execute serially, to ensure this limit is respected. To make it
+easier to debug code, <code class="xref py py-func docutils literal notranslate"><span class="pre">dynamain.application.serial()</span></code> has exactly the same interface, but
+executes the calls serially.</p>
+<p>Finally, you can override the value of some configuration parameters for some code. For example,
+the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dynamake.application</span> <span class="kn">as</span> <span class="nn">da</span>
+
+<span class="n">da</span><span class="o">.</span><span class="n">Param</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">parser</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;The number of foos&#39;</span><span class="p">)</span>
+
+<span class="nd">@config</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">print_foo</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">foo</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">env</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">foo</span><span class="p">)</span>
+
+<span class="nd">@config</span>
+<span class="k">def</span> <span class="nf">override_foo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">print_foo</span><span class="p">(</span><span class="s1">&#39;global:&#39;</span><span class="p">)</span>
+    <span class="n">print_foo</span><span class="p">(</span><span class="s1">&#39;explicit:&#39;</span><span class="p">,</span> <span class="n">foo</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">with</span> <span class="p">(</span><span class="n">da</span><span class="o">.</span><span class="n">override</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="mi">3</span><span class="p">)):</span>
+        <span class="n">print_foo</span><span class="p">(</span><span class="s1">&#39;override:&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Will print:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">global</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">explicit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">override</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="what-not-yet">
+<h2>WHAT NOT (YET)<a class="headerlink" href="#what-not-yet" title="Permalink to this headline">¶</a></h2>
+<p>Since DynaMake is very new, there are many features that should be implemented, but haven’t been
+worked on yet:</p>
+<ul class="simple">
+<li>Improve the documentation. This README covers the basics but there are additional features that
+are only mentioned in the class and function documentation, and deserves a better description.</li>
+<li>Allow forcing rebuilding (some) targets.</li>
+<li>Dry run. While it is impossible in general to print the full set of dry run actions, if should
+be easy to just print the 1st action(s) that need to be executed. This should provide most of the
+value.</li>
+<li>Allow automated clean actions based on the collected step outputs. If there’s nothing
+to be done when building some target(s), then all generated output files (with or without the
+ultimate targets) should be fair game to being removed as part of a clean action. However, due to
+the dry-run problem, we can’t automatically clean outputs of actions that depend on actions that
+still need to be executed.</li>
+<li>Allow skipping generating intermediate files if otherwise no actions need to be done. This is very
+hard to do with a dynamic build graph - probably impossible in the general case, but common
+cases might be possible(?)</li>
+<li>Generate a tree (actually a DAG) of step invocations. This can be collected from the persistent
+state files.</li>
+<li>Generate a visualization of the timeline of action executions showing start and end times, and
+possibly also resources consumption. In case of distributed actions, make a distinction between
+submission and completion times and actual start/end times to track the cluster/grid overheads.</li>
+<li>Allow registering additional file formats for the generated configuration files, to allow using
+them for non-DynaMake external actions.</li>
+<li>Allow using checksums instead of timestamps to determine if actions can be skipped, either
+by default or on a per-file basis.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="LICENSE.html" class="btn btn-neutral float-right" title="The MIT License (MIT)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="DynaMake - Dynamic Make in Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Weizmann Institute of Science.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3.49',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

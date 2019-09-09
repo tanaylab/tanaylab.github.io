@@ -1,0 +1,1339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tgutils package &mdash; TGUtils 0.1.64 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="tgutils" href="modules.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TGUtils
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.64
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License (MIT)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">package</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">tgutils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.application">tgutils.application module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.cache">tgutils.cache module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.load_yaml">tgutils.load_yaml module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.make">tgutils.make module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.numpy">tgutils.numpy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.pandas">tgutils.pandas module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.setup_mypy">tgutils.setup_mypy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.tests">tgutils.tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.tg_qsub">tgutils.tg_qsub module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils.version">tgutils.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tgutils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="cover/index.html#http://">coverage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TGUtils</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">tgutils</a> &raquo;</li>
+        
+      <li>tgutils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tgutils-package">
+<h1>tgutils package<a class="headerlink" href="#tgutils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tgutils.application">
+<span id="tgutils-application-module"></span><h2>tgutils.application module<a class="headerlink" href="#module-tgutils.application" title="Permalink to this headline">¶</a></h2>
+<p>Utilities for main functions.</p>
+<dl class="class">
+<dt id="tgutils.application.FileLockLoggerAdapter">
+<em class="property">class </em><code class="descclassname">tgutils.application.</code><code class="descname">FileLockLoggerAdapter</code><span class="sig-paren">(</span><em>logger: logging.Logger</em>, <em>path: str</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.application.FileLockLoggerAdapter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.LoggerAdapter</span></code></p>
+<p>A logger adapter that performs a file lock around each logged messages.</p>
+<p>If used consistently in multiple applications, this ensures that logging does not get garbled,
+even when running across multiple machines.</p>
+<dl class="method">
+<dt id="tgutils.application.FileLockLoggerAdapter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>logger: logging.Logger</em>, <em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.application.FileLockLoggerAdapter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a logger adapter that locks the specified directory path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tgutils.application.FileLockLoggerAdapter.log">
+<code class="descname">log</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#tgutils.application.FileLockLoggerAdapter.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log a message while locking the directory.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.application.Loop">
+<em class="property">class </em><code class="descclassname">tgutils.application.</code><code class="descname">Loop</code><span class="sig-paren">(</span><em>*</em>, <em>start: str</em>, <em>progress: str</em>, <em>completed: str</em>, <em>log_every: int = 1</em>, <em>log_with: Optional[int] = None</em>, <em>expected: Optional[int] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.application.Loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Log progress for a (possibly parallel) loop.</p>
+<dl class="method">
+<dt id="tgutils.application.Loop.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*</em>, <em>start: str</em>, <em>progress: str</em>, <em>completed: str</em>, <em>log_every: int = 1</em>, <em>log_with: Optional[int] = None</em>, <em>expected: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.application.Loop.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.application.Loop.completed">
+<code class="descname">completed</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.application.Loop.completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>The format of the completion messages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tgutils.application.Loop.done">
+<code class="descname">done</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.application.Loop.done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate the loop has completed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.application.Loop.expected">
+<code class="descname">expected</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.application.Loop.expected" title="Permalink to this definition">¶</a></dt>
+<dd><p>The expected number of increments.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.application.Loop.local_every">
+<code class="descname">local_every</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.application.Loop.local_every" title="Permalink to this definition">¶</a></dt>
+<dd><p>Granularity of parallel counting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.application.Loop.log_every">
+<code class="descname">log_every</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.application.Loop.log_every" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emit a log message every this amount of iterations (typically a power of 10).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.application.Loop.log_with">
+<code class="descname">log_with</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.application.Loop.log_with" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value in the log message is divided by this amount (typically a power of 1000).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.application.Loop.progress">
+<code class="descname">progress</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.application.Loop.progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>The format of the progress message.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.application.Loop.shared_counter">
+<code class="descname">shared_counter</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.application.Loop.shared_counter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The shared memory iteration counter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.application.Loop.start">
+<code class="descname">start</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.application.Loop.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>The format of the start message.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tgutils.application.Loop.step">
+<code class="descname">step</code><span class="sig-paren">(</span><em>fraction: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.application.Loop.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate a loop iteration.</p>
+<p>Ideally is called at the end of the iteration to indicate the iteration has completed. If
+the loop code is complex (contains <code class="docutils literal notranslate"><span class="pre">continue</span></code> etc.) then it is placed at the start of the
+code.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.application.each_file_line">
+<code class="descclassname">tgutils.application.</code><code class="descname">each_file_line</code><span class="sig-paren">(</span><em>path: str</em>, <em>loop: Optional[tgutils.application.Loop] = None</em><span class="sig-paren">)</span> &#x2192; Iterator[Tuple[int, str]]<a class="headerlink" href="#tgutils.application.each_file_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loop on each file line.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.application.indexed_range">
+<code class="descclassname">tgutils.application.</code><code class="descname">indexed_range</code><span class="sig-paren">(</span><em>index: int</em>, <em>*</em>, <em>size: int</em>, <em>invocations: int = 0</em><span class="sig-paren">)</span> &#x2192; range<a class="headerlink" href="#tgutils.application.indexed_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a range of indices for an indexed invocation.</p>
+<p>Each invocation <code class="docutils literal notranslate"><span class="pre">index</span></code> will get its own range, where the range sizes will be the same (as
+much as possible) for each invocation.</p>
+<p>If the number of <code class="docutils literal notranslate"><span class="pre">invocations</span></code> is zero, it is assumed to be the number of available parallel
+processes, that is, that there will be one invocation per parallel process (at most <code class="docutils literal notranslate"><span class="pre">size</span></code>).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.application.lock_file">
+<code class="descclassname">tgutils.application.</code><code class="descname">lock_file</code><span class="sig-paren">(</span><em>lock_path: str</em>, <em>lock_fd: int</em><span class="sig-paren">)</span> &#x2192; Iterator[None]<a class="headerlink" href="#tgutils.application.lock_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform some action while holding a file lock.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.application.main">
+<code class="descclassname">tgutils.application.</code><code class="descname">main</code><span class="sig-paren">(</span><em>parser: argparse.ArgumentParser</em>, <em>functions: Optional[List[str]] = None</em>, <em>*</em>, <em>adapter: Optional[Callable[argparse.Namespace</em>, <em>None]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.application.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic <code class="docutils literal notranslate"><span class="pre">main</span></code> function for configurable functions.</p>
+<p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.main()</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.application.maximal_open_files">
+<code class="descclassname">tgutils.application.</code><code class="descname">maximal_open_files</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.application.maximal_open_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure we can use the maximal number of open files at the same time.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.application.reset_application">
+<code class="descclassname">tgutils.application.</code><code class="descname">reset_application</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.application.reset_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the global state (for tests).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.application.tg_qsub_logger">
+<code class="descclassname">tgutils.application.</code><code class="descname">tg_qsub_logger</code><span class="sig-paren">(</span><em>logger: logging.Logger</em><span class="sig-paren">)</span> &#x2192; logging.Logger<a class="headerlink" href="#tgutils.application.tg_qsub_logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap a logger so that messages will not get interleaved with other program invocations and/or
+the messages from the <code class="docutils literal notranslate"><span class="pre">tg_qsub</span></code> script.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.application.tgutils_adapter">
+<code class="descclassname">tgutils.application.</code><code class="descname">tgutils_adapter</code><span class="sig-paren">(</span><em>args: argparse.Namespace</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.application.tgutils_adapter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform last minute adaptation of the program following parsing the command line options.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tgutils.cache">
+<span id="tgutils-cache-module"></span><h2>tgutils.cache module<a class="headerlink" href="#module-tgutils.cache" title="Permalink to this headline">¶</a></h2>
+<p>Simple caching of expensive values.</p>
+<dl class="class">
+<dt id="tgutils.cache.Cache">
+<em class="property">class </em><code class="descclassname">tgutils.cache.</code><code class="descname">Cache</code><a class="headerlink" href="#tgutils.cache.Cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Generic</span></code></p>
+<p>Cache of expensive values.</p>
+<dl class="method">
+<dt id="tgutils.cache.Cache.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.cache.Cache.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tgutils.cache.Cache.lookup">
+<code class="descname">lookup</code><span class="sig-paren">(</span><em>key: Key, compute_value: Callable[Value]</em><span class="sig-paren">)</span> &#x2192; Value<a class="headerlink" href="#tgutils.cache.Cache.lookup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lookup a value by its key, computing it only if this is the first lookup.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="tgutils.cache.Cache.reset">
+<em class="property">static </em><code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.cache.Cache.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all the caches (for tests).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tgutils.load_yaml">
+<span id="tgutils-load-yaml-module"></span><h2>tgutils.load_yaml module<a class="headerlink" href="#module-tgutils.load_yaml" title="Permalink to this headline">¶</a></h2>
+<p>Load data from YAML files.</p>
+<dl class="function">
+<dt id="tgutils.load_yaml.load_dictionary">
+<code class="descclassname">tgutils.load_yaml.</code><code class="descname">load_dictionary</code><span class="sig-paren">(</span><em>path: str</em>, <em>data: Any = None</em>, <em>*</em>, <em>allowed_keys: Optional[Dict[str</em>, <em>type]] = None</em>, <em>required_keys: Optional[Dict[str</em>, <em>type]] = None</em>, <em>key_type: type = &lt;class 'str'&gt;</em>, <em>value_type: Optional[type] = None</em><span class="sig-paren">)</span> &#x2192; Dict[Any, Any]<a class="headerlink" href="#tgutils.load_yaml.load_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a dictionary with string keys a YAML or JSON file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> – The path of the YAML/JSON file.</li>
+<li><strong>data</strong> – Optional data loaded from the file.
+If this is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the file is loaded instead.</li>
+<li><strong>allowed_keys</strong> – An optional dictionary of allowed keys,
+where the value is the expected type of the loaded value.
+If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, other keys are rejected (unless listed in <cite>required_keys</cite>).</li>
+<li><strong>required_keys</strong> – An optional dictionary of required_keys,
+where the value is the expected type of the loaded value.
+If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, specified keys that are missing from the loaded data are an error.</li>
+<li><strong>key_type</strong> – The expected type of the keys, <code class="docutils literal notranslate"><span class="pre">str</span></code> by default.</li>
+<li><strong>value_type</strong> – An optional type.
+If not <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The loaded dictionary.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Dict[str, Any]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.load_yaml.verify_type">
+<code class="descclassname">tgutils.load_yaml.</code><code class="descname">verify_type</code><span class="sig-paren">(</span><em>path: str, element_kind: str, element_identifier: str, value: Any, expected_type: Optional[type]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.load_yaml.verify_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify the type of an element loaded from a YAML/JSON file.</p>
+<p>If the value has an unexpected type, throws a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> – The path of the loaded YAML/JSON file.</li>
+<li><strong>element_kind</strong> – The kind of element this is (for the error message).</li>
+<li><strong>element_identifier</strong> – The identifier of the element (unique within its kind).</li>
+<li><strong>value</strong> – The loaded value of the element.</li>
+<li><strong>expected_type</strong> – The expected Python class the value should be an instance of.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tgutils.make">
+<span id="tgutils-make-module"></span><h2>tgutils.make module<a class="headerlink" href="#module-tgutils.make" title="Permalink to this headline">¶</a></h2>
+<p>Utilities for using DynaMake.</p>
+<dl class="function">
+<dt id="tgutils.make.parallel_jobs">
+<code class="descclassname">tgutils.make.</code><code class="descname">parallel_jobs</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#tgutils.make.parallel_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of jobs to use for a parallel sub-process in the current context (can be
+passed to <code class="docutils literal notranslate"><span class="pre">--jobs</span></code>).</p>
+<p>This assumes all the actions of the innermost <code class="docutils literal notranslate"><span class="pre">tg_require</span></code> in the current context are
+executed, and tries to utilize all the available CPUs for them.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.make.reset_make">
+<code class="descclassname">tgutils.make.</code><code class="descname">reset_make</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.make.reset_make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the persistent context (for tests).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.make.tg_require">
+<code class="descclassname">tgutils.make.</code><code class="descname">tg_require</code><span class="sig-paren">(</span><em>*paths</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.make.tg_require" title="Permalink to this definition">¶</a></dt>
+<dd><p>Require all the specified paths with a parallel context.</p>
+<p>This sets up the invocation context(s) of all the actions needed to build these files, and any
+of their dependencies, such that <code class="docutils literal notranslate"><span class="pre">parallel_size</span></code> contains the number of paths and
+<code class="docutils literal notranslate"><span class="pre">parallel_index</span></code> contains the index of the specific path. If nested, the context of the
+innermost call is used.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">parallel_size</span></code> and <code class="docutils literal notranslate"><span class="pre">parallel_index</span></code> context can then be embedded in the <code class="docutils literal notranslate"><span class="pre">run_prefix</span></code>
+of the actions, to be passed to <code class="docutils literal notranslate"><span class="pre">qsubber</span></code> which uses this information to optimize the
+assignment of CPUs to SunGrid jobs.</p>
+<p>For example, suppose you wrote the following in <code class="docutils literal notranslate"><span class="pre">DynaMake.yaml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">when</span><span class="p">:</span>
+    <span class="nt">is_parallel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+    <span class="nt">step</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_expensive_multi_processing_step</span>
+  <span class="nt">then</span><span class="p">:</span>
+    <span class="nt">run_prefix</span><span class="p">:</span>
+      <span class="s">&#39;qsubber</span><span class="nv"> </span><span class="s">-v</span><span class="nv"> </span><span class="s">-I</span><span class="nv"> </span><span class="s">{parallel_index}</span><span class="nv"> </span><span class="s">-S</span><span class="nv"> </span><span class="s">{parallel_size}</span><span class="nv"> </span><span class="s">-j</span><span class="nv"> </span><span class="s">job-{action_id}</span><span class="nv"> </span><span class="s">-s</span><span class="nv"> </span><span class="s">8-</span><span class="nv"> </span><span class="s">--&#39;</span>
+</pre></div>
+</div>
+<p>Then <code class="docutils literal notranslate"><span class="pre">qsubber</span></code> will allocate at least 8 CPUs for each action invoked by <code class="docutils literal notranslate"><span class="pre">some_step</span></code>. If
+there are only a few such invocations (say, up to one per cluster server), it may assign more
+CPUs to each invocation (up to all the CPUs on each server). If there are many invocations, it
+will assign less, to ensure as many invocations as possible run in parallel.</p>
+<p>This is due to the unfortunate fact that speedup gained by using more CPUs is not linear; that
+is, a 16-CPU action takes longer than half the time it takes using 8 CPUs. Therefore, if all we
+have is a 16-CPU machine, we are better off running two 8-CPU actions in parallel than one
+16-CPU action followed by another.</p>
+<p>This is overly convoluted, sub-optimal, and very specific to the way we distribute actions on
+the SunGrid cluster in the Tanay Group lab. The cluster manager should arguably do much better
+without all these complications. However, all we have is <code class="docutils literal notranslate"><span class="pre">qsub</span></code>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tgutils.numpy">
+<span id="tgutils-numpy-module"></span><h2>tgutils.numpy module<a class="headerlink" href="#module-tgutils.numpy" title="Permalink to this headline">¶</a></h2>
+<p>Numpy utilities.</p>
+<p>Import this as <code class="docutils literal notranslate"><span class="pre">np</span></code> instead of importing the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> module. It exports the same symbols, with
+the addition of strongly-typed phantom classes for tracking the exact dimensions and type of each
+variable using <code class="docutils literal notranslate"><span class="pre">mypy</span></code>. It also provides some additional utilities (I/O).</p>
+<dl class="data">
+<dt id="tgutils.numpy.A">
+<code class="descclassname">tgutils.numpy.</code><code class="descname">A</code><em class="property"> = ~A</em><a class="headerlink" href="#tgutils.numpy.A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type variable for arrays.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="tgutils.numpy.ARRAY_OF_DTYPE">
+<code class="descclassname">tgutils.numpy.</code><code class="descname">ARRAY_OF_DTYPE</code><em class="property"> = {'bool': &lt;class 'tgutils.numpy.ArrayBool'&gt;, 'float32': &lt;class 'tgutils.numpy.ArrayFloat32'&gt;, 'float64': &lt;class 'tgutils.numpy.ArrayFloat64'&gt;, 'int16': &lt;class 'tgutils.numpy.ArrayInt16'&gt;, 'int32': &lt;class 'tgutils.numpy.ArrayInt32'&gt;, 'int64': &lt;class 'tgutils.numpy.ArrayInt64'&gt;, 'int8': &lt;class 'tgutils.numpy.ArrayInt8'&gt;, 'str': &lt;class 'tgutils.numpy.ArrayStr'&gt;}</em><a class="headerlink" href="#tgutils.numpy.ARRAY_OF_DTYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The phantom type for an array by its data type name.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.ArrayBool">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">ArrayBool</code><a class="headerlink" href="#tgutils.numpy.ArrayBool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>An array of booleans.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayBool.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 1</em><a class="headerlink" href="#tgutils.numpy.ArrayBool.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayBool.dtype">
+<code class="descname">dtype</code><em class="property"> = 'bool'</em><a class="headerlink" href="#tgutils.numpy.ArrayBool.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.ArrayFloat32">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">ArrayFloat32</code><a class="headerlink" href="#tgutils.numpy.ArrayFloat32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>An array of 32-bit floating point numbers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayFloat32.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 1</em><a class="headerlink" href="#tgutils.numpy.ArrayFloat32.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayFloat32.dtype">
+<code class="descname">dtype</code><em class="property"> = 'float32'</em><a class="headerlink" href="#tgutils.numpy.ArrayFloat32.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.ArrayFloat64">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">ArrayFloat64</code><a class="headerlink" href="#tgutils.numpy.ArrayFloat64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>An array of 64-bit floating point numbers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayFloat64.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 1</em><a class="headerlink" href="#tgutils.numpy.ArrayFloat64.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayFloat64.dtype">
+<code class="descname">dtype</code><em class="property"> = 'float64'</em><a class="headerlink" href="#tgutils.numpy.ArrayFloat64.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.ArrayInt16">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">ArrayInt16</code><a class="headerlink" href="#tgutils.numpy.ArrayInt16" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>An array of 16-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayInt16.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 1</em><a class="headerlink" href="#tgutils.numpy.ArrayInt16.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayInt16.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int16'</em><a class="headerlink" href="#tgutils.numpy.ArrayInt16.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.ArrayInt32">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">ArrayInt32</code><a class="headerlink" href="#tgutils.numpy.ArrayInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>An array of 32-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayInt32.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 1</em><a class="headerlink" href="#tgutils.numpy.ArrayInt32.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayInt32.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int32'</em><a class="headerlink" href="#tgutils.numpy.ArrayInt32.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.ArrayInt64">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">ArrayInt64</code><a class="headerlink" href="#tgutils.numpy.ArrayInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>An array of 64-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayInt64.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 1</em><a class="headerlink" href="#tgutils.numpy.ArrayInt64.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayInt64.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int64'</em><a class="headerlink" href="#tgutils.numpy.ArrayInt64.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.ArrayInt8">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">ArrayInt8</code><a class="headerlink" href="#tgutils.numpy.ArrayInt8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>An array of 8-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayInt8.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 1</em><a class="headerlink" href="#tgutils.numpy.ArrayInt8.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayInt8.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int8'</em><a class="headerlink" href="#tgutils.numpy.ArrayInt8.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.ArrayStr">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">ArrayStr</code><a class="headerlink" href="#tgutils.numpy.ArrayStr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>An array of Unicode strings.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayStr.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 1</em><a class="headerlink" href="#tgutils.numpy.ArrayStr.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.ArrayStr.dtype">
+<code class="descname">dtype</code><em class="property"> = 'O'</em><a class="headerlink" href="#tgutils.numpy.ArrayStr.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.BaseArray">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">BaseArray</code><a class="headerlink" href="#tgutils.numpy.BaseArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
+<p>Base class for all Numpy array and matrix phantom types.</p>
+<dl class="classmethod">
+<dt id="tgutils.numpy.BaseArray.am">
+<em class="property">classmethod </em><code class="descname">am</code><span class="sig-paren">(</span><em>data: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#tgutils.numpy.BaseArray.am" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declare an array as being of this type.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.numpy.BaseArray.be">
+<em class="property">classmethod </em><code class="descname">be</code><span class="sig-paren">(</span><em>data: Collection</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#tgutils.numpy.BaseArray.be" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an array to this type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.BaseArray.dimensions">
+<code class="descname">dimensions</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.numpy.BaseArray.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The expected dimensions of an array of the (derived) class.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.numpy.BaseArray.empty">
+<em class="property">classmethod </em><code class="descname">empty</code><span class="sig-paren">(</span><em>shape: Union[int, Tuple[int, ...]]</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#tgutils.numpy.BaseArray.empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an uninitialized array.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="tgutils.numpy.BaseArray.exists">
+<em class="property">static </em><code class="descname">exists</code><span class="sig-paren">(</span><em>path: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#tgutils.numpy.BaseArray.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether there exists a disk file with the specified path to load an array from.</p>
+<p>This checks for either a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> or a <code class="docutils literal notranslate"><span class="pre">.npy</span></code> suffix to allow for loading either
+an array of strings or an array or matrix of numeric values.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.numpy.BaseArray.filled">
+<em class="property">classmethod </em><code class="descname">filled</code><span class="sig-paren">(</span><em>value: Any, shape: Union[int, Tuple[int, ...]]</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#tgutils.numpy.BaseArray.filled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an array full of some value.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.numpy.BaseArray.read">
+<em class="property">classmethod </em><code class="descname">read</code><span class="sig-paren">(</span><em>path: str</em>, <em>mmap_mode: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#tgutils.numpy.BaseArray.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a Numpy array of the concrete type from the disk.</p>
+<p>If a disk file with a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> suffix exists, this will read an array of strings. Otherwise,
+a file with a <code class="docutils literal notranslate"><span class="pre">.npy</span></code> suffix must exist, and this will memory map the array or matrix of
+values contained in it.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="tgutils.numpy.BaseArray.read_array">
+<em class="property">static </em><code class="descname">read_array</code><span class="sig-paren">(</span><em>path: str</em>, <em>mmap_mode: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#tgutils.numpy.BaseArray.read_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a 1D array of any type from the disk.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="tgutils.numpy.BaseArray.read_matrix">
+<em class="property">static </em><code class="descname">read_matrix</code><span class="sig-paren">(</span><em>path: str</em>, <em>mmap_mode: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#tgutils.numpy.BaseArray.read_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a 2D array of any type from the disk.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.numpy.BaseArray.shared_memory_zeros">
+<em class="property">classmethod </em><code class="descname">shared_memory_zeros</code><span class="sig-paren">(</span><em>shape: Union[int, Tuple[int, ...]]</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#tgutils.numpy.BaseArray.shared_memory_zeros" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a shared memory array, initialized to zeros.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.numpy.BaseArray.write">
+<em class="property">classmethod </em><code class="descname">write</code><span class="sig-paren">(</span><em>data: numpy.ndarray</em>, <em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.numpy.BaseArray.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a Numpy array of the concrete type to the disk.</p>
+<p>If writing an array of strings, this will create a file with a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> suffix containing
+one string value per line. Otherwise, the data may be an array or a matrix of numeric
+values, which will be written to a file with a <code class="docutils literal notranslate"><span class="pre">.npy</span></code> format allowing for memory mapped
+access.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.numpy.BaseArray.zeros">
+<em class="property">classmethod </em><code class="descname">zeros</code><span class="sig-paren">(</span><em>shape: Union[int, Tuple[int, ...]]</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#tgutils.numpy.BaseArray.zeros" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an array full of zeros.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="tgutils.numpy.MATRIX_OF_DTYPE">
+<code class="descclassname">tgutils.numpy.</code><code class="descname">MATRIX_OF_DTYPE</code><em class="property"> = {'bool': &lt;class 'tgutils.numpy.MatrixBool'&gt;, 'float32': &lt;class 'tgutils.numpy.MatrixFloat32'&gt;, 'float64': &lt;class 'tgutils.numpy.MatrixFloat64'&gt;, 'int16': &lt;class 'tgutils.numpy.MatrixInt16'&gt;, 'int32': &lt;class 'tgutils.numpy.MatrixInt32'&gt;, 'int64': &lt;class 'tgutils.numpy.MatrixInt64'&gt;, 'int8': &lt;class 'tgutils.numpy.MatrixInt8'&gt;}</em><a class="headerlink" href="#tgutils.numpy.MATRIX_OF_DTYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The phantom type for a matrix by its data type name.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.MatrixBool">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">MatrixBool</code><a class="headerlink" href="#tgutils.numpy.MatrixBool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>A matrix of booleans.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixBool.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 2</em><a class="headerlink" href="#tgutils.numpy.MatrixBool.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixBool.dtype">
+<code class="descname">dtype</code><em class="property"> = 'bool'</em><a class="headerlink" href="#tgutils.numpy.MatrixBool.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.MatrixFloat32">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">MatrixFloat32</code><a class="headerlink" href="#tgutils.numpy.MatrixFloat32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>A matrix of 32-bit floating point numbers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixFloat32.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 2</em><a class="headerlink" href="#tgutils.numpy.MatrixFloat32.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixFloat32.dtype">
+<code class="descname">dtype</code><em class="property"> = 'float32'</em><a class="headerlink" href="#tgutils.numpy.MatrixFloat32.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.MatrixFloat64">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">MatrixFloat64</code><a class="headerlink" href="#tgutils.numpy.MatrixFloat64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>A matrix of 64-bit floating point numbers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixFloat64.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 2</em><a class="headerlink" href="#tgutils.numpy.MatrixFloat64.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixFloat64.dtype">
+<code class="descname">dtype</code><em class="property"> = 'float64'</em><a class="headerlink" href="#tgutils.numpy.MatrixFloat64.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.MatrixInt16">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">MatrixInt16</code><a class="headerlink" href="#tgutils.numpy.MatrixInt16" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>A matrix of 16-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixInt16.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 2</em><a class="headerlink" href="#tgutils.numpy.MatrixInt16.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixInt16.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int16'</em><a class="headerlink" href="#tgutils.numpy.MatrixInt16.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.MatrixInt32">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">MatrixInt32</code><a class="headerlink" href="#tgutils.numpy.MatrixInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>A matrix of 32-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixInt32.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 2</em><a class="headerlink" href="#tgutils.numpy.MatrixInt32.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixInt32.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int32'</em><a class="headerlink" href="#tgutils.numpy.MatrixInt32.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.MatrixInt64">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">MatrixInt64</code><a class="headerlink" href="#tgutils.numpy.MatrixInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>A matrix of 64-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixInt64.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 2</em><a class="headerlink" href="#tgutils.numpy.MatrixInt64.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixInt64.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int64'</em><a class="headerlink" href="#tgutils.numpy.MatrixInt64.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.numpy.MatrixInt8">
+<em class="property">class </em><code class="descclassname">tgutils.numpy.</code><code class="descname">MatrixInt8</code><a class="headerlink" href="#tgutils.numpy.MatrixInt8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.numpy.BaseArray" title="tgutils.numpy.BaseArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.numpy.BaseArray</span></code></a></p>
+<p>A matrix of 8-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixInt8.dimensions">
+<code class="descname">dimensions</code><em class="property"> = 2</em><a class="headerlink" href="#tgutils.numpy.MatrixInt8.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.numpy.MatrixInt8.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int8'</em><a class="headerlink" href="#tgutils.numpy.MatrixInt8.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tgutils.pandas">
+<span id="tgutils-pandas-module"></span><h2>tgutils.pandas module<a class="headerlink" href="#module-tgutils.pandas" title="Permalink to this headline">¶</a></h2>
+<p>Pandas utilities.</p>
+<p>Import this as <code class="docutils literal notranslate"><span class="pre">pd</span></code> instead of directly importing the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> module. It exports the same
+symbols, with the addition of strongly-typed phantom classes for tracking the exact dimensions and
+type of each variable using <code class="docutils literal notranslate"><span class="pre">mypy</span></code>. It also provides some additional utilities (I/O).</p>
+<dl class="class">
+<dt id="tgutils.pandas.BaseFrame">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">BaseFrame</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>columns=None</em>, <em>dtype=None</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.BaseFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.core.frame.DataFrame</span></code></p>
+<p>Base class for all Numpy data series phantom types.</p>
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseFrame.am">
+<em class="property">classmethod </em><code class="descname">am</code><span class="sig-paren">(</span><em>data: pandas.core.frame.DataFrame</em><span class="sig-paren">)</span> &#x2192; F<a class="headerlink" href="#tgutils.pandas.BaseFrame.am" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declare a data frame as being of this type.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseFrame.be">
+<em class="property">classmethod </em><code class="descname">be</code><span class="sig-paren">(</span><em>data: Union[pandas.core.frame.DataFrame, numpy.ndarray, List[List[Any]]], index: Optional[Collection] = None, columns: Optional[Collection] = None</em><span class="sig-paren">)</span> &#x2192; F<a class="headerlink" href="#tgutils.pandas.BaseFrame.be" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an array to this type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.pandas.BaseFrame.dtype">
+<code class="descname">dtype</code><em class="property"> = None</em><a class="headerlink" href="#tgutils.pandas.BaseFrame.dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>The expected data type of a data frame of the (derived) class.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseFrame.empty">
+<em class="property">classmethod </em><code class="descname">empty</code><span class="sig-paren">(</span><em>*</em>, <em>index: Collection</em>, <em>columns: Collection</em><span class="sig-paren">)</span> &#x2192; F<a class="headerlink" href="#tgutils.pandas.BaseFrame.empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an uninitialized frame</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseFrame.filled">
+<em class="property">classmethod </em><code class="descname">filled</code><span class="sig-paren">(</span><em>value: Any</em>, <em>*</em>, <em>index: Collection</em>, <em>columns: Collection</em><span class="sig-paren">)</span> &#x2192; F<a class="headerlink" href="#tgutils.pandas.BaseFrame.filled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a frame full of some value.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseFrame.read">
+<em class="property">classmethod </em><code class="descname">read</code><span class="sig-paren">(</span><em>path: str</em>, <em>mmap_mode: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; F<a class="headerlink" href="#tgutils.pandas.BaseFrame.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a Pandas data frame of the concrete type from the disk.</p>
+<p>If additional file(s) with an <code class="docutils literal notranslate"><span class="pre">.index</span></code> and/or <code class="docutils literal notranslate"><span class="pre">.columns</span></code> suffix exist, they are loaded
+into the index and/or column labels.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseFrame.shared_memory_zeros">
+<em class="property">classmethod </em><code class="descname">shared_memory_zeros</code><span class="sig-paren">(</span><em>*</em>, <em>index: Collection</em>, <em>columns: Collection</em><span class="sig-paren">)</span> &#x2192; F<a class="headerlink" href="#tgutils.pandas.BaseFrame.shared_memory_zeros" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a shared memory frame, initialized to zeros.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseFrame.write">
+<em class="property">classmethod </em><code class="descname">write</code><span class="sig-paren">(</span><em>frame: pandas.core.frame.DataFrame</em>, <em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.pandas.BaseFrame.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a Pandas data frame of the concrete type to a file.</p>
+<p>If necessary, creates additional file(s) with an <code class="docutils literal notranslate"><span class="pre">.index</span></code> and/or <code class="docutils literal notranslate"><span class="pre">.columns</span></code> suffix to
+preserve the index and/or column labels.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseFrame.zeros">
+<em class="property">classmethod </em><code class="descname">zeros</code><span class="sig-paren">(</span><em>*</em>, <em>index: Collection</em>, <em>columns: Collection</em><span class="sig-paren">)</span> &#x2192; F<a class="headerlink" href="#tgutils.pandas.BaseFrame.zeros" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a frame full of zeros.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.BaseSeries">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">BaseSeries</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.BaseSeries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.core.series.Series</span></code></p>
+<p>Base class for all Numpy data series phantom types.</p>
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseSeries.am">
+<em class="property">classmethod </em><code class="descname">am</code><span class="sig-paren">(</span><em>data: pandas.core.series.Series</em><span class="sig-paren">)</span> &#x2192; S<a class="headerlink" href="#tgutils.pandas.BaseSeries.am" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declare a data series as being of this type.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseSeries.be">
+<em class="property">classmethod </em><code class="descname">be</code><span class="sig-paren">(</span><em>data: Collection</em>, <em>index: Optional[Collection] = None</em><span class="sig-paren">)</span> &#x2192; S<a class="headerlink" href="#tgutils.pandas.BaseSeries.be" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an array to this type.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseSeries.empty">
+<em class="property">classmethod </em><code class="descname">empty</code><span class="sig-paren">(</span><em>index: Collection</em><span class="sig-paren">)</span> &#x2192; S<a class="headerlink" href="#tgutils.pandas.BaseSeries.empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an uninitialized series</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseSeries.filled">
+<em class="property">classmethod </em><code class="descname">filled</code><span class="sig-paren">(</span><em>value: Any</em>, <em>index: Collection</em><span class="sig-paren">)</span> &#x2192; S<a class="headerlink" href="#tgutils.pandas.BaseSeries.filled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a series full of zeros.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseSeries.read">
+<em class="property">classmethod </em><code class="descname">read</code><span class="sig-paren">(</span><em>path: str</em>, <em>mmap_mode: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; S<a class="headerlink" href="#tgutils.pandas.BaseSeries.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a Pandas data series of the concrete type from the disk.</p>
+<p>If an additional file with an <code class="docutils literal notranslate"><span class="pre">.index</span></code> suffix exists, it is loaded into the index labels.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseSeries.shared_memory_zeros">
+<em class="property">classmethod </em><code class="descname">shared_memory_zeros</code><span class="sig-paren">(</span><em>index: Collection</em><span class="sig-paren">)</span> &#x2192; S<a class="headerlink" href="#tgutils.pandas.BaseSeries.shared_memory_zeros" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a shared memory series, initialized to zeros.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseSeries.write">
+<em class="property">classmethod </em><code class="descname">write</code><span class="sig-paren">(</span><em>series: pandas.core.series.Series</em>, <em>path: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.pandas.BaseSeries.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a Pandas data series of the concrete type to a file.</p>
+<p>If necessary, creates additional file with an <code class="docutils literal notranslate"><span class="pre">.index</span></code> suffix to preserve the index
+labels.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="tgutils.pandas.BaseSeries.zeros">
+<em class="property">classmethod </em><code class="descname">zeros</code><span class="sig-paren">(</span><em>index: Collection</em><span class="sig-paren">)</span> &#x2192; S<a class="headerlink" href="#tgutils.pandas.BaseSeries.zeros" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a series full of zeros.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="tgutils.pandas.F">
+<code class="descclassname">tgutils.pandas.</code><code class="descname">F</code><em class="property"> = ~F</em><a class="headerlink" href="#tgutils.pandas.F" title="Permalink to this definition">¶</a></dt>
+<dd><p>type variable for data frames.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="tgutils.pandas.FRAME_OF_DTYPE">
+<code class="descclassname">tgutils.pandas.</code><code class="descname">FRAME_OF_DTYPE</code><em class="property"> = {'bool': &lt;class 'tgutils.pandas.FrameBool'&gt;, 'float32': &lt;class 'tgutils.pandas.FrameFloat32'&gt;, 'float64': &lt;class 'tgutils.pandas.FrameFloat64'&gt;, 'int16': &lt;class 'tgutils.pandas.FrameInt16'&gt;, 'int32': &lt;class 'tgutils.pandas.FrameInt32'&gt;, 'int64': &lt;class 'tgutils.pandas.FrameInt64'&gt;, 'int8': &lt;class 'tgutils.pandas.FrameInt8'&gt;}</em><a class="headerlink" href="#tgutils.pandas.FRAME_OF_DTYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The phantom type for a data frame by its type name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="tgutils.pandas.Frame">
+<code class="descclassname">tgutils.pandas.</code><code class="descname">Frame</code><a class="headerlink" href="#tgutils.pandas.Frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.core.frame.DataFrame</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.FrameBool">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">FrameBool</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>columns=None</em>, <em>dtype=None</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.FrameBool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseFrame" title="tgutils.pandas.BaseFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseFrame</span></code></a></p>
+<p>A data frame of booleans.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.FrameBool.dtype">
+<code class="descname">dtype</code><em class="property"> = 'bool'</em><a class="headerlink" href="#tgutils.pandas.FrameBool.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.FrameFloat32">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">FrameFloat32</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>columns=None</em>, <em>dtype=None</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.FrameFloat32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseFrame" title="tgutils.pandas.BaseFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseFrame</span></code></a></p>
+<p>A data frame of 32-bit floating-point numbers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.FrameFloat32.dtype">
+<code class="descname">dtype</code><em class="property"> = 'float32'</em><a class="headerlink" href="#tgutils.pandas.FrameFloat32.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.FrameFloat64">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">FrameFloat64</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>columns=None</em>, <em>dtype=None</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.FrameFloat64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseFrame" title="tgutils.pandas.BaseFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseFrame</span></code></a></p>
+<p>A data frame of 64-bit floating-point numbers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.FrameFloat64.dtype">
+<code class="descname">dtype</code><em class="property"> = 'float64'</em><a class="headerlink" href="#tgutils.pandas.FrameFloat64.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.FrameInt16">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">FrameInt16</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>columns=None</em>, <em>dtype=None</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.FrameInt16" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseFrame" title="tgutils.pandas.BaseFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseFrame</span></code></a></p>
+<p>A data frame of 16-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.FrameInt16.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int16'</em><a class="headerlink" href="#tgutils.pandas.FrameInt16.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.FrameInt32">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">FrameInt32</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>columns=None</em>, <em>dtype=None</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.FrameInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseFrame" title="tgutils.pandas.BaseFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseFrame</span></code></a></p>
+<p>A data frame of 32-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.FrameInt32.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int32'</em><a class="headerlink" href="#tgutils.pandas.FrameInt32.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.FrameInt64">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">FrameInt64</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>columns=None</em>, <em>dtype=None</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.FrameInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseFrame" title="tgutils.pandas.BaseFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseFrame</span></code></a></p>
+<p>A data frame of 64-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.FrameInt64.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int64'</em><a class="headerlink" href="#tgutils.pandas.FrameInt64.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.FrameInt8">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">FrameInt8</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>columns=None</em>, <em>dtype=None</em>, <em>copy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.FrameInt8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseFrame" title="tgutils.pandas.BaseFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseFrame</span></code></a></p>
+<p>A data frame of 8-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.FrameInt8.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int8'</em><a class="headerlink" href="#tgutils.pandas.FrameInt8.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="tgutils.pandas.S">
+<code class="descclassname">tgutils.pandas.</code><code class="descname">S</code><em class="property"> = ~S</em><a class="headerlink" href="#tgutils.pandas.S" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type variable for data series.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="tgutils.pandas.SERIES_OF_DTYPE">
+<code class="descclassname">tgutils.pandas.</code><code class="descname">SERIES_OF_DTYPE</code><em class="property"> = {'bool': &lt;class 'tgutils.pandas.SeriesBool'&gt;, 'float32': &lt;class 'tgutils.pandas.SeriesFloat32'&gt;, 'float64': &lt;class 'tgutils.pandas.SeriesFloat64'&gt;, 'int16': &lt;class 'tgutils.pandas.SeriesInt16'&gt;, 'int32': &lt;class 'tgutils.pandas.SeriesInt32'&gt;, 'int64': &lt;class 'tgutils.pandas.SeriesInt64'&gt;, 'int8': &lt;class 'tgutils.pandas.SeriesInt8'&gt;, 'str': &lt;class 'tgutils.pandas.SeriesStr'&gt;}</em><a class="headerlink" href="#tgutils.pandas.SERIES_OF_DTYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The phantom type for a data series by its type name.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.SeriesBool">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">SeriesBool</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.SeriesBool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseSeries" title="tgutils.pandas.BaseSeries"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseSeries</span></code></a></p>
+<p>A data series of booleans.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.SeriesBool.dtype">
+<code class="descname">dtype</code><em class="property"> = 'bool'</em><a class="headerlink" href="#tgutils.pandas.SeriesBool.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.SeriesFloat32">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">SeriesFloat32</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.SeriesFloat32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseSeries" title="tgutils.pandas.BaseSeries"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseSeries</span></code></a></p>
+<p>A data series of 32-bit floating-point numbers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.SeriesFloat32.dtype">
+<code class="descname">dtype</code><em class="property"> = 'float32'</em><a class="headerlink" href="#tgutils.pandas.SeriesFloat32.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.SeriesFloat64">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">SeriesFloat64</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.SeriesFloat64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseSeries" title="tgutils.pandas.BaseSeries"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseSeries</span></code></a></p>
+<p>A data series of 64-bit floating-point numbers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.SeriesFloat64.dtype">
+<code class="descname">dtype</code><em class="property"> = 'float64'</em><a class="headerlink" href="#tgutils.pandas.SeriesFloat64.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.SeriesInt16">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">SeriesInt16</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.SeriesInt16" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseSeries" title="tgutils.pandas.BaseSeries"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseSeries</span></code></a></p>
+<p>A data series of 16-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.SeriesInt16.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int16'</em><a class="headerlink" href="#tgutils.pandas.SeriesInt16.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.SeriesInt32">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">SeriesInt32</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.SeriesInt32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseSeries" title="tgutils.pandas.BaseSeries"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseSeries</span></code></a></p>
+<p>A data series of 32-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.SeriesInt32.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int32'</em><a class="headerlink" href="#tgutils.pandas.SeriesInt32.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.SeriesInt64">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">SeriesInt64</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.SeriesInt64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseSeries" title="tgutils.pandas.BaseSeries"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseSeries</span></code></a></p>
+<p>A data series of 64-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.SeriesInt64.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int64'</em><a class="headerlink" href="#tgutils.pandas.SeriesInt64.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.SeriesInt8">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">SeriesInt8</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.SeriesInt8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseSeries" title="tgutils.pandas.BaseSeries"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseSeries</span></code></a></p>
+<p>A data series of 8-bit integers.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.SeriesInt8.dtype">
+<code class="descname">dtype</code><em class="property"> = 'int8'</em><a class="headerlink" href="#tgutils.pandas.SeriesInt8.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.pandas.SeriesStr">
+<em class="property">class </em><code class="descclassname">tgutils.pandas.</code><code class="descname">SeriesStr</code><span class="sig-paren">(</span><em>data=None</em>, <em>index=None</em>, <em>dtype=None</em>, <em>name=None</em>, <em>copy=False</em>, <em>fastpath=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.pandas.SeriesStr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.pandas.BaseSeries" title="tgutils.pandas.BaseSeries"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.pandas.BaseSeries</span></code></a></p>
+<p>A data series of Unicode strings.</p>
+<dl class="attribute">
+<dt id="tgutils.pandas.SeriesStr.dtype">
+<code class="descname">dtype</code><em class="property"> = 'O'</em><a class="headerlink" href="#tgutils.pandas.SeriesStr.dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tgutils.setup_mypy">
+<span id="tgutils-setup-mypy-module"></span><h2>tgutils.setup_mypy module<a class="headerlink" href="#module-tgutils.setup_mypy" title="Permalink to this headline">¶</a></h2>
+<p>Import this module in the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file to use the provided Numpy/Pandas <code class="docutils literal notranslate"><span class="pre">mypy</span></code> stubs.</p>
+<p>TODO: This is a horrible hack.</p>
+</div>
+<div class="section" id="module-tgutils.tests">
+<span id="tgutils-tests-module"></span><h2>tgutils.tests module<a class="headerlink" href="#module-tgutils.tests" title="Permalink to this headline">¶</a></h2>
+<p>Common utilities for tests.</p>
+<dl class="class">
+<dt id="tgutils.tests.TestWithFiles">
+<em class="property">class </em><code class="descclassname">tgutils.tests.</code><code class="descname">TestWithFiles</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.tests.TestWithFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tgutils.tests.TestWithReset" title="tgutils.tests.TestWithReset"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.tests.TestWithReset</span></code></a></p>
+<dl class="method">
+<dt id="tgutils.tests.TestWithFiles.expect_file">
+<code class="descname">expect_file</code><span class="sig-paren">(</span><em>path: str</em>, <em>expected: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.tests.TestWithFiles.expect_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tgutils.tests.TestWithFiles.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.tests.TestWithFiles.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tgutils.tests.TestWithFiles.tearDown">
+<code class="descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.tests.TestWithFiles.tearDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tgutils.tests.TestWithReset">
+<em class="property">class </em><code class="descclassname">tgutils.tests.</code><code class="descname">TestWithReset</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#tgutils.tests.TestWithReset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="tgutils.tests.TestWithReset.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.tests.TestWithReset.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.tests.undent">
+<code class="descclassname">tgutils.tests.</code><code class="descname">undent</code><span class="sig-paren">(</span><em>content: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#tgutils.tests.undent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tgutils.tests.write_file">
+<code class="descclassname">tgutils.tests.</code><code class="descname">write_file</code><span class="sig-paren">(</span><em>path: str</em>, <em>content: str = ''</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.tests.write_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-tgutils.tg_qsub">
+<span id="tgutils-tg-qsub-module"></span><h2>tgutils.tg_qsub module<a class="headerlink" href="#module-tgutils.tg_qsub" title="Permalink to this headline">¶</a></h2>
+<p>Submit a job to qsub in the Tanay Group lab.</p>
+<dl class="class">
+<dt id="tgutils.tg_qsub.Qsubber">
+<em class="property">class </em><code class="descclassname">tgutils.tg_qsub.</code><code class="descname">Qsubber</code><a class="headerlink" href="#tgutils.tg_qsub.Qsubber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Submit a job to qsub in the Tanay Group lab.</p>
+<dl class="method">
+<dt id="tgutils.tg_qsub.Qsubber.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.tg_qsub.Qsubber.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tgutils.tg_qsub.Qsubber.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#tgutils.tg_qsub.Qsubber.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the submitted job using the command line options.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tgutils.tg_qsub.main">
+<code class="descclassname">tgutils.tg_qsub.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#tgutils.tg_qsub.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit a job to qsub in the Tanay Group lab.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tgutils.version">
+<span id="tgutils-version-module"></span><h2>tgutils.version module<a class="headerlink" href="#module-tgutils.version" title="Permalink to this headline">¶</a></h2>
+<p>Version is generated by setup.py.</p>
+</div>
+<div class="section" id="module-tgutils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tgutils" title="Permalink to this headline">¶</a></h2>
+<p>Main TGUtils module.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="modules.html" class="btn btn-neutral" title="tgutils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Weizmann Institute of Science.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.64',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

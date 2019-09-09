@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TGUtils - Utilities for Tanay Group lab code &mdash; TGUtils 0.1.64 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The MIT License (MIT)" href="LICENSE.html" />
+    <link rel="prev" title="TGUtils - Utilities for Tanay Group lab code" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TGUtils
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.64
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Readme</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#phantom-types">Phantom Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type-operations">Type Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#de-serialization">De/serialization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamake">DynaMake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-qsub">Using Qsub</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#applications">Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#numpy-errors">Numpy Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#numpy-random-number-generation">Numpy Random Number Generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel">Parallel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other-utilities">Other Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tests">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caching">Caching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#yaml">YAML</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License (MIT)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">package</a></li>
+<li class="toctree-l1"><a class="reference external" href="cover/index.html#http://">coverage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TGUtils</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>TGUtils - Utilities for Tanay Group lab code</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tgutils-utilities-for-tanay-group-lab-code">
+<h1>TGUtils - Utilities for Tanay Group lab code<a class="headerlink" href="#tgutils-utilities-for-tanay-group-lab-code" title="Permalink to this headline">¶</a></h1>
+<p>This package contains common utilities used by the Tanay Group Python lab code (for example,
+<code class="docutils literal notranslate"><span class="pre">metacell</span></code>). These utilities are generally useful and not associated with any specific project.</p>
+<div class="section" id="phantom-types">
+<h2>Phantom Types<a class="headerlink" href="#phantom-types" title="Permalink to this headline">¶</a></h2>
+<p>The vanilla <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code>, <code class="docutils literal notranslate"><span class="pre">pd.Series</span></code> and <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> types are very generic. They are the
+same regardless of the element data type used, and in the case of <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code>, the number of
+dimensions (array vs. matrix).</p>
+<p>To understand the code, it is helpful to keep track of a more detailed data type - whether the
+variable is an array or a matrix, and what the element data type is. To facilitate this, <code class="docutils literal notranslate"><span class="pre">tgutils</span></code>
+provides what is known as “Phantom Types”. These types can be used in <code class="docutils literal notranslate"><span class="pre">mypy</span></code> type declarations,
+even though the actual data type of the variables remains the vanilla Numpy/Pandas data type.</p>
+<p>See <a class="reference internal" href="tgutils.html#module-tgutils.numpy" title="tgutils.numpy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tgutils.numpy</span></code></a> and <a class="reference internal" href="tgutils.html#module-tgutils.pandas" title="tgutils.pandas"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tgutils.pandas</span></code></a> for the list of provided phantom types. To
+use them, instead of the vanilla:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+<p>Write the modified:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tgutils.numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">tgutils.pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+<p>This this will provide access to the vanilla symbols using the <code class="docutils literal notranslate"><span class="pre">np.</span></code> and/or <code class="docutils literal notranslate"><span class="pre">pd.</span></code> prefixes, and
+will also provide access to the enhanced functionality described below.</p>
+<p>For example, instead of writing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_some_integers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">compute_some_floats</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">compute_stuff</span><span class="p">(</span><span class="n">foo</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">bar</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="o">...</span><span class="p">:</span>
+    <span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">workflow</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="o">...</span><span class="p">:</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="n">compute_some_integers</span><span class="p">()</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="n">compute_some_floats</span><span class="p">()</span>
+    <span class="n">compute_stuff</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should write:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_some_integers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ArrayInt32</span><span class="p">:</span>
+    <span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">compute_some_floats</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">MatrixFloat64</span><span class="p">:</span>
+    <span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">compute_stuff</span><span class="p">(</span><span class="n">foo</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ArrayInt32</span><span class="p">,</span> <span class="n">bar</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">MatrixFloat64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="o">...</span><span class="p">:</span>
+    <span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">workflow</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="o">...</span><span class="p">:</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="n">compute_some_integers</span><span class="p">()</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="n">compute_some_floats</span><span class="p">()</span>
+    <span class="n">compute_stuff</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will allow the reader to understand the exact data types involved. Even better, it will allow
+<code class="docutils literal notranslate"><span class="pre">mypy</span></code> to verify that you actually pass the correct data type to each function invocation.
+For example, if you by mistake write <code class="docutils literal notranslate"><span class="pre">compute_stuff(bar,</span> <span class="pre">foo)</span></code> then <code class="docutils literal notranslate"><span class="pre">mypy</span></code> will complain that
+the data types do not match - even though, under the covers, both <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span></code> have exactly
+the same data type at run-time: <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code>.</p>
+<p>To further help with <code class="docutils literal notranslate"><span class="pre">mypy</span></code> type checking, the <code class="docutils literal notranslate"><span class="pre">tgutils</span></code> package includes a <code class="docutils literal notranslate"><span class="pre">stubs</span></code> directory
+containing very partial quick-and-dirty type stubs for <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> (ideally, some brave
+soul(s) would tackle the very difficult issue of providing proper stubs for these libraries,
+allowing for the removal of the <code class="docutils literal notranslate"><span class="pre">tgutils</span></code> stubs). Importing <a class="reference internal" href="tgutils.html#module-tgutils.setup_mypy" title="tgutils.setup_mypy"><code class="xref py py-func docutils literal notranslate"><span class="pre">tgutils.setup_mypy()</span></code></a> module
+set <code class="docutils literal notranslate"><span class="pre">MYPYPATH</span></code> to this stubs directory, which is also a hack (see the <code class="docutils literal notranslate"><span class="pre">metacell</span></code> package for an
+example of using this in your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file).</p>
+<div class="section" id="type-operations">
+<h3>Type Operations<a class="headerlink" href="#type-operations" title="Permalink to this headline">¶</a></h3>
+<p>Control over the data types is also important when performing computations. It affects performance,
+memory consumption and even the semantics of some operations. For example, integer elements can
+never be <code class="docutils literal notranslate"><span class="pre">NaN</span></code> while floating point elements can, boolean elements have their own logic, and
+string elements are different from numeric elements.</p>
+<p>To help with this, <code class="docutils literal notranslate"><span class="pre">tgutils</span></code> provides two functions, <code class="docutils literal notranslate"><span class="pre">am</span></code> and <code class="docutils literal notranslate"><span class="pre">be</span></code>. Both these functions
+return the requested data type, but <code class="docutils literal notranslate"><span class="pre">am</span></code> is just an assertion while <code class="docutils literal notranslate"><span class="pre">be</span></code> is a cast operation.
+That is, writing <code class="docutils literal notranslate"><span class="pre">ArrayInt32.am(foo)</span></code> will return <code class="docutils literal notranslate"><span class="pre">foo</span></code> as an <code class="docutils literal notranslate"><span class="pre">ArrayInt32</span></code>, or will raise an
+error if <code class="docutils literal notranslate"><span class="pre">foo</span></code> is not an array of <code class="docutils literal notranslate"><span class="pre">int32</span></code>; while writing <code class="docutils literal notranslate"><span class="pre">ArrayInt32.be(foo)</span></code> will always
+return an <code class="docutils literal notranslate"><span class="pre">ArrayInt32</span></code>, which is either <code class="docutils literal notranslate"><span class="pre">foo</span></code> if it is an array of <code class="docutils literal notranslate"><span class="pre">int32</span></code>, or a copy of
+<code class="docutils literal notranslate"><span class="pre">foo</span></code> whose elements are the conversion of the elements of <code class="docutils literal notranslate"><span class="pre">foo</span></code> to <code class="docutils literal notranslate"><span class="pre">int32</span></code>.</p>
+</div>
+<div class="section" id="de-serialization">
+<h3>De/serialization<a class="headerlink" href="#de-serialization" title="Permalink to this headline">¶</a></h3>
+<p>The phantom types also provide read and write operations for efficiently storing data on the disk.
+That is, writing <code class="docutils literal notranslate"><span class="pre">ArrayInt32.read(path)</span></code> will read an array of <code class="docutils literal notranslate"><span class="pre">int32</span></code> elements from the
+specified path, and <code class="docutils literal notranslate"><span class="pre">ArrayInt32.write(foo,</span> <span class="pre">path)</span></code> will write an array of <code class="docutils literal notranslate"><span class="pre">int32</span></code> elements
+into the specified path.</p>
+</div>
+</div>
+<div class="section" id="dynamake">
+<h2>DynaMake<a class="headerlink" href="#dynamake" title="Permalink to this headline">¶</a></h2>
+<p>Import <code class="docutils literal notranslate"><span class="pre">tgutils.make</span></code> instead of <code class="docutils literal notranslate"><span class="pre">dynamake.make</span></code>. This will achieve the following:</p>
+<div class="section" id="using-qsub">
+<h3>Using Qsub<a class="headerlink" href="#using-qsub" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference internal" href="tgutils.html#module-tgutils.tg_qsub" title="tgutils.tg_qsub"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tgutils.tg_qsub</span></code></a> script deals with submitting jobs to run on the SunGrid cluster in the
+Tanay Group lab.</p>
+<p>A <a class="reference internal" href="tgutils.html#tgutils.make.tg_require" title="tgutils.make.tg_require"><code class="xref py py-func docutils literal notranslate"><span class="pre">tgutils.make.tg_require()</span></code></a> function allows for collecting context for optimizing the slot
+allocation of <code class="docutils literal notranslate"><span class="pre">tg_qsub</span></code> for maximizing the cluster utilization and minimizing wait times. This has
+no effect unless the collected context values are explicitly used in the <code class="docutils literal notranslate"><span class="pre">run_prefix</span></code> and/or
+<code class="docutils literal notranslate"><span class="pre">run_suffix</span></code> action wrapper of some step.</p>
+<p>This is a convoluted and sub-optimal mechanism but has significant performance benefits in the
+specific environment it was designed for.</p>
+</div>
+</div>
+<div class="section" id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
+<p>Import <code class="docutils literal notranslate"><span class="pre">tgutils.application</span></code> instead of <code class="docutils literal notranslate"><span class="pre">dynamake.application</span></code>. This will achieve the following:</p>
+<div class="section" id="resources">
+<h3>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h3>
+<p>By default, the Python process is restricted in the number of simultaneous open files. This
+is raised by <code class="docutils literal notranslate"><span class="pre">tgutils</span></code> to the maximum allowed by the operating system.</p>
+</div>
+<div class="section" id="numpy-errors">
+<h3>Numpy Errors<a class="headerlink" href="#numpy-errors" title="Permalink to this headline">¶</a></h3>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">numpy</span></code> ignores several kinds of numeric errors. This is modified by <code class="docutils literal notranslate"><span class="pre">tgutils</span></code>
+to raise an appropriate exception. This increases the robustness of the results.</p>
+</div>
+<div class="section" id="numpy-random-number-generation">
+<h3>Numpy Random Number Generation<a class="headerlink" href="#numpy-random-number-generation" title="Permalink to this headline">¶</a></h3>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">dynamake</span></code> only handles the Python random number generator. This is extended by
+<code class="docutils literal notranslate"><span class="pre">tgutils</span></code> so that the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> random number generator is seeded with the same seeds as the
+Python random number generator, even in parallel calls. This seeding ensures results are replicable
+(when using the same non-zero seed).</p>
+</div>
+<div class="section" id="logging">
+<h3>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h3>
+<p>The default Python logging that prints to <code class="docutils literal notranslate"><span class="pre">stderr</span></code> works well for a single application. However,
+when running multiple applications in parallel, log messages may get interleaved resulting in
+garbled output.</p>
+<p>This is solved by <code class="docutils literal notranslate"><span class="pre">tgutils</span></code> using the <a class="reference internal" href="tgutils.html#tgutils.application.tg_qsub_logger" title="tgutils.application.tg_qsub_logger"><code class="xref py py-func docutils literal notranslate"><span class="pre">tgutils.application.tg_qsub_logger()</span></code></a>, which wraps
+the default logger with a <a class="reference internal" href="tgutils.html#tgutils.application.FileLockLoggerAdapter" title="tgutils.application.FileLockLoggerAdapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.application.FileLockLoggerAdapter</span></code></a>. This uses a file
+lock operation around each emitted log message to ensure it is atomic. The lock file is chosen
+to be compatible with the one used by the <code class="docutils literal notranslate"><span class="pre">tgutils.tg_qsub</span></code> script, so that log messages
+from this script will also be protected.</p>
+</div>
+<div class="section" id="parallel">
+<h3>Parallel<a class="headerlink" href="#parallel" title="Permalink to this headline">¶</a></h3>
+<p>When running a large number of very small tasks, it possible to let <code class="docutils literal notranslate"><span class="pre">multiprocessing.Pool</span></code> run
+each task on the much smaller number of available threads. However, this is less efficient. An
+alternative is to use <a class="reference internal" href="tgutils.html#tgutils.application.indexed_range" title="tgutils.application.indexed_range"><code class="xref py py-func docutils literal notranslate"><span class="pre">tgutils.application.indexed_range()</span></code></a> which will partition the large
+range of task indices into equal-sized sub-ranges, one per process. Reporting progress can be
+done using the <code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.application.ParallelCounter</span></code> class.</p>
+</div>
+</div>
+<div class="section" id="other-utilities">
+<h2>Other Utilities<a class="headerlink" href="#other-utilities" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tests">
+<h3>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h3>
+<p>The provided <a class="reference internal" href="tgutils.html#module-tgutils.tests" title="tgutils.tests"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tgutils.tests</span></code></a> module provides <code class="xref py py-class docutils literal notranslate"><span class="pre">TestWithReset</span></code> which properly
+resets all the global state for each test, and <code class="xref py py-class docutils literal notranslate"><span class="pre">TestWithFiles</span></code> which also creates
+a fresh temporary directory for each test. You can create new files using
+<a class="reference internal" href="tgutils.html#tgutils.tests.write_file" title="tgutils.tests.write_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">tgutils.tests.write_file()</span></code></a> and verify file contents using
+<a class="reference internal" href="tgutils.html#tgutils.tests.TestWithFiles.expect_file" title="tgutils.tests.TestWithFiles.expect_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tgutils.tests.TestWithFiles.expect_file()</span></code></a>.</p>
+</div>
+<div class="section" id="caching">
+<h3>Caching<a class="headerlink" href="#caching" title="Permalink to this headline">¶</a></h3>
+<p>You can use the <a class="reference internal" href="tgutils.html#tgutils.cache.Cache" title="tgutils.cache.Cache"><code class="xref py py-class docutils literal notranslate"><span class="pre">tgutils.cache.Cache</span></code></a> class for a lightweight generic cache mechanism.
+It uses weak references to hold onto expensive-to-compute data.</p>
+</div>
+<div class="section" id="yaml">
+<h3>YAML<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h3>
+<p>You can use <a class="reference internal" href="tgutils.html#tgutils.load_yaml.load_dictionary" title="tgutils.load_yaml.load_dictionary"><code class="xref py py-func docutils literal notranslate"><span class="pre">tgutils.load_yaml.load_dictionary()</span></code></a> for a lightweight verification of loaded
+YAML data.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="LICENSE.html" class="btn btn-neutral float-right" title="The MIT License (MIT)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="TGUtils - Utilities for Tanay Group lab code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Weizmann Institute of Science.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.64',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

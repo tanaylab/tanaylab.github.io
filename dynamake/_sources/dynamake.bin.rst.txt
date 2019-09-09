@@ -1,0 +1,30 @@
+dynamake.bin package
+====================
+
+Submodules
+----------
+
+dynamake.bin.main module
+------------------------
+
+.. automodule:: dynamake.bin.main
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+dynamake.bin.make module
+------------------------
+
+.. automodule:: dynamake.bin.make
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: dynamake.bin
+    :members:
+    :undoc-members:
+    :show-inheritance:

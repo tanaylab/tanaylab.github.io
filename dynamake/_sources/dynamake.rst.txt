@@ -1,0 +1,61 @@
+dynamake package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    dynamake.bin
+
+Submodules
+----------
+
+dynamake.application module
+---------------------------
+
+.. automodule:: dynamake.application
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+dynamake.config module
+----------------------
+
+.. automodule:: dynamake.config
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+dynamake.make module
+--------------------
+
+.. automodule:: dynamake.make
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+dynamake.patterns module
+------------------------
+
+.. automodule:: dynamake.patterns
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+dynamake.version module
+-----------------------
+
+.. automodule:: dynamake.version
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: dynamake
+    :members:
+    :undoc-members:
+    :show-inheritance:

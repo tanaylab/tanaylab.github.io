@@ -1,0 +1,94 @@
+tgutils package
+===============
+
+Submodules
+----------
+
+tgutils.application module
+--------------------------
+
+.. automodule:: tgutils.application
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.cache module
+--------------------
+
+.. automodule:: tgutils.cache
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.load\_yaml module
+-------------------------
+
+.. automodule:: tgutils.load_yaml
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.make module
+-------------------
+
+.. automodule:: tgutils.make
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.numpy module
+--------------------
+
+.. automodule:: tgutils.numpy
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.pandas module
+---------------------
+
+.. automodule:: tgutils.pandas
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.setup\_mypy module
+--------------------------
+
+.. automodule:: tgutils.setup_mypy
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.tests module
+--------------------
+
+.. automodule:: tgutils.tests
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.tg\_qsub module
+-----------------------
+
+.. automodule:: tgutils.tg_qsub
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+tgutils.version module
+----------------------
+
+.. automodule:: tgutils.version
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: tgutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

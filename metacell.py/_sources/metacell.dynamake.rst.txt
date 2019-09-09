@@ -1,0 +1,54 @@
+metacell.dynamake package
+=========================
+
+Submodules
+----------
+
+metacell.dynamake.analysis module
+---------------------------------
+
+.. automodule:: metacell.dynamake.analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.dynamake.common module
+-------------------------------
+
+.. automodule:: metacell.dynamake.common
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.dynamake.group module
+------------------------------
+
+.. automodule:: metacell.dynamake.group
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.dynamake.importation module
+------------------------------------
+
+.. automodule:: metacell.dynamake.importation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.dynamake.view module
+-----------------------------
+
+.. automodule:: metacell.dynamake.view
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: metacell.dynamake
+   :members:
+   :undoc-members:
+   :show-inheritance:

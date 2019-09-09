@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>metacell.dash package &mdash; Metacell 0.5.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="metacell.dynamake package" href="metacell.dynamake.html" />
+    <link rel="prev" title="metacell.bin package" href="metacell.bin.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Metacell
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License (MIT)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="metacell.html">metacell package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="metacell.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="metacell.bin.html">metacell.bin package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">metacell.dash package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="metacell.dynamake.html">metacell.dynamake package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="metacell.storage.html">metacell.storage package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.analyze">metacell.analyze module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.few_profiles">metacell.few_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.many_profiles">metacell.many_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.parameters">metacell.parameters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.pick">metacell.pick module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.tracks">metacell.tracks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.utilities">metacell.utilities module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.version">metacell.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.visualizations">metacell.visualizations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="cover/index.html#http://">coverage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Metacell</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">metacell</a> &raquo;</li>
+        
+          <li><a href="metacell.html">metacell package</a> &raquo;</li>
+        
+      <li>metacell.dash package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metacell-dash-package">
+<h1>metacell.dash package<a class="headerlink" href="#metacell-dash-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-metacell.dash.app">
+<span id="metacell-dash-app-module"></span><h2>metacell.dash.app module<a class="headerlink" href="#module-metacell.dash.app" title="Permalink to this headline">¶</a></h2>
+<p>Make the URL reflect the state of the application.</p>
+<p>This is heavily modified from: <a class="reference external" href="https://gist.github.com/jtpio/1aeb0d850dcd537a5b244bcf5aeaa75b">https://gist.github.com/jtpio/1aeb0d850dcd537a5b244bcf5aeaa75b</a>
+See: <a class="reference external" href="https://github.com/plotly/dash/issues/188">https://github.com/plotly/dash/issues/188</a> for details</p>
+<dl class="class">
+<dt id="metacell.dash.app.ComponentData">
+<em class="property">class </em><code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">ComponentData</code><span class="sig-paren">(</span><em class="sig-param">id: str, properties: List[str], dumper: Optional[Callable], loader: Optional[Callable]</em><span class="sig-paren">)</span><a class="headerlink" href="#metacell.dash.app.ComponentData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Data remembered per component.</p>
+<dl class="method">
+<dt id="metacell.dash.app.ComponentData.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">id: str, properties: List[str], dumper: Optional[Callable], loader: Optional[Callable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dash.app.ComponentData.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ComponentData.by_name">
+<code class="sig-name descname">by_name</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ComponentData.by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>All the known component’s data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ComponentData.dumper">
+<code class="sig-name descname">dumper</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ComponentData.dumper" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to convert property values from storage into Dash.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ComponentData.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ComponentData.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique identifier of the component.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="metacell.dash.app.ComponentData.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param">params: Dict[str, Any], kwargs: Dict[str, Any]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dash.app.ComponentData.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the data from the stored parameters into the keyword arguments.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ComponentData.loader">
+<code class="sig-name descname">loader</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ComponentData.loader" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to convert property values from Dash in to storage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ComponentData.properties">
+<code class="sig-name descname">properties</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ComponentData.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of properties to save for the component.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="metacell.dash.app.DEFAULT_MAX_COLUMNS">
+<code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">DEFAULT_MAX_COLUMNS</code><em class="property"> = 200</em><a class="headerlink" href="#metacell.dash.app.DEFAULT_MAX_COLUMNS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default number of columns to display in a <a class="reference internal" href="#metacell.dash.app.ResampledHeatmap" title="metacell.dash.app.ResampledHeatmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">metacell.dash.app.ResampledHeatmap</span></code></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="metacell.dash.app.DEFAULT_MAX_ROWS">
+<code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">DEFAULT_MAX_ROWS</code><em class="property"> = 200</em><a class="headerlink" href="#metacell.dash.app.DEFAULT_MAX_ROWS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default number of rows to display in a <a class="reference internal" href="#metacell.dash.app.ResampledHeatmap" title="metacell.dash.app.ResampledHeatmap"><code class="xref py py-class docutils literal notranslate"><span class="pre">metacell.dash.app.ResampledHeatmap</span></code></a>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="metacell.dash.app.ResampledHeatmap">
+<em class="property">class </em><code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">ResampledHeatmap</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">aggregation: str = 'mean'</em>, <em class="sig-param">data: Optional[Dict[str</em>, <em class="sig-param">Any]] = None</em>, <em class="sig-param">layout: Optional[Dict[str</em>, <em class="sig-param">Any]] = None</em>, <em class="sig-param">max_rows: int = 200</em>, <em class="sig-param">max_columns: int = 200</em><span class="sig-paren">)</span><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Support displaying a large heatmap.</p>
+<p>If the visible data is larger than some threshold, it is aggregated using some function. The
+aggregated data loses the original labels (as each entry is the aggregation of several labeled
+entries).</p>
+<dl class="method">
+<dt id="metacell.dash.app.ResampledHeatmap.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">aggregation: str = 'mean'</em>, <em class="sig-param">data: Optional[Dict[str</em>, <em class="sig-param">Any]] = None</em>, <em class="sig-param">layout: Optional[Dict[str</em>, <em class="sig-param">Any]] = None</em>, <em class="sig-param">max_rows: int = 200</em>, <em class="sig-param">max_columns: int = 200</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an empty resampled heatmap state.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.aggregation">
+<code class="sig-name descname">aggregation</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.aggregation" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to aggregate the data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.aggregations">
+<code class="sig-name descname">aggregations</code><em class="property"> = {'max': &lt;function ResampledHeatmap._max&gt;, 'mean': &lt;function ResampledHeatmap._mean&gt;, 'median': &lt;function ResampledHeatmap._median&gt;, 'min': &lt;function ResampledHeatmap._min&gt;, 'std': &lt;function ResampledHeatmap._std&gt;, 'sum': &lt;function ResampledHeatmap._sum&gt;, 'var': &lt;function ResampledHeatmap._var&gt;}</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.aggregations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Supported aggregation methods.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.column_scale">
+<code class="sig-name descname">column_scale</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.column_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>How many original columns are aggregated into each visible column.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.data">
+<code class="sig-name descname">data</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The heatmap configuration data to use.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="metacell.dash.app.ResampledHeatmap.display_frame">
+<code class="sig-name descname">display_frame</code><span class="sig-paren">(</span><em class="sig-param">selection: Optional[Dict[str</em>, <em class="sig-param">Any]] = None</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.display_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the data to display given some user selection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="metacell.dash.app.ResampledHeatmap.frame">
+<em class="property">property </em><code class="sig-name descname">frame</code><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full data frame being displayed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.layout">
+<code class="sig-name descname">layout</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.layout" title="Permalink to this definition">¶</a></dt>
+<dd><p>The layout to use.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.max_columns">
+<code class="sig-name descname">max_columns</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.max_columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximal number of columns to display.
+If more columns are displayed, they will be aggregated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.max_rows">
+<code class="sig-name descname">max_rows</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.max_rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximal number of rows to display.
+If more rows are displayed, they will be aggregated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="metacell.dash.app.ResampledHeatmap.relayout_figure">
+<code class="sig-name descname">relayout_figure</code><span class="sig-paren">(</span><em class="sig-param">selection: Optional[Dict[str</em>, <em class="sig-param">Any]] = None</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.relayout_figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the figure to use given a relayoutData event.</p>
+<p>TODO: This handles zoom events but struggles with pan events.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.row_scale">
+<code class="sig-name descname">row_scale</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.row_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>How many original rows are aggregated into each visible row.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.start_column">
+<code class="sig-name descname">start_column</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.start_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of the first visible column.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.start_row">
+<code class="sig-name descname">start_row</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.start_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of the first visible row.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.stop_column">
+<code class="sig-name descname">stop_column</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.stop_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of the first non-visible column.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="metacell.dash.app.ResampledHeatmap.stop_row">
+<code class="sig-name descname">stop_row</code><em class="property"> = None</em><a class="headerlink" href="#metacell.dash.app.ResampledHeatmap.stop_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of the first non-visible row.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dash.app.app">
+<code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">app</code><span class="sig-paren">(</span><em class="sig-param">content: Callable[Dict[str, str], List[Any]]</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#metacell.dash.app.app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Dash application.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">content</span></code> function should take a <code class="docutils literal notranslate"><span class="pre">params</span></code> dictionary and use it to create each
+<code class="docutils literal notranslate"><span class="pre">component</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dash.app.apply_filter_action">
+<code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">apply_filter_action</code><span class="sig-paren">(</span><em class="sig-param">data: numpy.ndarray, filter_action: Dict[str, Any]</em><span class="sig-paren">)</span> &#x2192; tgutils.numpy.ArrayBool<a class="headerlink" href="#metacell.dash.app.apply_filter_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a filter to an array of values.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dash.app.component">
+<code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">component</code><span class="sig-paren">(</span><em class="sig-param">params: Dict[str, str], *, properties: List[str] = ['value'], dumper: Optional[Callable] = None, loader: Optional[Callable] = None</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#metacell.dash.app.component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dash component in the HTML content.</p>
+<p>Invoke <code class="docutils literal notranslate"><span class="pre">component(params)(dcc.Something)(id='...',</span> <span class="pre">...)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">dcc.Something(id='...',</span>
+<span class="pre">...)</span></code>.</p>
+<p>Specify <code class="docutils literal notranslate"><span class="pre">properties</span></code> unless you only need to store the <code class="docutils literal notranslate"><span class="pre">value</span></code> property.</p>
+<p>Specify a <code class="docutils literal notranslate"><span class="pre">dumper</span></code> and a <code class="docutils literal notranslate"><span class="pre">loader</span></code> if there is a need to convert between the Dash value(s)
+and the stored value(s) (e.g., storing identifiers for a component that uses row indices). They
+are given a dictionary containing the properties and can modify them as needed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dash.app.parse_filter_query">
+<code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">parse_filter_query</code><span class="sig-paren">(</span><em class="sig-param">filter_query: Optional[str]</em><span class="sig-paren">)</span> &#x2192; List[Dict[str, Any]]<a class="headerlink" href="#metacell.dash.app.parse_filter_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a Dash filter query into a list of filter actions.</p>
+<p>Each action is a dictionary with the <code class="docutils literal notranslate"><span class="pre">column_id</span></code>, <code class="docutils literal notranslate"><span class="pre">operator</span></code>, and the <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dash.app.reset_stat_button">
+<code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">reset_stat_button</code><span class="sig-paren">(</span><em class="sig-param">text: str = 'Reset Stat'</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#metacell.dash.app.reset_stat_button" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a “Reset Stat” button.</p>
+<p>Clicking the button clears the <code class="docutils literal notranslate"><span class="pre">Stat</span></code> cache. This is needed if <code class="docutils literal notranslate"><span class="pre">Stat</span></code> decided some file(s)
+do not exist, but they were created later (from outside the application).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dash.app.save_button">
+<code class="sig-prename descclassname">metacell.dash.app.</code><code class="sig-name descname">save_button</code><span class="sig-paren">(</span><em class="sig-param">text: str = 'Save'</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#metacell.dash.app.save_button" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a “Save State” button.</p>
+<p>Clicking the button saves the current state of the application in a disk file <code class="docutils literal notranslate"><span class="pre">.dash/UUID</span></code> and
+places the <code class="docutils literal notranslate"><span class="pre">UUID</span></code> in the URL query.</p>
+<p>When loading the page, specifying <code class="docutils literal notranslate"><span class="pre">?uuid=UUID</span></code> may be used to retrieve the application state
+from the disk file.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-metacell.dash.main">
+<span id="metacell-dash-main-module"></span><h2>metacell.dash.main module<a class="headerlink" href="#module-metacell.dash.main" title="Permalink to this headline">¶</a></h2>
+<p>Main program for Metacell interactive dashboard.</p>
+<dl class="data">
+<dt id="metacell.dash.main.DEFAULT_PAGE_SIZE">
+<code class="sig-prename descclassname">metacell.dash.main.</code><code class="sig-name descname">DEFAULT_PAGE_SIZE</code><em class="property"> = 31</em><a class="headerlink" href="#metacell.dash.main.DEFAULT_PAGE_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default number of rows in a single table page.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dash.main.main">
+<code class="sig-prename descclassname">metacell.dash.main.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dash.main.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main Dash program.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-metacell.dash.plots">
+<span id="metacell-dash-plots-module"></span><h2>metacell.dash.plots module<a class="headerlink" href="#module-metacell.dash.plots" title="Permalink to this headline">¶</a></h2>
+<p>Actually plot the graphs.</p>
+</div>
+<div class="section" id="module-metacell.dash">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-metacell.dash" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="metacell.dynamake.html" class="btn btn-neutral float-right" title="metacell.dynamake package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="metacell.bin.html" class="btn btn-neutral float-left" title="metacell.bin package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Weizmann Institute of Science
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

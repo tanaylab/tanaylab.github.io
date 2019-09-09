@@ -1,0 +1,78 @@
+metacell.storage package
+========================
+
+Submodules
+----------
+
+metacell.storage.genes module
+-----------------------------
+
+.. automodule:: metacell.storage.genes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.storage.hca module
+---------------------------
+
+.. automodule:: metacell.storage.hca
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.storage.helpers module
+-------------------------------
+
+.. automodule:: metacell.storage.helpers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.storage.imports module
+-------------------------------
+
+.. automodule:: metacell.storage.imports
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.storage.matrices module
+--------------------------------
+
+.. automodule:: metacell.storage.matrices
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.storage.metadata module
+--------------------------------
+
+.. automodule:: metacell.storage.metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.storage.profiles module
+--------------------------------
+
+.. automodule:: metacell.storage.profiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.storage.views module
+-----------------------------
+
+.. automodule:: metacell.storage.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: metacell.storage
+   :members:
+   :undoc-members:
+   :show-inheritance:

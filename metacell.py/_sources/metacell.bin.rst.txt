@@ -1,0 +1,38 @@
+metacell.bin package
+====================
+
+Submodules
+----------
+
+metacell.bin.metacell\_call module
+----------------------------------
+
+.. automodule:: metacell.bin.metacell_call
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.bin.metacell\_import module
+------------------------------------
+
+.. automodule:: metacell.bin.metacell_import
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.bin.metacell\_make module
+----------------------------------
+
+.. automodule:: metacell.bin.metacell_make
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: metacell.bin
+   :members:
+   :undoc-members:
+   :show-inheritance:

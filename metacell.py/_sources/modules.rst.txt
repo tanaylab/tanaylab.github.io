@@ -1,0 +1,7 @@
+metacell
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   metacell

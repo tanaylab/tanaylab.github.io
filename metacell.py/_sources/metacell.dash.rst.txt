@@ -1,0 +1,38 @@
+metacell.dash package
+=====================
+
+Submodules
+----------
+
+metacell.dash.app module
+------------------------
+
+.. automodule:: metacell.dash.app
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.dash.main module
+-------------------------
+
+.. automodule:: metacell.dash.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.dash.plots module
+--------------------------
+
+.. automodule:: metacell.dash.plots
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: metacell.dash
+   :members:
+   :undoc-members:
+   :show-inheritance:

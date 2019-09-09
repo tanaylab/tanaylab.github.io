@@ -1,0 +1,28 @@
+Metacell - Single-cell mRNA Analysis
+====================================
+
+**NOTE**: This is a pre-alpha development version of a Metacell Python package.
+You are probably looking for the published `<https://tanaylab.bitbucket.io/metacell-r/index.html>`_
+R package.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   Readme <README>
+   License (MIT) <LICENSE>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Code:
+
+   package <modules>
+   coverage <cover/index.html#http://>
+
+
+Indices and tables:
+===================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

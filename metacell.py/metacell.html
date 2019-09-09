@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>metacell package &mdash; Metacell 0.5.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="metacell.bin package" href="metacell.bin.html" />
+    <link rel="prev" title="metacell" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Metacell
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License (MIT)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">package</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">metacell package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="metacell.bin.html">metacell.bin package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="metacell.dash.html">metacell.dash package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="metacell.dynamake.html">metacell.dynamake package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="metacell.storage.html">metacell.storage package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.analyze">metacell.analyze module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.few_profiles">metacell.few_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.many_profiles">metacell.many_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.parameters">metacell.parameters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.pick">metacell.pick module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.tracks">metacell.tracks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.utilities">metacell.utilities module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.version">metacell.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell.visualizations">metacell.visualizations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-metacell">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="cover/index.html#http://">coverage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Metacell</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">metacell</a> &raquo;</li>
+        
+      <li>metacell package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metacell-package">
+<h1>metacell package<a class="headerlink" href="#metacell-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="metacell.bin.html">metacell.bin package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="metacell.bin.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.bin.html#module-metacell.bin.metacell_call">metacell.bin.metacell_call module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.bin.html#module-metacell.bin.metacell_import">metacell.bin.metacell_import module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.bin.html#module-metacell.bin.metacell_make">metacell.bin.metacell_make module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.bin.html#module-metacell.bin">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metacell.dash.html">metacell.dash package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dash.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dash.html#module-metacell.dash.app">metacell.dash.app module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dash.html#module-metacell.dash.main">metacell.dash.main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dash.html#module-metacell.dash.plots">metacell.dash.plots module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dash.html#module-metacell.dash">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metacell.dynamake.html">metacell.dynamake package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dynamake.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dynamake.html#module-metacell.dynamake.analysis">metacell.dynamake.analysis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dynamake.html#module-metacell.dynamake.common">metacell.dynamake.common module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dynamake.html#module-metacell.dynamake.group">metacell.dynamake.group module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dynamake.html#module-metacell.dynamake.importation">metacell.dynamake.importation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dynamake.html#module-metacell.dynamake.view">metacell.dynamake.view module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.dynamake.html#module-metacell.dynamake">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metacell.storage.html">metacell.storage package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage.genes">metacell.storage.genes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage.hca">metacell.storage.hca module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage.helpers">metacell.storage.helpers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage.imports">metacell.storage.imports module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage.matrices">metacell.storage.matrices module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage.metadata">metacell.storage.metadata module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage.profiles">metacell.storage.profiles module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage.views">metacell.storage.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metacell.storage.html#module-metacell.storage">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-metacell.analyze">
+<span id="metacell-analyze-module"></span><h2>metacell.analyze module<a class="headerlink" href="#module-metacell.analyze" title="Permalink to this headline">¶</a></h2>
+<p>Perform analysis on metacell data.</p>
+</div>
+<div class="section" id="module-metacell.few_profiles">
+<span id="metacell-few-profiles-module"></span><h2>metacell.few_profiles module<a class="headerlink" href="#module-metacell.few_profiles" title="Permalink to this headline">¶</a></h2>
+<p>Directly group a small number of profiles.</p>
+</div>
+<div class="section" id="module-metacell.many_profiles">
+<span id="metacell-many-profiles-module"></span><h2>metacell.many_profiles module<a class="headerlink" href="#module-metacell.many_profiles" title="Permalink to this headline">¶</a></h2>
+<p>Group a large number of profiles using divide-and-conquer.</p>
+</div>
+<div class="section" id="module-metacell.parameters">
+<span id="metacell-parameters-module"></span><h2>metacell.parameters module<a class="headerlink" href="#module-metacell.parameters" title="Permalink to this headline">¶</a></h2>
+<p>Provide general purpose parameters and utilities.</p>
+</div>
+<div class="section" id="module-metacell.pick">
+<span id="metacell-pick-module"></span><h2>metacell.pick module<a class="headerlink" href="#module-metacell.pick" title="Permalink to this headline">¶</a></h2>
+<p>Pick specific genes and/or profiles from a data frame.</p>
+</div>
+<div class="section" id="module-metacell.tracks">
+<span id="metacell-tracks-module"></span><h2>metacell.tracks module<a class="headerlink" href="#module-metacell.tracks" title="Permalink to this headline">¶</a></h2>
+<p>Track the trajectory of some profiles through the grouping process.</p>
+</div>
+<div class="section" id="module-metacell.utilities">
+<span id="metacell-utilities-module"></span><h2>metacell.utilities module<a class="headerlink" href="#module-metacell.utilities" title="Permalink to this headline">¶</a></h2>
+<p>Generic utilities.</p>
+<dl class="function">
+<dt id="metacell.utilities.combine_uuids">
+<code class="sig-prename descclassname">metacell.utilities.</code><code class="sig-name descname">combine_uuids</code><span class="sig-paren">(</span><em class="sig-param">uuids: List[uuid.UUID]</em><span class="sig-paren">)</span> &#x2192; uuid.UUID<a class="headerlink" href="#metacell.utilities.combine_uuids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> to combine multiple UUIDs into a single UUID.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.utilities.file_uuid">
+<code class="sig-prename descclassname">metacell.utilities.</code><code class="sig-name descname">file_uuid</code><span class="sig-paren">(</span><em class="sig-param">path: str</em><span class="sig-paren">)</span> &#x2192; uuid.UUID<a class="headerlink" href="#metacell.utilities.file_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute a checksum of a disk file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.utilities.nans_count">
+<code class="sig-prename descclassname">metacell.utilities.</code><code class="sig-name descname">nans_count</code><span class="sig-paren">(</span><em class="sig-param">array: tgutils.numpy.ArrayFloat32</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#metacell.utilities.nans_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count the number of NaN values in an array.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.utilities.non_nans_count">
+<code class="sig-prename descclassname">metacell.utilities.</code><code class="sig-name descname">non_nans_count</code><span class="sig-paren">(</span><em class="sig-param">array: tgutils.numpy.ArrayFloat32</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#metacell.utilities.non_nans_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count the number of non-NaN values in an array.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.utilities.only_lowest_ranks">
+<code class="sig-prename descclassname">metacell.utilities.</code><code class="sig-name descname">only_lowest_ranks</code><span class="sig-paren">(</span><em class="sig-param">array: tgutils.numpy.ArrayFloat32</em>, <em class="sig-param">keep_count: int</em><span class="sig-paren">)</span> &#x2192; tgutils.numpy.ArrayFloat32<a class="headerlink" href="#metacell.utilities.only_lowest_ranks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return only the lowest few values in an array.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.utilities.rank_array">
+<code class="sig-prename descclassname">metacell.utilities.</code><code class="sig-name descname">rank_array</code><span class="sig-paren">(</span><em class="sig-param">array: tgutils.numpy.ArrayFloat32</em><span class="sig-paren">)</span> &#x2192; tgutils.numpy.ArrayFloat32<a class="headerlink" href="#metacell.utilities.rank_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an array of values to an array of ranks.</p>
+<p>The result is still an array of float where NaN values get a NaN rank.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.utilities.sliding_window_functions">
+<code class="sig-prename descclassname">metacell.utilities.</code><code class="sig-name descname">sliding_window_functions</code><span class="sig-paren">(</span><em class="sig-param">values: tgutils.numpy.ArrayFloat32, order_by: tgutils.numpy.ArrayFloat32, window_size: int, functions: List[str]</em><span class="sig-paren">)</span> &#x2192; Dict[str, tgutils.numpy.ArrayFloat32]<a class="headerlink" href="#metacell.utilities.sliding_window_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute some function(s) on a sliding window.</p>
+<p>The values are first sorted by the content of a second array, then the sliding window is applied
+(repeating the 1st and last elements as needed), the function(s) are applied, and the results
+are unsorted back into the proper positions.</p>
+<p>Currently supported functions are <code class="docutils literal notranslate"><span class="pre">median</span></code>, <code class="docutils literal notranslate"><span class="pre">mean</span></code>, <code class="docutils literal notranslate"><span class="pre">std</span></code> and <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.utilities.sum_profiles_loop">
+<code class="sig-prename descclassname">metacell.utilities.</code><code class="sig-name descname">sum_profiles_loop</code><span class="sig-paren">(</span><em class="sig-param">expected: int</em><span class="sig-paren">)</span> &#x2192; tgutils.application.Loop<a class="headerlink" href="#metacell.utilities.sum_profiles_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a logged loop for summing profiles.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-metacell.version">
+<span id="metacell-version-module"></span><h2>metacell.version module<a class="headerlink" href="#module-metacell.version" title="Permalink to this headline">¶</a></h2>
+<p>Version is generated by setup.py.</p>
+</div>
+<div class="section" id="module-metacell.visualizations">
+<span id="metacell-visualizations-module"></span><h2>metacell.visualizations module<a class="headerlink" href="#module-metacell.visualizations" title="Permalink to this headline">¶</a></h2>
+<p>Visualizations of computed metacell data.</p>
+</div>
+<div class="section" id="module-metacell">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-metacell" title="Permalink to this headline">¶</a></h2>
+<p>Main Metacell module.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="metacell.bin.html" class="btn btn-neutral float-right" title="metacell.bin package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="metacell" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Weizmann Institute of Science
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

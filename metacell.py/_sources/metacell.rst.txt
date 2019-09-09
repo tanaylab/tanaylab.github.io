@@ -1,0 +1,96 @@
+metacell package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   metacell.bin
+   metacell.dash
+   metacell.dynamake
+   metacell.storage
+
+Submodules
+----------
+
+metacell.analyze module
+-----------------------
+
+.. automodule:: metacell.analyze
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.few\_profiles module
+-----------------------------
+
+.. automodule:: metacell.few_profiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.many\_profiles module
+------------------------------
+
+.. automodule:: metacell.many_profiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.parameters module
+--------------------------
+
+.. automodule:: metacell.parameters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.pick module
+--------------------
+
+.. automodule:: metacell.pick
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.tracks module
+----------------------
+
+.. automodule:: metacell.tracks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.utilities module
+-------------------------
+
+.. automodule:: metacell.utilities
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.version module
+-----------------------
+
+.. automodule:: metacell.version
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+metacell.visualizations module
+------------------------------
+
+.. automodule:: metacell.visualizations
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: metacell
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>metacell.dynamake package &mdash; Metacell 0.5.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="metacell.storage package" href="metacell.storage.html" />
+    <link rel="prev" title="metacell.dash package" href="metacell.dash.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Metacell
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Readme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License (MIT)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="metacell.html">metacell package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="metacell.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="metacell.bin.html">metacell.bin package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="metacell.dash.html">metacell.dash package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">metacell.dynamake package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="metacell.storage.html">metacell.storage package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.analyze">metacell.analyze module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.few_profiles">metacell.few_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.many_profiles">metacell.many_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.parameters">metacell.parameters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.pick">metacell.pick module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.tracks">metacell.tracks module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.utilities">metacell.utilities module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.version">metacell.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell.visualizations">metacell.visualizations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metacell.html#module-metacell">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="cover/index.html#http://">coverage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Metacell</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">metacell</a> &raquo;</li>
+        
+          <li><a href="metacell.html">metacell package</a> &raquo;</li>
+        
+      <li>metacell.dynamake package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metacell-dynamake-package">
+<h1>metacell.dynamake package<a class="headerlink" href="#metacell-dynamake-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-metacell.dynamake.analysis">
+<span id="metacell-dynamake-analysis-module"></span><h2>metacell.dynamake.analysis module<a class="headerlink" href="#module-metacell.dynamake.analysis" title="Permalink to this headline">¶</a></h2>
+<p>Build steps for analyzing metacell data.</p>
+</div>
+<div class="section" id="module-metacell.dynamake.common">
+<span id="metacell-dynamake-common-module"></span><h2>metacell.dynamake.common module<a class="headerlink" href="#module-metacell.dynamake.common" title="Permalink to this headline">¶</a></h2>
+<p>Common functions for DynaMake steps.</p>
+<dl class="function">
+<dt id="metacell.dynamake.common.call">
+<em class="property">async </em><code class="sig-prename descclassname">metacell.dynamake.common.</code><code class="sig-name descname">call</code><span class="sig-paren">(</span><em class="sig-param">name: Optional[str] = None</em>, <em class="sig-param">*</em>, <em class="sig-param">with_config: bool = False</em>, <em class="sig-param">with_parallel: bool = False</em>, <em class="sig-param">with_intermediate: bool = False</em>, <em class="sig-param">log_context: Optional[str] = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dynamake.common.call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invoke the <code class="docutils literal notranslate"><span class="pre">metacell_call</span></code> script to invoke some top-level Python function.</p>
+<p>If the called function name is not specified, it is assumed to be identical to the current step
+name.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">with_config</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then a <code class="docutils literal notranslate"><span class="pre">--config</span></code> parameter is added using
+<code class="xref py py-func docutils literal notranslate"><span class="pre">dynamake.application.with_config()</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">with_parallel</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then <code class="docutils literal notranslate"><span class="pre">--jobs</span></code> is added with a value computed by
+<cite>:py:func:tgutils.make.parallel_jobs</cite>, that is, taking into account the innermost
+<cite>:py:func:tgutils.make.tg_require</cite>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">with_intermediate</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the program uses the <code class="docutils literal notranslate"><span class="pre">write_intermediate</span></code>
+parameter.</p>
+<p>The first named argument is special; it is automatically emphasized, and also passed to the
+<code class="docutils literal notranslate"><span class="pre">--log_context</span></code> command line option. You can disable this by providing an explicit
+<code class="docutils literal notranslate"><span class="pre">log_context</span></code> (which may be empty).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dynamake.common.ecall">
+<em class="property">async </em><code class="sig-prename descclassname">metacell.dynamake.common.</code><code class="sig-name descname">ecall</code><span class="sig-paren">(</span><em class="sig-param">name: Optional[str] = None</em>, <em class="sig-param">*</em>, <em class="sig-param">with_config: bool = False</em>, <em class="sig-param">with_parallel: bool = False</em>, <em class="sig-param">with_intermediate: bool = False</em>, <em class="sig-param">log_context: Optional[str] = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dynamake.common.ecall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <code class="docutils literal notranslate"><span class="pre">call</span></code> but first <code class="docutils literal notranslate"><span class="pre">e</span></code>-xpand all the named arguments.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metacell.dynamake.common.erequire_ancestor">
+<code class="sig-prename descclassname">metacell.dynamake.common.</code><code class="sig-name descname">erequire_ancestor</code><span class="sig-paren">(</span><em class="sig-param">nested_path: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#metacell.dynamake.common.erequire_ancestor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Require a file which may exist in a parent directory.</p>
+<p>Searches for the file in the nested directory, and failing that, in its parent(s),
+up to and including the current directory (but no further).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-metacell.dynamake.group">
+<span id="metacell-dynamake-group-module"></span><h2>metacell.dynamake.group module<a class="headerlink" href="#module-metacell.dynamake.group" title="Permalink to this headline">¶</a></h2>
+<p>[:,np.newaxis]
+Build steps for grouping cells to metacells.</p>
+<dl class="function">
+<dt id="metacell.dynamake.group.group_few_profiles">
+<em class="property">async </em><code class="sig-prename descclassname">metacell.dynamake.group.</code><code class="sig-name descname">group_few_profiles</code><span class="sig-paren">(</span><em class="sig-param">profiles_dir: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dynamake.group.group_few_profiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="metacell.dynamake.group.group_many_profiles">
+<em class="property">async </em><code class="sig-prename descclassname">metacell.dynamake.group.</code><code class="sig-name descname">group_many_profiles</code><span class="sig-paren">(</span><em class="sig-param">profiles_dir: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dynamake.group.group_many_profiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-metacell.dynamake.importation">
+<span id="metacell-dynamake-importation-module"></span><h2>metacell.dynamake.importation module<a class="headerlink" href="#module-metacell.dynamake.importation" title="Permalink to this headline">¶</a></h2>
+<p>Build steps for importing raw data into the metacell pipeline.</p>
+<dl class="function">
+<dt id="metacell.dynamake.importation.convert_10x">
+<em class="property">async </em><code class="sig-prename descclassname">metacell.dynamake.importation.</code><code class="sig-name descname">convert_10x</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dynamake.importation.convert_10x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="metacell.dynamake.importation.convert_hca">
+<em class="property">async </em><code class="sig-prename descclassname">metacell.dynamake.importation.</code><code class="sig-name descname">convert_hca</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dynamake.importation.convert_hca" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="metacell.dynamake.importation.convert_moca">
+<em class="property">async </em><code class="sig-prename descclassname">metacell.dynamake.importation.</code><code class="sig-name descname">convert_moca</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#metacell.dynamake.importation.convert_moca" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="metacell.dynamake.importation.standard_format_file">
+<code class="sig-prename descclassname">metacell.dynamake.importation.</code><code class="sig-name descname">standard_format_file</code><span class="sig-paren">(</span><em class="sig-param">name: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#metacell.dynamake.importation.standard_format_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-metacell.dynamake.view">
+<span id="metacell-dynamake-view-module"></span><h2>metacell.dynamake.view module<a class="headerlink" href="#module-metacell.dynamake.view" title="Permalink to this headline">¶</a></h2>
+<p>Build steps for creating views of the data to analyze.</p>
+</div>
+<div class="section" id="module-metacell.dynamake">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-metacell.dynamake" title="Permalink to this headline">¶</a></h2>
+<p>DynaMake rules for the metacell work flow.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="metacell.storage.html" class="btn btn-neutral float-right" title="metacell.storage package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="metacell.dash.html" class="btn btn-neutral float-left" title="metacell.dash package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Weizmann Institute of Science
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

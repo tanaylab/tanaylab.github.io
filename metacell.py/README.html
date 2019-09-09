@@ -1,0 +1,669 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Metacell - Single-cell RNA Sequencing Analysis &mdash; Metacell 0.5.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The MIT License (MIT)" href="LICENSE.html" />
+    <link rel="prev" title="Metacell - Single-cell mRNA Analysis" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Metacell
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Readme</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#metacell-analysis">Metacell Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importing">Importing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis">Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#directory-structure">Directory Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#raw-data">Raw Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fast-access-data">Fast Access Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grouped-data">Grouped Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License (MIT)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">package</a></li>
+<li class="toctree-l1"><a class="reference external" href="cover/index.html#http://">coverage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Metacell</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Metacell - Single-cell RNA Sequencing Analysis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metacell-single-cell-rna-sequencing-analysis">
+<h1>Metacell - Single-cell RNA Sequencing Analysis<a class="headerlink" href="#metacell-single-cell-rna-sequencing-analysis" title="Permalink to this headline">¶</a></h1>
+<p>The metacell package implements the metacell algorithm for single-cell RNA sequencing (scRNA-seq)
+data analysis.</p>
+<p>The <a class="reference external" href="https://www.biorxiv.org/content/10.1101/437665v1">original</a> metacell algorithm was
+implemented in R. In contrast, the Python package described here implements an <cite>improved
+&lt;https://todo/&gt;</cite> version, which uses improved internal algorithms and supports much larger data sets
+(millions of cells).</p>
+<div class="section" id="metacell-analysis">
+<h2>Metacell Analysis<a class="headerlink" href="#metacell-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Naively, scRNA_seq data is a set of cell profiles, where for each one, for each gene, we get a count
+of the mRNA molecules that existed in the cell for that gene. This serves as an indicator of how
+“expressed” or “active” the gene is.</p>
+<p>As in any real world technology, the raw data may suffer from technical artifacts (counting the
+molecules of two cells in one profile, counting the molecules from a ruptured cells, counting only
+the molecules from the cell nucleus, etc.). This requires pruning the raw data to exclude such
+artifacts. TODO: Create view should consider these issues.</p>
+<p>The current technology scRNA-seq data is also very sparse (typically &lt;10%, sometimes even &lt;5% of the
+RNA molecules are counted). This introduces large sampling variance on top of the original signal,
+which itself contains significant inherent biological noise.</p>
+<p>Analyzing scRNA-seq data therefore requires processing the profiles in bulk. Classically, this has
+been done by directly clustering the cells using various methods.</p>
+<p>In contrast, the metacell approach groups together profiles of the “same” biological state into
+groups with the <em>minimal</em> number of profiles (~100) needed for computing robust statistics (in
+particular, mean gene expression). Each such group is a single “metacell”.</p>
+<p>By summing profiles together, each metacell greatly reduces the sampling variance, and provides a
+more robust estimation of some transcription state. In particular, a metacell is not a cell type
+(multiple metacells may belong to the same type), and is not a parametric model of the cell state.</p>
+<p>The metacells should therefore be further analyzed using additional methods to classify cell types,
+detect cell trajectories and/or lineage, build parametric models for cell behavior, etc. Using
+metacells as input for such analysis techniques should benefit both from the more robust, less noisy
+input; and from the (~100-fold) reduction in the number of profiles to analyze.</p>
+<p>An obvious technique is to recursively group the metacells into larger groups, and investigate the
+resulting clustering hierarchy. Methods for further analysis of the data may choose to build upon
+this readily available hierarchy (which is also provided by this package).</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<p>Given Python version 3.6 and above, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">metacell</span></code> (or, <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">pip</span> <span class="pre">install</span>
+<span class="pre">metacell</span></code> if you have <code class="docutils literal notranslate"><span class="pre">sudo</span></code> privileges). This will install this package and two scripts:
+<code class="docutils literal notranslate"><span class="pre">metacell_flow</span></code> and <code class="docutils literal notranslate"><span class="pre">metacell_call</span></code>.</p>
+<p>The metacell package is built using the <a class="reference external" href="https://pypi.org/project/dynamake/">DynaMake</a> package.
+The <code class="docutils literal notranslate"><span class="pre">metacell_flow</span></code> script is simply the <code class="docutils literal notranslate"><span class="pre">dynamake</span></code> script, pre-loaded with the metacell build
+steps, and <code class="docutils literal notranslate"><span class="pre">metacell_call</span></code> is simply the <code class="docutils literal notranslate"><span class="pre">dynacall</span></code> script, pre-loaded with the metacell
+computation functions.</p>
+</div>
+<div class="section" id="importing">
+<h3>Importing<a class="headerlink" href="#importing" title="Permalink to this headline">¶</a></h3>
+<p>To use the package, create a directory somewhere with a large amount of available space (for ~2M
+cells, metacell required up to 200GB of disk space). If using a servers cluster, on some shared file
+system, and provide a DynaMake configuration file with an appropriate <code class="docutils literal notranslate"><span class="pre">run_prefix</span></code> for
+distributing jobs across the cluster; see the DynaMake documentation for details.</p>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">raw</span></code> sub-directory and download the <a class="reference internal" href="#raw-data">raw_data</a> into it. Then, run <code class="docutils literal notranslate"><span class="pre">metacell_flow</span>
+<span class="pre">import</span></code> to import the gene and cell data into the fast-access format used by the metacell package.
+This is unfortunately a slow process (in particular, the delaning step). Luckily, you only need to
+do this once.</p>
+</div>
+<div class="section" id="analysis">
+<h3>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h3>
+<p>TODO: Analyze the raw data to determine exclusions.</p>
+<p>TODO: Create a view for analysis.</p>
+<p>Once a view has been created, run <code class="docutils literal notranslate"><span class="pre">metacell_flow</span> <span class="pre">--view=name</span> <span class="pre">group</span></code>. This will result in a
+<code class="docutils literal notranslate"><span class="pre">views/name/profiles.group.npy</span></code> file containing the group index of each of the profiles, and a
+<code class="docutils literal notranslate"><span class="pre">views/name/groups</span></code> directory with the fast-access data for these computed groups (and groups of
+groups, etc., as needed).</p>
+<p>TODO: Investigate the results.</p>
+</div>
+</div>
+<div class="section" id="directory-structure">
+<h2>Directory Structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h2>
+<p>The provided automated workflow uses the following directory structure. The specifics of each
+directory type are provided further below.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">ROOT</span></code></dt><dd><p>A directory which is typically named after the data source (<code class="docutils literal notranslate"><span class="pre">PBMC</span></code>, <code class="docutils literal notranslate"><span class="pre">MOCA</span></code>, <code class="docutils literal notranslate"><span class="pre">HCA</span></code>, etc.).
+Will contain:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">raw</span></code></dt><dd><p>A directory containing the raw data from the data source. Should contain one or more:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>A directory containing <a class="reference internal" href="#x">10X</a> or <a class="reference internal" href="#moca">MOCA</a> data.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">name.h5</span></code></dt><dd><p>An HDF file containing <a class="reference internal" href="#hca">HCA</a> data.</p>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">std</span></code></dt><dd><p>The first processing step will convert the <code class="docutils literal notranslate"><span class="pre">raw</span></code> data to the standard input format. The
+result will contain:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>A directory in the standard (<a class="reference internal" href="#std">STD</a>) format ready to be delaned.</p>
+</dd>
+</dl>
+<p>Creating the standard format directory is pretty fast. It typically requires either a simple
+copy or applying something like <code class="docutils literal notranslate"><span class="pre">sed</span></code> to fix minor formatting issues. For HCA files, it is
+just a matter of dumping the data into a textual format.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">delaned</span></code></dt><dd><p>The next processing step will split the input into distinct lanes. The result will contain:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>A directory for each of the standard format directories. This would be either a standard
+format directory, or will contain:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">lane</span></code></dt><dd><p>A directory in the standard format containing just the data for a single lane.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>When data contains multiple lanes, delaning is a painfully slow process as it needs to split
+the matrix market file, processing one line at a time (without any parallelization). It
+would have been much easier if the raw data was already split into lanes.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes</span></code></dt><dd><p>A directory containing fast access per-gene data (<a class="reference internal" href="#genes">GENES</a>) extracted from the <code class="docutils literal notranslate"><span class="pre">delaned</span></code>
+data.</p>
+<p>The extraction process first verifies this data is identical for all the <code class="docutils literal notranslate"><span class="pre">delaned</span></code>
+directories. Then one of these directories is used to actually extract the data.
+This is very fast, as there are only ~30,000 genes to deal with.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cells</span></code></dt><dd><p>A directory containing fast access per-gene-per-profile (<a class="reference internal" href="#collection">COLLECTION</a>) data. Will contain:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>A directory for each of the <code class="docutils literal notranslate"><span class="pre">delaned</span></code> directories. This would either be a
+simple profiles batch (<a class="reference internal" href="#batch">BATCH</a>), or a collection combining:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">lane</span></code></dt><dd><p>A profiles batch directory containing the data for a single lane.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Conversion of the (delaned) textual data to the fast-access format isn’t very fast, but this
+is offset by being able to run this conversion in parallel for each lane. It is therefore
+much less painful than delaning. Once conversion is done, the import process is complete and
+does not need to be repeated.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">views</span></code></dt><dd><p>This is where the metacells package performs its analysis, recursively grouping the cells
+into metacells. Should contain:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>Some view profiles container (<a class="reference internal" href="#view">VIEW</a>) based on the full <code class="docutils literal notranslate"><span class="pre">cells</span></code> profiles collection, to
+group. Typically such a view will exclude profiles with too-low total UMIs count, or
+that suffer from other technical issues (e.g. doublets). Genes may also be excluded.</p>
+<p>The main function of the metacell package is to recursively compute the groups for
+such a view (that is, extend it to become a <a class="reference internal" href="#grouped">GROUPED</a> directory).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="raw-data">
+<span id="id1"></span><h3>Raw Data<a class="headerlink" href="#raw-data" title="Permalink to this headline">¶</a></h3>
+<p>The formats which can be used as the raw input for metacell processing:</p>
+<dl id="x">
+<dt><strong>10X</strong></dt><dd><p>A directory containing <a class="reference external" href="https://www.10xgenomics.com/">10X Genomics</a> data. Should contain the
+files:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">matrix.mtx</span></code></dt><dd><p>Matrix market UMIs data.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">barcodes.tsv</span></code></dt><dd><p>The barcode of each profile (possibly with a <code class="docutils literal notranslate"><span class="pre">-lane</span></code> suffix).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes.tsv</span></code></dt><dd><p>The ensembl ID and name of each gene.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="moca">
+<dt><strong>MOCA</strong></dt><dd><p>A directory containing <a class="reference external" href="http://atlas.gs.washington.edu/mouse-rna/">Mouse Organogenesis Cell Atlas</a> data. Should contain the files:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">gene_count.txt</span></code></dt><dd><p>Matrix market UMIs data.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">cell_annotate.csv</span></code></dt><dd><p>Per-cell data (see list of expected fields in <code class="docutils literal notranslate"><span class="pre">metacell/storage/moca_format.yaml</span></code>).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">gene_annotate.csv</span></code></dt><dd><p>Per-gene data (see list of expected fields in <code class="docutils literal notranslate"><span class="pre">metacell/storage/moca_format.yaml</span></code>).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="hca">
+<dt><strong>HCA</strong></dt><dd><p>A file containing <a class="reference external" href="https://www.humancellatlas.org/">Human Cell Atlas</a> in HDF format with a
+<cite>.h5`</cite> suffix. Must contain a single top-level key with the sub-keys <code class="docutils literal notranslate"><span class="pre">barcodes</span></code>, <code class="docutils literal notranslate"><span class="pre">indptr</span></code>,
+<code class="docutils literal notranslate"><span class="pre">genes</span></code>, <code class="docutils literal notranslate"><span class="pre">indices</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+</dd>
+</dl>
+<p>These formats are converted to a standard input format:</p>
+<dl id="std">
+<dt><strong>STD</strong></dt><dd><p>A directory containing data in a standard metacell input format. Should contain the files:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">umis.mtx</span></code></dt><dd><p>Matrix market UMIs data.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.csv</span></code></dt><dd><p>Per-profile data.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes.csv</span></code></dt><dd><p>Per-gene data.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">format.yaml</span></code></dt><dd><p>A description of the fields of the CSV files.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="fast-access-data">
+<h3>Fast Access Data<a class="headerlink" href="#fast-access-data" title="Permalink to this headline">¶</a></h3>
+<p>Formats of data allowing fast access during the metacell processing.</p>
+<dl id="genes">
+<dt><strong>GENES</strong></dt><dd><p>A directory containing per-gene data, accessed using the
+<a class="reference internal" href="metacell.storage.html#metacell.storage.genes.Genes" title="metacell.storage.genes.Genes"><code class="xref py py-class docutils literal notranslate"><span class="pre">metacell.storage.genes.Genes</span></code></a> class. Should contain the files:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">genes.yaml</span></code></dt><dd><p>General meta-data describing this set of genes. Should contain the keys <code class="docutils literal notranslate"><span class="pre">organism</span></code>,
+<code class="docutils literal notranslate"><span class="pre">genes_count</span></code> and <code class="docutils literal notranslate"><span class="pre">uuid</span></code>, which must be equal to the <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> of the
+<code class="docutils literal notranslate"><span class="pre">genes.name.txt</span></code> file. This UUID uniquely identifies this set of genes.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes.*.txt</span></code></dt><dd><p>Per-gene string data. These should include <code class="docutils literal notranslate"><span class="pre">genes.name.txt</span></code> containing the
+(sorted, all-upper-case) gene names, and <code class="docutils literal notranslate"><span class="pre">genes.ensembl.txt</span></code> containing the
+<a class="reference external" href="https://www.ensembl.org">ensembl</a> identifier of each gene.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes.*.npy</span></code></dt><dd><p>Per-gene numeric data, if any.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="container">
+<dt><strong>CONTAINER</strong></dt><dd><p>Either a <strong>BATCH</strong>, <strong>COLLECTION</strong>, or <strong>VIEW</strong> directory, providing access to
+per-gene-per-profile data for some genes and profiles using the
+<code class="xref py py-class docutils literal notranslate"><span class="pre">metacell.storage.profiles.ProfilesContainer</span></code> class.</p>
+</dd>
+</dl>
+<dl id="batch">
+<dt><strong>BATCH</strong></dt><dd><p>A directory containing per-gene-per-profile data for some closely related profiles (a single
+batch), accessed using the <a class="reference internal" href="metacell.storage.html#metacell.storage.profiles.ProfilesBatch" title="metacell.storage.profiles.ProfilesBatch"><code class="xref py py-class docutils literal notranslate"><span class="pre">metacell.storage.profiles.ProfilesBatch</span></code></a> class. Barcodes
+can be safely assumed to be unique within each batch, but not between multiple batches. When
+investigating batch effects, this is the smallest group of profiles for which these effects can
+be assumed to be the same. Should contain the files:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_batch.yaml</span></code></dt><dd><p>General meta-data describing this batch of profiles. Should contain the keys:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_count</span></code>, <code class="docutils literal notranslate"><span class="pre">genes_count</span></code></dt><dd><p>The number of profiles, and number of genes per profiles.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_kind</span></code></dt><dd><p>The kind of profiles (<code class="docutils literal notranslate"><span class="pre">cells</span></code>, <code class="docutils literal notranslate"><span class="pre">metacells</span></code>, <code class="docutils literal notranslate"><span class="pre">1_zones</span></code>, <code class="docutils literal notranslate"><span class="pre">2_zones</span></code>, etc.).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes_uuid</span></code></dt><dd><p>The UUID of the genes per profile.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>Should be equal to the <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> of the <code class="docutils literal notranslate"><span class="pre">matrix.umis.mmm</span></code> or <code class="docutils literal notranslate"><span class="pre">matrix.umis.npy</span></code>
+file. This UUID uniquely identifies this profiles batch.</p>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">matrix.*.mmm</span></code>, <code class="docutils literal notranslate"><span class="pre">matrix.*.npy</span></code></dt><dd><p>Per-gene-per-profile data. The <code class="docutils literal notranslate"><span class="pre">mmm</span></code> format is a metacell-specific compressed sparse data
+format accessed using the <code class="xref py py-class docutils literal notranslate"><span class="pre">metacell.matrices.MemoryMappedMatrix</span></code> class. Each batch
+should contain <code class="docutils literal notranslate"><span class="pre">matrix.umis.mmm</span></code> or <code class="docutils literal notranslate"><span class="pre">matrix.umis.npy</span></code>, but additional
+per-gene-per-profile data may exist.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.*.txt</span></code></dt><dd><p>Per-profile string data. Common data includes:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.barcode.txt</span></code></dt><dd><p>The unique (in this batch) per-profile barcode (without any lane suffix).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.name.txt</span></code></dt><dd><p>The unique (in this batch) per-profile string name, if any.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.batch.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">profiles.lane.txt</span></code></dt><dd><p>The name of the batch and the name of the lane (if any) per profile. These are the same
+for all profiles in the batch, but having these files is useful when collecting multiple
+batches to a single data set (see below).</p>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.*.npy</span></code></dt><dd><p>Per-profile numeric data. Common data includes:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.total_umis.npy</span></code>, <code class="docutils literal notranslate"><span class="pre">profiles.total_squared_umis.npy</span></code></dt><dd><p>The sum of the genes UMIs and the sum of the square of the genes UMIs for each profile.</p>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes.*.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">genes.*.npy</span></code></dt><dd><p>Per-gene string and numeric data, specific for this profiles batch, if any. Common data
+includes:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">genes.total_umis.npy</span></code>, <code class="docutils literal notranslate"><span class="pre">genes.total_squared_umis.npy</span></code></dt><dd><p>The sum of the profiles UMIs and the sum of the square of the profiles UMIs for each
+gene.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="view">
+<dt><strong>VIEW</strong></dt><dd><p>A directory containing a possibly restricted view of another profiles container accessed using
+the <a class="reference internal" href="metacell.storage.html#metacell.storage.profiles.ProfilesView" title="metacell.storage.profiles.ProfilesView"><code class="xref py py-class docutils literal notranslate"><span class="pre">metacell.storage.profiles.ProfilesView</span></code></a> class. Should contain the files:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_view.yaml</span></code></dt><dd><p>General meta-data describing the profiles view. Should contain the keys:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">base_uuid</span></code></dt><dd><p>The UUID of the base profiles container this is a view of.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">base_path</span></code></dt><dd><p>The path of the base profiles container this is a view of. If this is a relative path,
+it is relative to the view directory.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_kind</span></code></dt><dd><p>Identical to the value of the base profiles container.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_count</span></code>, <code class="docutils literal notranslate"><span class="pre">genes_count</span></code></dt><dd><p>The number of profiles and genes in the restricted view. These are less than or equal to
+the values of the base profiles container.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes_uuid</span></code></dt><dd><p>The unique identifier of the genes subset. This will be identical to the UUID of the
+genes of the base container if there is no <code class="docutils literal notranslate"><span class="pre">included_genes.npy</span></code> file, that is,
+if the view uses all the base container’s genes.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>If the view is identical to the base profiles container (that is, acts as a link to it),
+then should be the same as the UUID of the base profiles container. Otherwise, is based
+on the combination of the UUID of the base profiles container, and the bytes of the
+<code class="docutils literal notranslate"><span class="pre">included_profiles.npy</span></code> and/or <code class="docutils literal notranslate"><span class="pre">included_genes.npy</span></code> files.</p>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">included_profiles.npy</span></code></dt><dd><p>If exist, contain the sorted indices of the base container profiles which are included in
+this view. Otherwise, the view contains all the base container profiles.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">included_genes.npy</span></code></dt><dd><p>If exist, contain the sorted indices of the base container genes which are included in this
+view. Otherwise, the view contains all the base container genes.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">matrix.*.mmm</span></code>, <code class="docutils literal notranslate"><span class="pre">matrix.*.npy</span></code></dt><dd><p>Per-gene-per-profile data, specific for the specific view, if any.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.*.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">profiles.*.npy</span></code></dt><dd><p>Per-profile data, specific for the specific view, if any.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes.*.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">genes.*.npy</span></code></dt><dd><p>Per-gene data, specific for the specific view, if any.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="collection">
+<dt><strong>COLLECTION</strong></dt><dd><p>A directory combining a collection of other profiles container directories into a single unified
+profiles container, accessed using the <a class="reference internal" href="metacell.storage.html#metacell.storage.profiles.ProfilesCollection" title="metacell.storage.profiles.ProfilesCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">metacell.storage.profiles.ProfilesCollection</span></code></a>
+class.
+Should contain the files:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_collection.yaml</span></code></dt><dd><p>General meta-data describing the combined container. Should contain the keys:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>Should be equal to the <code class="docutils literal notranslate"><span class="pre">md5sum</span></code> of all the <code class="docutils literal notranslate"><span class="pre">uuid</span></code> bytes of the contained batches.
+This UUID uniquely identifies the profiles collection.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_count</span></code></dt><dd><p>The total number of profiles in the collection.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_kind</span></code>, <code class="docutils literal notranslate"><span class="pre">genes_uuid</span></code>, <code class="docutils literal notranslate"><span class="pre">genes_count</span></code></dt><dd><p>Identical to the values in each of the combined profile batches.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">combined</span></code></dt><dd><p>A list of mapping, one per combined profile container directories. Should contain the
+keys:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>The name of a sub-directory of the collection directory, containing the profiles
+container which is combined into the overall collection.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>The UUID identifying the combined profiles container.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles_count</span></code></dt><dd><p>The number of profiles in the combined profiles container.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">genes.*.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">genes.*.npy</span></code></dt><dd><p>Per-gene data, specific for the overall collection, if any.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>A profiles container sub-directory which is combined into the collection.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="grouped-data">
+<h3>Grouped Data<a class="headerlink" href="#grouped-data" title="Permalink to this headline">¶</a></h3>
+<p>The primary function of the metacell package is to group profiles together, in particular, to group
+cell profiles into metacells.</p>
+<dl id="grouped">
+<dt><strong>GROUPED</strong></dt><dd><p>A profiles container directory can become “grouped” if it also contains the files:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">profiles.group.npy</span></code></dt><dd><p>The group index for each of the container’s profiles. A negative value indicates the profile
+belongs to no group (is an “outlier”).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">groups</span></code></dt><dd><p>A <strong>GROUPS</strong> profiles container for the computed groups. The per-profile-per-gene UMIs count
+in this container will be the sum of the per-profile-per-gene of each of the grouped
+profiles contained in the group profile.</p>
+<p>A groups profiles container has identical format to a normal profiles batch directory,
+except that its metadata file contains a <code class="docutils literal notranslate"><span class="pre">grouped_profiles</span></code> key with the (relative) path
+to the grouped profiles container (typically <code class="docutils literal notranslate"><span class="pre">..</span></code>), and a <code class="docutils literal notranslate"><span class="pre">grouped_uuid</span></code> key with the
+UUID of the grouped profiles container.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">profiles_kind</span></code> of the groupes container should be based on the grouped container
+profiles kind. In particular, groups of <code class="docutils literal notranslate"><span class="pre">cells</span></code> are called <code class="docutils literal notranslate"><span class="pre">metacells</span></code>. Such groups are
+expected to contain cells of the “same” state.</p>
+<p>When grouping a large number of profiles, the <code class="docutils literal notranslate"><span class="pre">groups</span></code> directory might itself be grouped.
+This recursion continues as long as the total number of profiles is “large”. The
+<code class="docutils literal notranslate"><span class="pre">profiles_kind</span></code> of higher level groups is named <code class="docutils literal notranslate"><span class="pre">1_zones</span></code>, <code class="docutils literal notranslate"><span class="pre">2_zones</span></code> etc. Such groups
+contain profiles with a “similar”, but not necessarily the “same” state.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">outliers</span></code></dt><dd><p>A profiles view containing just the outlier profiles (which are not included in any
+of the groups).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">tmp</span></code></dt><dd><p>Temporary files used to compute the groupings, but need not be used once it has been
+computed. The contents of this directory depends on whether we are grouping a few
+profiles or many profiles.</p>
+<p>If grouping a small number of profiles:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">selected</span></code></dt><dd><p>A view of the profiles container, including only the selected (“feature”) genes.</p>
+</dd>
+</dl>
+<p>If grouping a large number of profiles, we can’t directly compute the groups, since the
+basic algorithm has a complexity of O(N^2). Computation therefore must works through a
+divide-and-conquer algorithm. This requires different temporary files:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">phase-1</span></code></dt><dd><p>A directory containing the second phase’s files.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">pile-index</span></code></dt><dd><p>A profiles view of a random subset of a restricted number of to-be-grouped profiles.
+To help in sorting file names, the indices are zero-padded so all have the same
+width (e.g. <code class="docutils literal notranslate"><span class="pre">00,</span> <span class="pre">..,</span> <span class="pre">10,</span> <span class="pre">11,</span> <span class="pre">...</span></code>). Each such pile is independently (directly)
+grouped.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">outliers-pile</span></code></dt><dd><p>This directory is a profiles view containing all profiles that were marked as an
+outlier in some indexed pile. It is also independently grouped. Unlike the indexed
+piles, this view may contain a large number of profiles so grouping it may require
+an intermediate step of its own.</p>
+<p>Rare “types” do not have enough profiles in each of the piles to form groups, so
+will be marked as outliers. In this outliers-only view, there might be enough of
+these rare profiles to form a proper group.</p>
+</dd>
+</dl>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">grouped</span></code></dt><dd><p>A view of the grouped profiles container, with <code class="docutils literal notranslate"><span class="pre">p.group_index.npy</span></code> containing the
+combined group indices from all the piles.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">groups</span></code></dt><dd><p>The intermediate grouping combines the groups from all the phase-1 piles, as well as the
+groups from the phase-1 outliers. This is the less-accurate grouping we will improve
+upon. To allow doing so, we compute the groups-of-groups, that is, we compute
+<code class="docutils literal notranslate"><span class="pre">p.group_index.npy</span></code>. This may require recursion.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">outliers</span></code></dt><dd><p>A profiles view containing just the profiles which were marked as outliers when
+grouping the phase-1 outliers described above. That is, all the profiles which
+we tried to but failed to group in the first phase.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">phase-2</span></code></dt><dd><p>A directory containing the second phase’s files. This is similar to the first phase’s
+structure, with the following differences:</p>
+<ul class="simple">
+<li><p>The profiles contained in each pile are not chosen randomly. Instead, they are the
+profiles contained in one of the computed intermediate groups-of-groups.</p></li>
+<li><p>The outliers pile contains the phase-1 outliers in addition to the outliers of the
+phase-2 indexed piles. This allows very rare profile “types” a second chance at being
+grouped.</p></li>
+<li><p>There are no <code class="docutils literal notranslate"><span class="pre">grouped</span></code> or <code class="docutils literal notranslate"><span class="pre">groups</span></code> directories; the results are written directly
+to the original (parent) grouped profiles container. These final groups are
+recursively grouped as long as there is a large number of profiles, as described
+above.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="LICENSE.html" class="btn btn-neutral float-right" title="The MIT License (MIT)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Metacell - Single-cell mRNA Analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Weizmann Institute of Science
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

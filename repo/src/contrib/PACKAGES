@@ -25,11 +25,11 @@ MD5sum: db8854e9cd759535d5e8db43f71b40c1
 NeedsCompilation: no
 
 Package: misha
-Version: 4.0.8
+Version: 4.0.9
 Depends: utils
 License: GPL-2
 OS_type: unix
-MD5sum: 7afc31e24112337ce74d71413db075cc
+MD5sum: de48c55db1311c2d0eb86efba98295ac
 NeedsCompilation: yes
 
 Package: Repguide

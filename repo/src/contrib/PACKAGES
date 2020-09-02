@@ -92,11 +92,12 @@ MD5sum: e2d701e9cb785762293db938e88fff7e
 NeedsCompilation: yes
 
 Package: tgstat
-Version: 2.3.5
-Depends: utils
+Version: 2.3.16
+Depends: R (>= 3.5.0)
+Imports: utils
 License: GPL-2
 OS_type: unix
-MD5sum: 25f431de2e3908b7842fc87b10b81e35
+MD5sum: 079c20c2ba77002986b1d9fdef22fab5
 NeedsCompilation: yes
 
 Package: tgutil

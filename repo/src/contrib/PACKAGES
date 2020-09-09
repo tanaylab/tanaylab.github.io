@@ -13,15 +13,16 @@ MD5sum: 39abe4df997f8d92d07de8b35d5a4d24
 NeedsCompilation: yes
 
 Package: metacell
-Version: 0.3.41
-Depends: R (>= 3.4.2)
+Version: 0.3.5
+Depends: R (>= 3.5.0)
 Imports: data.table, dplyr, graph, methods, Matrix, matrixStats,
         pheatmap, RColorBrewer, Rgraphviz, KernSmooth, zoo, ggplot2,
         cluster, cowplot, pdist, doMC, RCurl, igraph, RSvgDevice,
-        dbscan, entropy, parallel, tgconfig, tgutil (>= 0.0.3), tgstat,
-        SingleCellExperiment
-Suggests: knitr, rmarkdown
-MD5sum: db8854e9cd759535d5e8db43f71b40c1
+        dbscan, entropy, parallel, tgstat, tgutil, tgconfig, umap,
+        lpsymphony, lpSolveAPI
+Suggests: knitr, rmarkdown, SingleCellExperiment
+License: MIT + file LICENSE
+MD5sum: 8a90395d3aeacef2194986a37821504a
 NeedsCompilation: no
 
 Package: misha

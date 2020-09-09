@@ -45,6 +45,18 @@ License: GPL
 MD5sum: b9fae030a2edac551702c634132a1ba0
 NeedsCompilation: no
 
+Package: Repsc
+Version: 0.0.0.9000
+Depends: R (>= 3.5.1)
+Imports: ape, Biostrings, BSgenome, cowplot, DECIPHER, data.table,
+        doFuture, dplyr, foreach, future, GenomicAlignments,
+        GenomeInfoDb, GenomicRanges, ggplot2, glue, kmer, Matrix,
+        parallel, plyr, plyranges, Rsamtools, rtracklayer, S4Vectors,
+        stringr, treemapify, tibble, tidyr
+Suggests: doMC, knitr, rmarkdown, testthat
+MD5sum: fec2550a103ab63b2177a7d97fa54ac2
+NeedsCompilation: no
+
 Package: sc5mc
 Version: 0.1.37
 Depends: R (>= 3.2.2), misha (>= 3.5.4), gpatterns
@@ -56,6 +68,17 @@ LinkingTo: Rcpp
 Suggests: knitr, rmarkdown
 License: MIT
 MD5sum: 6f8e6dc7a1f2c7be545efe07609635f9
+NeedsCompilation: yes
+
+Package: shaman
+Version: 2.0
+Imports: misha (>= 3.5.6), Rcpp (>= 0.12.11), RANN, data.table, ggplot2
+        (>= 2.2.0), reshape2, grid, Gviz, plyr, parallel (>= 3.3.2) ,
+        doMC (>= 1.3.4), Rcpp
+LinkingTo: Rcpp
+Suggests: knitr, rmarkdown
+License: GPL
+MD5sum: 8f76b77128af172575927dbc13957085
 NeedsCompilation: yes
 
 Package: tgcg
@@ -101,13 +124,14 @@ MD5sum: 079c20c2ba77002986b1d9fdef22fab5
 NeedsCompilation: yes
 
 Package: tgutil
-Version: 0.1.2
+Version: 0.1.6
 Depends: R (>= 3.2.0)
-Imports: broom, data.table, dplyr, ggplot2, magrittr, matrixStats,
-        rlang, scales, tibble
-Suggests: testthat
+Imports: Matrix, broom, cowplot, data.table, dplyr, ggplot2, grid,
+        grDevices, magrittr, matrixStats, methods, qlcMatrix, readr,
+        rlang, scales, tibble, tidyr
+Suggests: covr, testthat
 License: GPL-3
-MD5sum: 1f2ff70e093647c873ba673dfbeb4e53
+MD5sum: 5a3ab3079d8d3f8f650f9ff47c8f3b55
 NeedsCompilation: no
 
 Package: umi4cPackage

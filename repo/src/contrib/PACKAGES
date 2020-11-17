@@ -30,7 +30,7 @@ Version: 4.0.11
 Depends: utils
 License: GPL-2
 OS_type: unix
-MD5sum: 387a2e38f9406c102d85e201840bd20b
+MD5sum: cc34b1fd6683c45b75a92a381a797112
 NeedsCompilation: yes
 
 Package: Repguide
